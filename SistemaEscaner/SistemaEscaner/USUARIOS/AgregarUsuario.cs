@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace SistemaEscaner.USUARIOS
 {
     public partial class AgregarUsuario : Form
     {
+        private bool showPassword = false;
         ExpedienteEntities Entity = new ExpedienteEntities();
 
         long IdUsuario = 0;
@@ -20,6 +22,8 @@ namespace SistemaEscaner.USUARIOS
         {
             InitializeComponent();
             CargarDatosDGV();
+            var tt = new ToolTip();
+            tt.SetToolTip(IMGVer, "Ver Contraseña");
         }
 
         private void CargarDatosDGV()
@@ -92,8 +96,8 @@ namespace SistemaEscaner.USUARIOS
             {
                 var TUsuarios = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario); //Validacion de existencia de variable IdUsuario
                 TUsuarios.Usuario = txtUsuario.Text;
-                TUsuarios.IdTipoUsuario = cbTipoUsuario.SelectedIndex;
-                TUsuarios.IdEstado = cbEstado.SelectedIndex;
+                TUsuarios.IdTipoUsuario = cbTipoUsuario.SelectedIndex+1;
+                TUsuarios.IdEstado = cbEstado.SelectedIndex+1;
 
                 Entity.SaveChanges();
             }
@@ -112,11 +116,67 @@ namespace SistemaEscaner.USUARIOS
                     Contra = txtContra.Text,
                     FechaIngreso = DateTime.Now,
                     FechaModificado = DateTime.Now,
-                    IdEstado = cbEstado.SelectedIndex,
-                    IdTipoUsuario = cbTipoUsuario.SelectedIndex
+                    IdEstado = cbEstado.SelectedIndex+1,
+                    IdTipoUsuario = cbTipoUsuario.SelectedIndex+1
                 };
+                
                 Entity.Usuarios.Add(TbUsuarios);
                 Entity.SaveChanges();
+                MessageBox.Show("Usuario Guardado con Exito!");
+            }
+            LimpiarForm();
+            CargarDatosDGV();
+        }
+
+        //Metodo Limpiar
+        private void LimpiarForm()
+        {
+            txtUsuario.Text = "";
+            txtContra.Text = "";
+            //cbEstado.Text = "";
+            //cbTipoUsuario.Text = "";
+            Modificar = false;
+            DGVUsuarios.ClearSelection();
+        }
+
+        private void BTNModificar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BTNLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarForm();
+        }
+
+        private void IMGVer_Click(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+
+            if (showPassword)
+            {
+                txtContra.PasswordChar = '\0'; // Mostrar contraseña en texto normal
+            }
+            else
+            {
+                txtContra.PasswordChar = '*'; // Ocultar contraseña con asteriscos
+            }
+        }
+
+        private void DGVUsuarios_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                IdUsuario = Convert.ToInt64(DGVUsuarios.SelectedCells[0].Value);
+                var TUsuario = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario);
+                txtUsuario.Text = TUsuario.Usuario;
+                cbEstado.SelectedIndex = TUsuario.IdEstado - 1;
+                cbTipoUsuario.SelectedIndex = TUsuario.IdTipoUsuario - 1;
+                Modificar = true;
+            }
+            catch (Exception)
+            {
+                LimpiarForm();
             }
         }
     }
