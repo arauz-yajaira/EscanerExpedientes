@@ -141,7 +141,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void BTNModificar_Click(object sender, EventArgs e)
         {
-            
+            CargarDatosDGV();
         }
 
         private void BTNLimpiar_Click(object sender, EventArgs e)
