@@ -18,6 +18,8 @@ namespace SistemaEscaner.USUARIOS
 
         long IdUsuario = 0;
         bool Modificar = false;
+        bool Agregar = false;
+
         public AgregarUsuario()
         {
             InitializeComponent();
@@ -84,13 +86,21 @@ namespace SistemaEscaner.USUARIOS
 
         private void BTNAgregar_Click(object sender, EventArgs e)
         {
+
+            #region
             //Validacion de llenado
-            if (txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
+            if (Agregar || txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
             {
                 MessageBox.Show("Ingrese Todos los Datos, para agregar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           if (Modificar)
+                {
+                    MessageBox.Show("Usuario Modificado Exitosamente!", "Usuario Modificado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            
 
             String Pass = Hash.obtenerHash256(txtContra.Text);
+
             var user = Entity.Usuarios.FirstOrDefault(x => x.Usuario == txtUsuario.Text);//determina si hay existencia de usuario iguales
             if (Modificar)
             {
@@ -100,6 +110,7 @@ namespace SistemaEscaner.USUARIOS
                 TUsuarios.IdEstado = cbEstado.SelectedIndex+1;
 
                 Entity.SaveChanges();
+               
             }
             else
             {
@@ -124,6 +135,8 @@ namespace SistemaEscaner.USUARIOS
                 Entity.SaveChanges();
                 MessageBox.Show("Usuario Guardado con Exito!");
             }
+            #endregion
+
             LimpiarForm();
             CargarDatosDGV();
         }
@@ -137,11 +150,13 @@ namespace SistemaEscaner.USUARIOS
             //cbTipoUsuario.Text = "";
             Modificar = false;
             DGVUsuarios.ClearSelection();
+            BTNAgregar.Text = "Agregar Usuario  ";
+
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
         {
-            CargarDatosDGV();
+         
         }
 
         private void BTNLimpiar_Click(object sender, EventArgs e)
@@ -163,8 +178,12 @@ namespace SistemaEscaner.USUARIOS
             }
         }
 
-        private void DGVUsuarios_SelectionChanged(object sender, EventArgs e)
+        private void DGVUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTNContra.Enabled = false;
+            BTNAgregar.Text = "Modificar Usuario";
+            Modificar = true;
+
             try
             {
                 IdUsuario = Convert.ToInt64(DGVUsuarios.SelectedCells[0].Value);

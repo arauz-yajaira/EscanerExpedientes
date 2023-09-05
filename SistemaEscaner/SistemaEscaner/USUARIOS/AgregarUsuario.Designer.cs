@@ -30,11 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.IMGVer = new System.Windows.Forms.PictureBox();
-            this.BTNLimpiar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BTNContra = new System.Windows.Forms.Button();
-            this.BTNModificar = new System.Windows.Forms.Button();
             this.BTNAgregar = new System.Windows.Forms.Button();
+            this.BTNLimpiar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.IMGVer = new System.Windows.Forms.PictureBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.txtContra = new System.Windows.Forms.TextBox();
@@ -45,13 +47,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -88,50 +87,25 @@
             this.panel1.Size = new System.Drawing.Size(483, 589);
             this.panel1.TabIndex = 1;
             // 
-            // IMGVer
+            // panel2
             // 
-            this.IMGVer.BackColor = System.Drawing.Color.Transparent;
-            this.IMGVer.Image = global::SistemaEscaner.Properties.Resources.OIP__2_;
-            this.IMGVer.Location = new System.Drawing.Point(412, 182);
-            this.IMGVer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.IMGVer.Name = "IMGVer";
-            this.IMGVer.Size = new System.Drawing.Size(29, 24);
-            this.IMGVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IMGVer.TabIndex = 16;
-            this.IMGVer.TabStop = false;
-            this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
-            // 
-            // BTNLimpiar
-            // 
-            this.BTNLimpiar.Location = new System.Drawing.Point(362, 319);
-            this.BTNLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BTNLimpiar.Name = "BTNLimpiar";
-            this.BTNLimpiar.Size = new System.Drawing.Size(95, 40);
-            this.BTNLimpiar.TabIndex = 15;
-            this.BTNLimpiar.Text = "Limpiar";
-            this.BTNLimpiar.UseVisualStyleBackColor = true;
-            this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.BTNContra);
+            this.panel2.Controls.Add(this.BTNAgregar);
+            this.panel2.Location = new System.Drawing.Point(47, 402);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(381, 163);
+            this.panel2.TabIndex = 19;
             // 
             // BTNContra
             // 
-            this.BTNContra.Location = new System.Drawing.Point(94, 113);
+            this.BTNContra.Location = new System.Drawing.Point(26, 69);
             this.BTNContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNContra.Name = "BTNContra";
             this.BTNContra.Size = new System.Drawing.Size(199, 40);
             this.BTNContra.TabIndex = 14;
             this.BTNContra.Text = "Cambiar Contraseña";
             this.BTNContra.UseVisualStyleBackColor = true;
-            // 
-            // BTNModificar
-            // 
-            this.BTNModificar.Location = new System.Drawing.Point(62, 59);
-            this.BTNModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BTNModificar.Name = "BTNModificar";
-            this.BTNModificar.Size = new System.Drawing.Size(245, 40);
-            this.BTNModificar.TabIndex = 13;
-            this.BTNModificar.Text = "Modificar Usuario";
-            this.BTNModificar.UseVisualStyleBackColor = true;
-            this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
             // 
             // BTNAgregar
             // 
@@ -146,6 +120,50 @@
             this.BTNAgregar.Text = "Agregar Usuario";
             this.BTNAgregar.UseVisualStyleBackColor = false;
             this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
+            // 
+            // BTNLimpiar
+            // 
+            this.BTNLimpiar.Location = new System.Drawing.Point(362, 319);
+            this.BTNLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BTNLimpiar.Name = "BTNLimpiar";
+            this.BTNLimpiar.Size = new System.Drawing.Size(95, 40);
+            this.BTNLimpiar.TabIndex = 15;
+            this.BTNLimpiar.Text = "Limpiar";
+            this.BTNLimpiar.UseVisualStyleBackColor = true;
+            this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(180, 235);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(223, 23);
+            this.textBox1.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(26, 239);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Confirme Contraseña";
+            // 
+            // IMGVer
+            // 
+            this.IMGVer.BackColor = System.Drawing.Color.Transparent;
+            this.IMGVer.Image = global::SistemaEscaner.Properties.Resources.OIP__2_;
+            this.IMGVer.Location = new System.Drawing.Point(412, 182);
+            this.IMGVer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.IMGVer.Name = "IMGVer";
+            this.IMGVer.Size = new System.Drawing.Size(29, 24);
+            this.IMGVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.IMGVer.TabIndex = 16;
+            this.IMGVer.TabStop = false;
+            this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
             // 
             // cbEstado
             // 
@@ -245,38 +263,7 @@
             this.DGVUsuarios.Name = "DGVUsuarios";
             this.DGVUsuarios.Size = new System.Drawing.Size(851, 455);
             this.DGVUsuarios.TabIndex = 2;
-            this.DGVUsuarios.SelectionChanged += new System.EventHandler(this.DGVUsuarios_SelectionChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(180, 235);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(223, 23);
-            this.textBox1.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 239);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Confirme Contraseña";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.BTNModificar);
-            this.panel2.Controls.Add(this.BTNContra);
-            this.panel2.Controls.Add(this.BTNAgregar);
-            this.panel2.Location = new System.Drawing.Point(47, 402);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(381, 163);
-            this.panel2.TabIndex = 19;
+            this.DGVUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellClick);
             // 
             // AgregarUsuario
             // 
@@ -293,9 +280,9 @@
             this.Text = "AgregarUsuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,7 +303,6 @@
         private System.Windows.Forms.ComboBox cbTipoUsuario;
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Button BTNContra;
-        private System.Windows.Forms.Button BTNModificar;
         private System.Windows.Forms.Button BTNAgregar;
         private System.Windows.Forms.Button BTNLimpiar;
         private System.Windows.Forms.PictureBox IMGVer;
