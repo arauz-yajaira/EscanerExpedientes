@@ -67,6 +67,23 @@ namespace SistemaEscaner.USUARIOS
 
         }
 
+        public void ConfirmarContra()
+        {
+            // Obtenga el texto de ambos TextBox
+            string password = txtContra.Text;
+            string confirmPassword = txtConfir.Text;
+
+            // Compara las contraseñas
+            if (password == confirmPassword)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
+            }
+        }
         public class Hash
         {
             public static string obtenerHash256(string text)
@@ -92,6 +109,7 @@ namespace SistemaEscaner.USUARIOS
             if (Agregar || txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
             {
                 MessageBox.Show("Ingrese Todos los Datos, para agregar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ConfirmarContra();
             }
            if (Modificar)
                 {
@@ -171,10 +189,12 @@ namespace SistemaEscaner.USUARIOS
             if (showPassword)
             {
                 txtContra.PasswordChar = '\0'; // Mostrar contraseña en texto normal
+                txtConfir.PasswordChar = '\0';
             }
             else
             {
                 txtContra.PasswordChar = '*'; // Ocultar contraseña con asteriscos
+                txtConfir.PasswordChar = '*';
             }
         }
 

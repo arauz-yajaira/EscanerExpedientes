@@ -34,7 +34,7 @@
             this.BTNContra = new System.Windows.Forms.Button();
             this.BTNAgregar = new System.Windows.Forms.Button();
             this.BTNLimpiar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfir = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.IMGVer = new System.Windows.Forms.PictureBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -69,7 +69,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.BTNLimpiar);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtConfir);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.IMGVer);
             this.panel1.Controls.Add(this.cbEstado);
@@ -132,14 +132,14 @@
             this.BTNLimpiar.UseVisualStyleBackColor = true;
             this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
             // 
-            // textBox1
+            // txtConfir
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 235);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(223, 23);
-            this.textBox1.TabIndex = 18;
+            this.txtConfir.Location = new System.Drawing.Point(180, 235);
+            this.txtConfir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtConfir.Name = "txtConfir";
+            this.txtConfir.PasswordChar = '*';
+            this.txtConfir.Size = new System.Drawing.Size(223, 23);
+            this.txtConfir.TabIndex = 18;
             // 
             // label7
             // 
@@ -306,7 +306,7 @@
         private System.Windows.Forms.Button BTNAgregar;
         private System.Windows.Forms.Button BTNLimpiar;
         private System.Windows.Forms.PictureBox IMGVer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
     }
