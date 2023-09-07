@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblModificar = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BTNContra = new System.Windows.Forms.Button();
             this.BTNAgregar = new System.Windows.Forms.Button();
@@ -48,10 +49,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblModificar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.BTNLimpiar);
             this.panel1.Controls.Add(this.txtConfir);
@@ -87,6 +91,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(483, 589);
             this.panel1.TabIndex = 1;
+            // 
+            // lblModificar
+            // 
+            this.lblModificar.AutoSize = true;
+            this.lblModificar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificar.Location = new System.Drawing.Point(4, 11);
+            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModificar.Name = "lblModificar";
+            this.lblModificar.Size = new System.Drawing.Size(71, 18);
+            this.lblModificar.TabIndex = 20;
+            this.lblModificar.Text = "Usuario";
+            this.lblModificar.TextChanged += new System.EventHandler(this.LblModificar_TextChanged);
             // 
             // panel2
             // 
@@ -275,11 +291,23 @@
             this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
+            this.pictureBox3.Location = new System.Drawing.Point(1345, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(95, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
             // AgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 714);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.DGVUsuarios);
             this.Controls.Add(this.panel1);
@@ -294,6 +322,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +350,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblModificar;
     }
 }

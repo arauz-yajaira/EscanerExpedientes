@@ -18,7 +18,6 @@ namespace SistemaEscaner.USUARIOS
 
         long IdUsuario = 0;
         bool Modificar = false;
-        bool Agregar = false;
 
         public AgregarUsuario()
         {
@@ -66,7 +65,7 @@ namespace SistemaEscaner.USUARIOS
             cbEstado.DisplayMember = E.Columns[1].ColumnName;
             DGVUsuarios.ClearSelection();
             DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
+            lblModificar.Text = Modificar.ToString();
         }
 
    
@@ -87,38 +86,54 @@ namespace SistemaEscaner.USUARIOS
             }
         }
 
+        public bool Validaciones()
+        {
+            //Validacion de llenado
+            if (Modificar)
+            {
+                if (txtUsuario.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
+                {
+                    MessageBox.Show("Agrega Datos!", "Ingrese Todos los Datos, para agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return true;
+                }
+            }
+            else
+            {
+                if (txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
+                {
+
+                    MessageBox.Show("Agrega Datos!", "Ingrese Todos los Datos, para agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return true;
+                }
+            }
+            
+            return false;
+        }
         private void BTNAgregar_Click(object sender, EventArgs e)
         {
            
             #region
-            //Validacion de llenado
-            if (Agregar || txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
-            {
-                MessageBox.Show("Ingrese Todos los Datos, para agregar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
-            }
-           if (Modificar)
-                {
-                    MessageBox.Show("Usuario Modificado Exitosamente!", "Usuario Modificado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            
-
+      
+         
             String Pass = Hash.obtenerHash256(txtContra.Text);
 
-            var user = Entity.Usuarios.FirstOrDefault(x => x.Usuario == txtUsuario.Text);//determina si hay existencia de usuario iguales
+            
             if (Modificar)
             {
-                var TUsuarios = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario); //Validacion de existencia de variable IdUsuario
-                TUsuarios.Usuario = txtUsuario.Text;
-                TUsuarios.IdTipoUsuario = cbTipoUsuario.SelectedIndex+1;
-                TUsuarios.IdEstado = cbEstado.SelectedIndex+1;
-
-                Entity.SaveChanges();
-               
+                if (Validaciones() == false)
+                {
+                    var TUsuarios = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario); //Validacion de existencia de variable IdUsuario
+                    TUsuarios.Usuario = txtUsuario.Text;
+                    TUsuarios.IdTipoUsuario = cbTipoUsuario.SelectedIndex + 1;
+                    TUsuarios.IdEstado = cbEstado.SelectedIndex + 1;           
+                    Entity.SaveChanges();
+                    MessageBox.Show("Usuario Modificado con Exito!");
+                }
             }
             else
             {
-                if (user != null)
+                var user = Entity.Usuarios.FirstOrDefault(x => x.Usuario == txtUsuario.Text);//determina si hay existencia de usuario iguales
+                if (user != null && Validaciones() == true)
                 {
                     MessageBox.Show("Este nombre de Usuario ya Existe", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuario.Focus();
@@ -176,7 +191,9 @@ namespace SistemaEscaner.USUARIOS
             BTNAgregar.Text = "Agregar Usuario  ";
             txtConfir.Text = "";
             txtBuscar.Text = "";
-
+            lblModificar.Text = Modificar.ToString();
+            txtContra.Enabled = true;
+            txtConfir.Enabled = true;
 
         }
 
@@ -208,10 +225,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void DGVUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTNContra.Enabled = false;
-            BTNAgregar.Text = "Modificar Usuario";
-            Modificar = true;
-
+            
             try
             {
                 IdUsuario = Convert.ToInt64(DGVUsuarios.SelectedCells[0].Value);
@@ -220,6 +234,11 @@ namespace SistemaEscaner.USUARIOS
                 cbEstado.SelectedIndex = TUsuario.IdEstado - 1;
                 cbTipoUsuario.SelectedIndex = TUsuario.IdTipoUsuario - 1;
                 Modificar = true;
+                BTNContra.Enabled = false;
+                txtContra.Enabled = false;
+                txtConfir.Enabled = false;
+                BTNAgregar.Text = "Modificar Usuario";
+                lblModificar.Text = Modificar.ToString();
             }
             catch (Exception)
             {
@@ -247,6 +266,11 @@ namespace SistemaEscaner.USUARIOS
             DGVUsuarios.DataSource = TUsuario.CopyAnonymusToDataTable();
             DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+        }
+
+        private void LblModificar_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -16,7 +16,7 @@ namespace SistemaEscaner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new USUARIOS.InicioSesion());
+            Application.Run(new USUARIOS.AgregarUsuario());
         }
     }
 }
