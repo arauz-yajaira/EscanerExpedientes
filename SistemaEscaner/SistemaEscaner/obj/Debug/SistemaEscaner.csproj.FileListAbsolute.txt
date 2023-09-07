@@ -66,3 +66,4 @@ C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\Sistema
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.CopyComplete
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.exe
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.pdb
+C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.USUARIOS.InicioSesion.resources
