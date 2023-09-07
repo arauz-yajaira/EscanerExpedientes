@@ -26,6 +26,7 @@ namespace SistemaEscaner.USUARIOS
             CargarDatosDGV();
             var tt = new ToolTip();
             tt.SetToolTip(IMGVer, "Ver Contraseña");
+            BTNContra.Enabled = false;
         }
 
         private void CargarDatosDGV()
@@ -63,27 +64,12 @@ namespace SistemaEscaner.USUARIOS
             cbEstado.DataSource = E;
             cbEstado.ValueMember = E.Columns[0].ColumnName;
             cbEstado.DisplayMember = E.Columns[1].ColumnName;
-
+            DGVUsuarios.ClearSelection();
+            DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
         }
 
-        public void ConfirmarContra()
-        {
-            // Obtenga el texto de ambos TextBox
-            string password = txtContra.Text;
-            string confirmPassword = txtConfir.Text;
-
-            // Compara las contraseñas
-            if (password == confirmPassword)
-            {
-                
-            }
-            else
-            {
-                MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
-                // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
-            }
-        }
+   
         public class Hash
         {
             public static string obtenerHash256(string text)
@@ -103,13 +89,13 @@ namespace SistemaEscaner.USUARIOS
 
         private void BTNAgregar_Click(object sender, EventArgs e)
         {
-
+           
             #region
             //Validacion de llenado
             if (Agregar || txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
             {
                 MessageBox.Show("Ingrese Todos los Datos, para agregar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ConfirmarContra();
+               
             }
            if (Modificar)
                 {
@@ -149,9 +135,28 @@ namespace SistemaEscaner.USUARIOS
                     IdTipoUsuario = cbTipoUsuario.SelectedIndex+1
                 };
                 
-                Entity.Usuarios.Add(TbUsuarios);
-                Entity.SaveChanges();
-                MessageBox.Show("Usuario Guardado con Exito!");
+              
+               
+                // Obtenga el texto de ambos TextBox
+                string password = txtContra.Text;
+                string confirmPassword = txtConfir.Text;
+
+                // Compara las contraseñas
+                if (password == confirmPassword)
+                {
+                   // MessageBox.Show("Las contraseñas coinciden");
+                    MessageBox.Show("Usuario Guardado con Exito!");
+                    Entity.Usuarios.Add(TbUsuarios);
+                    Entity.SaveChanges();
+
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                    // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
+                    txtContra.Focus();
+                    return;
+                }
             }
             #endregion
 
@@ -169,6 +174,9 @@ namespace SistemaEscaner.USUARIOS
             Modificar = false;
             DGVUsuarios.ClearSelection();
             BTNAgregar.Text = "Agregar Usuario  ";
+            txtConfir.Text = "";
+            txtBuscar.Text = "";
+
 
         }
 
@@ -215,8 +223,30 @@ namespace SistemaEscaner.USUARIOS
             }
             catch (Exception)
             {
-                LimpiarForm();
+                // LimpiarForm();
+                DGVUsuarios.ClearSelection();
+
             }
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string Usuario = txtBuscar.Text;
+            var TUsuario = from B in Entity.Usuarios
+                           where B.Usuario.Contains(Usuario)
+                           orderby B.Usuario
+                           select new
+                           {
+                               B.IdUsuario,
+                               B.Usuario,
+                               B.FechaIngreso,
+                               B.FechaModificado,
+                               B.EstadoUsuario.EstadoUsuario1,
+                               B.TipoUsuario.TipoUsuario1
+                           };
+            DGVUsuarios.DataSource = TUsuario.CopyAnonymusToDataTable();
+            DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
         }
     }
 }

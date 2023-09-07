@@ -47,6 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
@@ -103,7 +104,7 @@
             this.BTNContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNContra.Name = "BTNContra";
             this.BTNContra.Size = new System.Drawing.Size(199, 40);
-            this.BTNContra.TabIndex = 14;
+            this.BTNContra.TabIndex = 8;
             this.BTNContra.Text = "Cambiar Contraseña";
             this.BTNContra.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +117,7 @@
             this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNAgregar.Name = "BTNAgregar";
             this.BTNAgregar.Size = new System.Drawing.Size(334, 50);
-            this.BTNAgregar.TabIndex = 12;
+            this.BTNAgregar.TabIndex = 7;
             this.BTNAgregar.Text = "Agregar Usuario";
             this.BTNAgregar.UseVisualStyleBackColor = false;
             this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
@@ -127,7 +128,7 @@
             this.BTNLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNLimpiar.Name = "BTNLimpiar";
             this.BTNLimpiar.Size = new System.Drawing.Size(95, 40);
-            this.BTNLimpiar.TabIndex = 15;
+            this.BTNLimpiar.TabIndex = 6;
             this.BTNLimpiar.Text = "Limpiar";
             this.BTNLimpiar.UseVisualStyleBackColor = true;
             this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
@@ -139,7 +140,7 @@
             this.txtConfir.Name = "txtConfir";
             this.txtConfir.PasswordChar = '*';
             this.txtConfir.Size = new System.Drawing.Size(223, 23);
-            this.txtConfir.TabIndex = 18;
+            this.txtConfir.TabIndex = 3;
             // 
             // label7
             // 
@@ -172,7 +173,7 @@
             this.cbEstado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(164, 23);
-            this.cbEstado.TabIndex = 11;
+            this.cbEstado.TabIndex = 5;
             // 
             // cbTipoUsuario
             // 
@@ -181,7 +182,7 @@
             this.cbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
             this.cbTipoUsuario.Size = new System.Drawing.Size(164, 23);
-            this.cbTipoUsuario.TabIndex = 10;
+            this.cbTipoUsuario.TabIndex = 4;
             // 
             // txtContra
             // 
@@ -190,7 +191,7 @@
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(223, 23);
-            this.txtContra.TabIndex = 9;
+            this.txtContra.TabIndex = 2;
             // 
             // txtUsuario
             // 
@@ -198,7 +199,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(223, 23);
-            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label6
             // 
@@ -258,18 +259,28 @@
             // DGVUsuarios
             // 
             this.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUsuarios.Location = new System.Drawing.Point(591, 100);
+            this.DGVUsuarios.Location = new System.Drawing.Point(589, 143);
             this.DGVUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DGVUsuarios.Name = "DGVUsuarios";
             this.DGVUsuarios.Size = new System.Drawing.Size(851, 455);
-            this.DGVUsuarios.TabIndex = 2;
+            this.DGVUsuarios.TabIndex = 0;
+            this.DGVUsuarios.TabStop = false;
             this.DGVUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellClick);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(589, 100);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(415, 23);
+            this.txtBuscar.TabIndex = 2;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // AgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 714);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.DGVUsuarios);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -309,5 +320,6 @@
         private System.Windows.Forms.TextBox txtConfir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }
