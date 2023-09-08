@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaEscaner.USUARIOS;
 
 namespace SistemaEscaner.USUARIOS
 {
@@ -26,6 +28,9 @@ namespace SistemaEscaner.USUARIOS
             var tt = new ToolTip();
             tt.SetToolTip(IMGVer, "Ver Contraseña");
             BTNContra.Enabled = false;
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(txtContra, "La contraseña debe contener al menos 6 letras o numeros");
+
         }
 
         private void CargarDatosDGV()
@@ -65,7 +70,7 @@ namespace SistemaEscaner.USUARIOS
             cbEstado.DisplayMember = E.Columns[1].ColumnName;
             DGVUsuarios.ClearSelection();
             DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            lblModificar.Text = Modificar.ToString();
+            //lblModificar.Text = Modificar.ToString();
         }
 
    
@@ -86,6 +91,7 @@ namespace SistemaEscaner.USUARIOS
             }
         }
 
+   
         public bool Validaciones()
         {
             //Validacion de llenado
@@ -94,6 +100,7 @@ namespace SistemaEscaner.USUARIOS
                 if (txtUsuario.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
                 {
                     MessageBox.Show("Agrega Datos!", "Ingrese Todos los Datos, para agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                 
                     return true;
                 }
             }
@@ -101,8 +108,8 @@ namespace SistemaEscaner.USUARIOS
             {
                 if (txtUsuario.Text.Equals("") || txtContra.Text.Equals("") || cbEstado.Equals("") || cbTipoUsuario.Equals(""))
                 {
-
                     MessageBox.Show("Agrega Datos!", "Ingrese Todos los Datos, para agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                  
                     return true;
                 }
             }
@@ -111,7 +118,8 @@ namespace SistemaEscaner.USUARIOS
         }
         private void BTNAgregar_Click(object sender, EventArgs e)
         {
-           
+          
+            Validaciones();
             #region
       
          
@@ -120,7 +128,7 @@ namespace SistemaEscaner.USUARIOS
             
             if (Modificar)
             {
-                if (Validaciones() == false)
+                if (Validaciones() == false )
                 {
                     var TUsuarios = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario); //Validacion de existencia de variable IdUsuario
                     TUsuarios.Usuario = txtUsuario.Text;
@@ -133,7 +141,7 @@ namespace SistemaEscaner.USUARIOS
             else
             {
                 var user = Entity.Usuarios.FirstOrDefault(x => x.Usuario == txtUsuario.Text);//determina si hay existencia de usuario iguales
-                if (user != null && Validaciones() == true)
+                if (user != null && Validaciones() == true )
                 {
                     MessageBox.Show("Este nombre de Usuario ya Existe", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuario.Focus();
@@ -156,22 +164,34 @@ namespace SistemaEscaner.USUARIOS
                 string password = txtContra.Text;
                 string confirmPassword = txtConfir.Text;
 
-                // Compara las contraseñas
-                if (password == confirmPassword)
+                // Definir una expresión regular para verificar si la contraseña cumple con los requisitos
+                // al menos 6 espacios letras
+                string patron = @"^(.*[A-Za-z0-9]){6}$";
+
+
+                // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
+                if (password == confirmPassword && Regex.IsMatch(password, patron))
                 {
-                   // MessageBox.Show("Las contraseñas coinciden");
+                    // MessageBox.Show("Contraseña válida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show("Usuario Guardado con Exito!");
                     Entity.Usuarios.Add(TbUsuarios);
                     Entity.SaveChanges();
-
                 }
-                else
+                else if (password != confirmPassword)
                 {
                     MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
                     // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
                     txtContra.Focus();
                     return;
+                }else
+                {
+
+                    MessageBox.Show("La contraseña debe contener al menos 6 letras y al menos un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtContra.Focus();
+                    return;
                 }
+                // Compara las contraseñas
+              
             }
             #endregion
 
@@ -191,7 +211,7 @@ namespace SistemaEscaner.USUARIOS
             BTNAgregar.Text = "Agregar Usuario  ";
             txtConfir.Text = "";
             txtBuscar.Text = "";
-            lblModificar.Text = Modificar.ToString();
+            //lblModificar.Text = Modificar.ToString();
             txtContra.Enabled = true;
             txtConfir.Enabled = true;
 

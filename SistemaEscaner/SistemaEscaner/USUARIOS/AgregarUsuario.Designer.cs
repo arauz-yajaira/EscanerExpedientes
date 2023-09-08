@@ -126,9 +126,9 @@
             // 
             // BTNAgregar
             // 
-            this.BTNAgregar.BackColor = System.Drawing.Color.Indigo;
+            this.BTNAgregar.BackColor = System.Drawing.Color.SpringGreen;
             this.BTNAgregar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNAgregar.ForeColor = System.Drawing.Color.White;
+            this.BTNAgregar.ForeColor = System.Drawing.Color.Black;
             this.BTNAgregar.Location = new System.Drawing.Point(19, 3);
             this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNAgregar.Name = "BTNAgregar";
@@ -140,13 +140,14 @@
             // 
             // BTNLimpiar
             // 
-            this.BTNLimpiar.Location = new System.Drawing.Point(362, 319);
+            this.BTNLimpiar.BackColor = System.Drawing.Color.Orange;
+            this.BTNLimpiar.Location = new System.Drawing.Point(360, 329);
             this.BTNLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNLimpiar.Name = "BTNLimpiar";
             this.BTNLimpiar.Size = new System.Drawing.Size(95, 40);
             this.BTNLimpiar.TabIndex = 6;
             this.BTNLimpiar.Text = "Limpiar";
-            this.BTNLimpiar.UseVisualStyleBackColor = true;
+            this.BTNLimpiar.UseVisualStyleBackColor = false;
             this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
             // 
             // txtConfir
