@@ -20,7 +20,8 @@ namespace SistemaEscaner.USUARIOS
 
         long IdUsuario = 0;
         bool Modificar = false;
-        bool clic = false;
+        float clic = 0;
+        int tam = 0;
 
         public AgregarUsuario()
         {
@@ -142,8 +143,32 @@ namespace SistemaEscaner.USUARIOS
                     {
                         TUsuarios.Contra = Pass; 
                     }
-                    Entity.SaveChanges();
-                    MessageBox.Show("Usuario Modificado con Exito!");
+
+                    if (ValidarContra())
+                    {
+                        // MessageBox.Show("Contraseña válida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Usuario Guardado con Exito!");
+                        // MessageBox.Show(Pass.Length.ToString());
+                        MessageBox.Show("Usuario Modificado con Exito!");
+                        Entity.SaveChanges();
+                        ReiniciarForm();
+                    }
+                    else if (!ValidarContra() && tam == 1)
+                    {
+                        MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                        // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
+                        txtContra.Focus();
+                        return;
+                    }
+                    else if (!ValidarContra() && tam == 0)
+                    {
+
+                        MessageBox.Show("La contraseña debe contener al menos 6 letras y al menos un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtContra.Focus();
+                        return;
+                    }
+                   
+                    
                 }
             }
             else
@@ -177,21 +202,22 @@ namespace SistemaEscaner.USUARIOS
 
 
                 // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
-                if (Pass == confirmPass && Regex.IsMatch(Pass, patron))
+                if (ValidarContra())
                 {
                     // MessageBox.Show("Contraseña válida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show("Usuario Guardado con Exito!");
-                    MessageBox.Show(Pass.Length.ToString());
+                    //MessageBox.Show("Usuario Guardado con Exito!");
+                   // MessageBox.Show(Pass.Length.ToString());
                     Entity.Usuarios.Add(TbUsuarios);
                     Entity.SaveChanges();
+                    ReiniciarForm();
                 }
-                else if (Pass != confirmPass)
+                else if (!ValidarContra() && tam==1)
                 {
                     MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
                     // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
-                    txtContra.Focus();
+                    txtContra.Focus(); 
                     return;
-                }else
+                }else if (!ValidarContra() && tam == 0)
                 {
 
                     MessageBox.Show("La contraseña debe contener al menos 6 letras y al menos un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -207,6 +233,41 @@ namespace SistemaEscaner.USUARIOS
             CargarDatosDGV();
         }
 
+        //metodo contra 6 espacios
+        private bool ValidarContra()
+        {
+            String Pass = Hash.obtenerHash256(txtContra.Text);
+            String confirmPass = Hash.obtenerHash256(txtConfir.Text);
+            string patron = @"^(.*[A-Za-z0-9]){6}$";
+
+
+            // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
+            if (Pass == confirmPass && Regex.IsMatch(Pass, patron) && Pass != "" && confirmPass != "")
+            {
+                // MessageBox.Show("Contraseña válida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              //  MessageBox.Show("Usuario Guardado con Exito!");
+              //  MessageBox.Show(Pass.Length.ToString());
+                //Entity.Usuarios.Add(TbUsuarios);
+                // Entity.SaveChanges();
+                return true;
+            }
+            else if (Pass != confirmPass)
+            {
+                MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
+                txtContra.Focus();
+                tam = 1;
+                return false;
+            }
+            else
+            {
+
+                MessageBox.Show("La contraseña debe contener al menos 6 letras y al menos un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContra.Focus();
+                tam = 0;
+                return false;
+            }
+        }
         //Metodo Limpiar
         private void LimpiarForm()
         {
@@ -225,6 +286,27 @@ namespace SistemaEscaner.USUARIOS
             BTNContra.Enabled = false;
             BTNContra.Visible = false;
             lblModificar.Visible = false;
+
+        }
+
+        private void ReiniciarForm()
+        {
+            txtUsuario.Text = "";
+            txtContra.Text = "";
+            //cbEstado.Text = "";
+            //cbTipoUsuario.Text = "";
+            Modificar = false;
+            DGVUsuarios.ClearSelection();
+            BTNAgregar.Text = "Agregar Usuario  ";
+            txtConfir.Text = "";
+            txtBuscar.Text = "";
+            //lblModificar.Text = Modificar.ToString();
+            txtContra.Enabled = true;
+            txtConfir.Enabled = true;
+            BTNContra.Enabled = false;
+            BTNContra.Visible = false;
+            lblModificar.Visible = false;
+
 
         }
 
@@ -320,14 +402,36 @@ namespace SistemaEscaner.USUARIOS
 
         private void BTNContra_Click_1(object sender, EventArgs e)
         {
-            
-            if ( )
+  
+            if (clic % 2 == 0 )
             {
+                //Primer click se habilita opcion de Cambiar contraseña 
+                txtUsuario.Enabled = false;
+                txtContra.Enabled = true;
+                txtConfir.Enabled = true;
+                DGVUsuarios.Enabled = false;
+                BTNContra.Text = "Cancelar";
+                txtBuscar.Enabled = false;
+                IMGVer.Enabled = true;
+                BTNLimpiar.Enabled = false;
 
             }
-            txtUsuario.Enabled = false;
-            txtContra.Enabled = true;
-            txtConfir.Enabled = true;
+            else
+            {
+                //Al segundo click se cancela la opcion Cambiar Contraseña
+                txtUsuario.Enabled = true;
+                txtContra.Enabled = false;
+                txtConfir.Enabled = false;
+                DGVUsuarios.Enabled = true;
+                BTNContra.Text = "Cambiar Contraseña";
+                txtBuscar.Enabled = true;
+                clic = 1;
+                BTNLimpiar.Enabled = true;
+                ReiniciarForm();
+            }
+            
+            clic = clic+1;
+           
         }
     }
 }
