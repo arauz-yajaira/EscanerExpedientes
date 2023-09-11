@@ -52,7 +52,7 @@
     </Key>
     <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Contra" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contra" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModificado" Type="date" Nullable="false" />
     <Property Name="IdEstado" Type="int" Nullable="false" />

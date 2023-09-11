@@ -20,6 +20,7 @@ namespace SistemaEscaner.USUARIOS
 
         long IdUsuario = 0;
         bool Modificar = false;
+        bool clic = false;
 
         public AgregarUsuario()
         {
@@ -30,7 +31,8 @@ namespace SistemaEscaner.USUARIOS
             BTNContra.Enabled = false;
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(txtContra, "La contraseña debe contener al menos 6 letras o numeros");
-
+            BTNContra.Visible = false;
+            lblModificar.Visible = false;
         }
 
         private void CargarDatosDGV()
@@ -124,8 +126,10 @@ namespace SistemaEscaner.USUARIOS
       
          
             String Pass = Hash.obtenerHash256(txtContra.Text);
-
+            String confirmPass = Hash.obtenerHash256(txtConfir.Text);
             
+
+
             if (Modificar)
             {
                 if (Validaciones() == false )
@@ -133,7 +137,11 @@ namespace SistemaEscaner.USUARIOS
                     var TUsuarios = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == IdUsuario); //Validacion de existencia de variable IdUsuario
                     TUsuarios.Usuario = txtUsuario.Text;
                     TUsuarios.IdTipoUsuario = cbTipoUsuario.SelectedIndex + 1;
-                    TUsuarios.IdEstado = cbEstado.SelectedIndex + 1;           
+                    TUsuarios.IdEstado = cbEstado.SelectedIndex + 1;
+                    if (txtContra.Enabled == true && txtConfir.Enabled == true)
+                    {
+                        TUsuarios.Contra = Pass; 
+                    }
                     Entity.SaveChanges();
                     MessageBox.Show("Usuario Modificado con Exito!");
                 }
@@ -151,7 +159,7 @@ namespace SistemaEscaner.USUARIOS
                 {
 
                     Usuario = txtUsuario.Text,
-                    Contra = txtContra.Text,
+                    Contra = Pass,
                     FechaIngreso = DateTime.Now,
                     FechaModificado = DateTime.Now,
                     IdEstado = cbEstado.SelectedIndex+1,
@@ -161,8 +169,7 @@ namespace SistemaEscaner.USUARIOS
               
                
                 // Obtenga el texto de ambos TextBox
-                string password = txtContra.Text;
-                string confirmPassword = txtConfir.Text;
+            
 
                 // Definir una expresión regular para verificar si la contraseña cumple con los requisitos
                 // al menos 6 espacios letras
@@ -170,14 +177,15 @@ namespace SistemaEscaner.USUARIOS
 
 
                 // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
-                if (password == confirmPassword && Regex.IsMatch(password, patron))
+                if (Pass == confirmPass && Regex.IsMatch(Pass, patron))
                 {
                     // MessageBox.Show("Contraseña válida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show("Usuario Guardado con Exito!");
+                    MessageBox.Show(Pass.Length.ToString());
                     Entity.Usuarios.Add(TbUsuarios);
                     Entity.SaveChanges();
                 }
-                else if (password != confirmPassword)
+                else if (Pass != confirmPass)
                 {
                     MessageBox.Show("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
                     // Puedes borrar los TextBox o realizar otras acciones en caso de que las contraseñas no coincidan
@@ -214,6 +222,9 @@ namespace SistemaEscaner.USUARIOS
             //lblModificar.Text = Modificar.ToString();
             txtContra.Enabled = true;
             txtConfir.Enabled = true;
+            BTNContra.Enabled = false;
+            BTNContra.Visible = false;
+            lblModificar.Visible = false;
 
         }
 
@@ -254,11 +265,19 @@ namespace SistemaEscaner.USUARIOS
                 cbEstado.SelectedIndex = TUsuario.IdEstado - 1;
                 cbTipoUsuario.SelectedIndex = TUsuario.IdTipoUsuario - 1;
                 Modificar = true;
+               // txtContra.Text = "";
+                //txtConfir.Text = "";
                 BTNContra.Enabled = false;
                 txtContra.Enabled = false;
                 txtConfir.Enabled = false;
                 BTNAgregar.Text = "Modificar Usuario";
-                lblModificar.Text = Modificar.ToString();
+               // lblModificar.Text = Modificar.ToString();
+                BTNContra.Enabled = true;
+                BTNContra.Visible = true;
+                lblModificar.Text = "Si desea cambiar contraseña de click aqui ->";
+                lblModificar.Visible = true;
+                IMGVer.Enabled = false;
+              
             }
             catch (Exception)
             {
@@ -291,6 +310,24 @@ namespace SistemaEscaner.USUARIOS
         private void LblModificar_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void BTNContra_Click(object sender, EventArgs e)
+        {
+            txtContra.Enabled = true;
+            txtConfir.Enabled = true;
+        }
+
+        private void BTNContra_Click_1(object sender, EventArgs e)
+        {
+            
+            if ( )
+            {
+
+            }
+            txtUsuario.Enabled = false;
+            txtContra.Enabled = true;
+            txtConfir.Enabled = true;
         }
     }
 }

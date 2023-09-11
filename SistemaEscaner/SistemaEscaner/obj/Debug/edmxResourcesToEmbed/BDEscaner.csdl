@@ -54,7 +54,7 @@
     </Key>
     <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Contra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contra" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="FechaModificado" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
