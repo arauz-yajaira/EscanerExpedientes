@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Collections;
 using System.Drawing;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaEscaner.USUARIOS;
+using ClosedXML.Excel;
 
 namespace SistemaEscaner.USUARIOS
 {
@@ -433,5 +432,64 @@ namespace SistemaEscaner.USUARIOS
             clic = clic+1;
            
         }
+
+        
+        //Instalar Nuget ClosedXML 
+        private void BTNExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Indica donde guardaremos
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Archivo de Excel|*.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Creamos filePath archivo que gurdaremos = cuadro de dialogo de guardar
+                    string filePath = saveFileDialog.FileName;
+
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Datos");
+
+
+
+                    // Agregar el texto del TextBox en una celda
+
+                    worksheet.Cell(2, 1).Value = txtUsuario.Text;
+
+                    // Agregar tres filas de espacio
+                    worksheet.Row(2).InsertRowsBelow(3);
+
+                    // Establecer los encabezados en negrita, uno por uno
+                    for (int col = 1; col <= DGVUsuarios.Columns.Count; col++)
+                    {
+                        worksheet.Cell(5, col).Value = DGVUsuarios.Columns[col - 1].HeaderText;
+                        worksheet.Cell(5, col).Style.Font.Bold = true;
+                    }
+
+                 
+
+                    // Datos despues del encabezaado
+                    for (int row = 0; row < DGVUsuarios.Rows.Count; row++)
+                    {
+                        for (int col = 0; col < DGVUsuarios.Columns.Count; col++)
+                        {
+                            //Espacios entre tabla 
+                            worksheet.Cell(row + 6, col + 1).Value = DGVUsuarios.Rows[row].Cells[col].Value?.ToString();
+                        }
+                    }
+
+
+                    // Guardar el archivo Excel
+                    workbook.SaveAs(filePath);
+                    MessageBox.Show("Exportación a Excel completada correctamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al exportar a Excel: " + ex.Message);
+            }
+        }
+    
     }
 }

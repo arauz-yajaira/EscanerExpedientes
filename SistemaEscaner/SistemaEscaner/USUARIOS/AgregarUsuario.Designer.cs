@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblModificar = new System.Windows.Forms.Label();
+            this.BTNContra = new System.Windows.Forms.Button();
+            this.BTNAgregar = new System.Windows.Forms.Button();
             this.BTNLimpiar = new System.Windows.Forms.Button();
             this.txtConfir = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,9 +49,7 @@
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblModificar = new System.Windows.Forms.Label();
-            this.BTNContra = new System.Windows.Forms.Button();
-            this.BTNAgregar = new System.Windows.Forms.Button();
+            this.BTNExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
@@ -90,6 +91,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(483, 589);
             this.panel1.TabIndex = 1;
+            // 
+            // lblModificar
+            // 
+            this.lblModificar.AutoSize = true;
+            this.lblModificar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificar.Location = new System.Drawing.Point(52, 482);
+            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModificar.Name = "lblModificar";
+            this.lblModificar.Size = new System.Drawing.Size(71, 18);
+            this.lblModificar.TabIndex = 23;
+            this.lblModificar.Text = "Usuario";
+            // 
+            // BTNContra
+            // 
+            this.BTNContra.Location = new System.Drawing.Point(48, 513);
+            this.BTNContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BTNContra.Name = "BTNContra";
+            this.BTNContra.Size = new System.Drawing.Size(199, 40);
+            this.BTNContra.TabIndex = 22;
+            this.BTNContra.Text = "Cambiar Contraseña";
+            this.BTNContra.UseVisualStyleBackColor = true;
+            this.BTNContra.Click += new System.EventHandler(this.BTNContra_Click_1);
+            // 
+            // BTNAgregar
+            // 
+            this.BTNAgregar.BackColor = System.Drawing.Color.SpringGreen;
+            this.BTNAgregar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNAgregar.ForeColor = System.Drawing.Color.Black;
+            this.BTNAgregar.Location = new System.Drawing.Point(48, 413);
+            this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BTNAgregar.Name = "BTNAgregar";
+            this.BTNAgregar.Size = new System.Drawing.Size(334, 50);
+            this.BTNAgregar.TabIndex = 21;
+            this.BTNAgregar.Text = "Agregar Usuario";
+            this.BTNAgregar.UseVisualStyleBackColor = false;
+            this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
             // 
             // BTNLimpiar
             // 
@@ -256,47 +293,22 @@
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             // 
-            // lblModificar
+            // BTNExcel
             // 
-            this.lblModificar.AutoSize = true;
-            this.lblModificar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModificar.Location = new System.Drawing.Point(52, 482);
-            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblModificar.Name = "lblModificar";
-            this.lblModificar.Size = new System.Drawing.Size(71, 18);
-            this.lblModificar.TabIndex = 23;
-            this.lblModificar.Text = "Usuario";
-            // 
-            // BTNContra
-            // 
-            this.BTNContra.Location = new System.Drawing.Point(48, 513);
-            this.BTNContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BTNContra.Name = "BTNContra";
-            this.BTNContra.Size = new System.Drawing.Size(199, 40);
-            this.BTNContra.TabIndex = 22;
-            this.BTNContra.Text = "Cambiar Contraseña";
-            this.BTNContra.UseVisualStyleBackColor = true;
-            this.BTNContra.Click += new System.EventHandler(this.BTNContra_Click_1);
-            // 
-            // BTNAgregar
-            // 
-            this.BTNAgregar.BackColor = System.Drawing.Color.SpringGreen;
-            this.BTNAgregar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNAgregar.ForeColor = System.Drawing.Color.Black;
-            this.BTNAgregar.Location = new System.Drawing.Point(48, 413);
-            this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BTNAgregar.Name = "BTNAgregar";
-            this.BTNAgregar.Size = new System.Drawing.Size(334, 50);
-            this.BTNAgregar.TabIndex = 21;
-            this.BTNAgregar.Text = "Agregar Usuario";
-            this.BTNAgregar.UseVisualStyleBackColor = false;
-            this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
+            this.BTNExcel.Location = new System.Drawing.Point(1110, 56);
+            this.BTNExcel.Name = "BTNExcel";
+            this.BTNExcel.Size = new System.Drawing.Size(102, 44);
+            this.BTNExcel.TabIndex = 34;
+            this.BTNExcel.Text = "exportar a excel";
+            this.BTNExcel.UseVisualStyleBackColor = true;
+            this.BTNExcel.Click += new System.EventHandler(this.BTNExcel_Click);
             // 
             // AgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 714);
+            this.Controls.Add(this.BTNExcel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.DGVUsuarios);
@@ -340,5 +352,6 @@
         private System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.Button BTNContra;
         private System.Windows.Forms.Button BTNAgregar;
+        private System.Windows.Forms.Button BTNExcel;
     }
 }
