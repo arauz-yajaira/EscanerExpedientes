@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblModificar = new System.Windows.Forms.Label();
@@ -50,22 +52,30 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BTNExcel = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbHora = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.BTNCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(584, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " Módulo Usuarios";
             // 
             // panel1
             // 
@@ -86,244 +96,225 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(40, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(483, 589);
-            this.panel1.TabIndex = 1;
             // 
             // lblModificar
             // 
-            this.lblModificar.AutoSize = true;
-            this.lblModificar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModificar.Location = new System.Drawing.Point(52, 482);
-            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.lblModificar, "lblModificar");
             this.lblModificar.Name = "lblModificar";
-            this.lblModificar.Size = new System.Drawing.Size(71, 18);
-            this.lblModificar.TabIndex = 23;
-            this.lblModificar.Text = "Usuario";
             // 
             // BTNContra
             // 
-            this.BTNContra.Location = new System.Drawing.Point(48, 513);
-            this.BTNContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.BTNContra, "BTNContra");
             this.BTNContra.Name = "BTNContra";
-            this.BTNContra.Size = new System.Drawing.Size(199, 40);
-            this.BTNContra.TabIndex = 22;
-            this.BTNContra.Text = "Cambiar Contraseña";
             this.BTNContra.UseVisualStyleBackColor = true;
             this.BTNContra.Click += new System.EventHandler(this.BTNContra_Click_1);
             // 
             // BTNAgregar
             // 
             this.BTNAgregar.BackColor = System.Drawing.Color.SpringGreen;
-            this.BTNAgregar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.BTNAgregar, "BTNAgregar");
             this.BTNAgregar.ForeColor = System.Drawing.Color.Black;
-            this.BTNAgregar.Location = new System.Drawing.Point(48, 413);
-            this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNAgregar.Name = "BTNAgregar";
-            this.BTNAgregar.Size = new System.Drawing.Size(334, 50);
-            this.BTNAgregar.TabIndex = 21;
-            this.BTNAgregar.Text = "Agregar Usuario";
             this.BTNAgregar.UseVisualStyleBackColor = false;
             this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
             // 
             // BTNLimpiar
             // 
             this.BTNLimpiar.BackColor = System.Drawing.Color.Orange;
-            this.BTNLimpiar.Location = new System.Drawing.Point(360, 329);
-            this.BTNLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.BTNLimpiar, "BTNLimpiar");
             this.BTNLimpiar.Name = "BTNLimpiar";
-            this.BTNLimpiar.Size = new System.Drawing.Size(95, 40);
-            this.BTNLimpiar.TabIndex = 6;
-            this.BTNLimpiar.Text = "Limpiar";
             this.BTNLimpiar.UseVisualStyleBackColor = false;
             this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
             // 
             // txtConfir
             // 
-            this.txtConfir.Location = new System.Drawing.Point(180, 235);
-            this.txtConfir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.txtConfir, "txtConfir");
             this.txtConfir.Name = "txtConfir";
-            this.txtConfir.PasswordChar = '*';
-            this.txtConfir.Size = new System.Drawing.Size(223, 23);
-            this.txtConfir.TabIndex = 3;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 239);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Confirme Contraseña";
             // 
             // IMGVer
             // 
             this.IMGVer.BackColor = System.Drawing.Color.Transparent;
             this.IMGVer.Image = global::SistemaEscaner.Properties.Resources.OIP__2_;
-            this.IMGVer.Location = new System.Drawing.Point(412, 182);
-            this.IMGVer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.IMGVer, "IMGVer");
             this.IMGVer.Name = "IMGVer";
-            this.IMGVer.Size = new System.Drawing.Size(29, 24);
-            this.IMGVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IMGVer.TabIndex = 16;
             this.IMGVer.TabStop = false;
             this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
             // 
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(176, 329);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.cbEstado, "cbEstado");
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(164, 23);
-            this.cbEstado.TabIndex = 5;
             // 
             // cbTipoUsuario
             // 
             this.cbTipoUsuario.FormattingEnabled = true;
-            this.cbTipoUsuario.Location = new System.Drawing.Point(176, 281);
-            this.cbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.cbTipoUsuario, "cbTipoUsuario");
             this.cbTipoUsuario.Name = "cbTipoUsuario";
-            this.cbTipoUsuario.Size = new System.Drawing.Size(164, 23);
-            this.cbTipoUsuario.TabIndex = 4;
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(180, 182);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.txtContra, "txtContra");
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '*';
-            this.txtContra.Size = new System.Drawing.Size(223, 23);
-            this.txtContra.TabIndex = 2;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(180, 135);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(223, 23);
-            this.txtUsuario.TabIndex = 1;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(106, 329);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Estado";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 281);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 18);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Tipo Usuario";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 182);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Contraseña";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(97, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Usuario";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 56);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 33);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Agregar Usuarios";
             // 
             // DGVUsuarios
             // 
             this.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUsuarios.Location = new System.Drawing.Point(589, 143);
-            this.DGVUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            resources.ApplyResources(this.DGVUsuarios, "DGVUsuarios");
             this.DGVUsuarios.Name = "DGVUsuarios";
-            this.DGVUsuarios.Size = new System.Drawing.Size(851, 455);
-            this.DGVUsuarios.TabIndex = 0;
             this.DGVUsuarios.TabStop = false;
             this.DGVUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(589, 100);
+            resources.ApplyResources(this.txtBuscar, "txtBuscar");
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(415, 23);
-            this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
-            this.pictureBox3.Location = new System.Drawing.Point(1345, 31);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(95, 92);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             // 
             // BTNExcel
             // 
-            this.BTNExcel.Location = new System.Drawing.Point(1110, 56);
+            resources.ApplyResources(this.BTNExcel, "BTNExcel");
             this.BTNExcel.Name = "BTNExcel";
-            this.BTNExcel.Size = new System.Drawing.Size(102, 44);
-            this.BTNExcel.TabIndex = 34;
-            this.BTNExcel.Text = "exportar a excel";
             this.BTNExcel.UseVisualStyleBackColor = true;
             this.BTNExcel.Click += new System.EventHandler(this.BTNExcel_Click);
             // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.BTNCerrar);
+            this.panel2.Controls.Add(this.lbHora);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.lbFecha);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Name = "panel2";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
+            // 
+            // lbFecha
+            // 
+            resources.ApplyResources(this.lbFecha, "lbFecha");
+            this.lbFecha.ForeColor = System.Drawing.Color.White;
+            this.lbFecha.Name = "lbFecha";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.label11);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // lbHora
+            // 
+            resources.ApplyResources(this.lbHora, "lbHora");
+            this.lbHora.ForeColor = System.Drawing.Color.White;
+            this.lbHora.Name = "lbHora";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // BTNCerrar
+            // 
+            this.BTNCerrar.BackColor = System.Drawing.Color.Red;
+            this.BTNCerrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTNCerrar.FlatAppearance.BorderSize = 0;
+            this.BTNCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BTNCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.BTNCerrar, "BTNCerrar");
+            this.BTNCerrar.Name = "BTNCerrar";
+            this.BTNCerrar.UseVisualStyleBackColor = false;
+            this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrar_Click);
+            // 
             // AgregarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 714);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.BTNExcel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.DGVUsuarios);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarUsuario";
-            this.Text = "AgregarUsuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +344,16 @@
         private System.Windows.Forms.Button BTNContra;
         private System.Windows.Forms.Button BTNAgregar;
         private System.Windows.Forms.Button BTNExcel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbFecha;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbHora;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button BTNCerrar;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

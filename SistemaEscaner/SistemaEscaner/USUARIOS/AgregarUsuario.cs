@@ -26,13 +26,23 @@ namespace SistemaEscaner.USUARIOS
         {
             InitializeComponent();
             CargarDatosDGV();
+            TootTipsProyecto();
+            BTNContra.Visible = false;
+            lblModificar.Visible = false;
+            timer1.Enabled = true;
+        }
+
+        private void TootTipsProyecto()
+        {
             var tt = new ToolTip();
             tt.SetToolTip(IMGVer, "Ver Contraseña");
             BTNContra.Enabled = false;
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(txtContra, "La contraseña debe contener al menos 6 letras o numeros");
-            BTNContra.Visible = false;
-            lblModificar.Visible = false;
+            toolTip.SetToolTip(BTNAgregar, "Agrega un nuevo Usuarrio");
+            toolTip.SetToolTip(txtBuscar, "Busca el usuario");
+            toolTip.SetToolTip(BTNCerrar, "Cerrar ventana");
+
         }
 
         private void CargarDatosDGV()
@@ -490,6 +500,27 @@ namespace SistemaEscaner.USUARIOS
                 MessageBox.Show("Error al exportar a Excel: " + ex.Message);
             }
         }
-    
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = ("Hora:") + DateTime.Now.ToString(" hh:mm");
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void BTNCerrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Desea Cerrar la ventana");
+               
+            }
+            catch
+            {
+
+                Close();
+            }
+            return;
+
+        }
     }
 }
