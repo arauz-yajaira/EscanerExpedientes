@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using SistemaEscaner;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 

@@ -33,8 +33,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.txtBuscarExp.Name = "txtBuscarExp";
             this.txtBuscarExp.Size = new System.Drawing.Size(354, 26);
             this.txtBuscarExp.TabIndex = 3;
+            this.txtBuscarExp.TextChanged += new System.EventHandler(this.TxtBuscarExp_TextChanged);
             // 
             // label4
             // 
@@ -70,6 +71,8 @@
             // 
             // DGVDatos
             // 
+            this.DGVDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGVDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDatos.Location = new System.Drawing.Point(80, 254);
             this.DGVDatos.Name = "DGVDatos";
@@ -88,6 +91,17 @@
             this.panel1.Size = new System.Drawing.Size(808, 161);
             this.panel1.TabIndex = 8;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 33);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = " Instrucciones:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -100,17 +114,6 @@
             this.label2.Text = " Ingrese una de las opciones: Identidad, Nombre o Correlativo, para encontrar inf" +
     "ormación de paciente.";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 33);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = " Instrucciones:";
-            // 
             // Expediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -120,8 +123,10 @@
             this.Controls.Add(this.DGVDatos);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Expediente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expediente";
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel1.ResumeLayout(false);

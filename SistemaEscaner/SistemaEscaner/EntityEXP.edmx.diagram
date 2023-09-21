@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f4df1ef8c1f446768219552e81d6fc75" Name="Diagram1">
+        <EntityTypeShape EntityType="BIT_LESPModel.ACTIVO_FIJO_TABLA" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ACUMULADOS_PLANILLA" Width="1.5" PointX="3" PointY="112.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGENCIA" Width="1.5" PointX="28" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUP_EMPLEADO_CTL" Width="1.5" PointX="9" PointY="102.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUP_EMPLEADO_DET" Width="1.5" PointX="9" PointY="135.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_ACT_FIJO" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_ACTIVO_C" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_ACTIVO_D" Width="1.5" PointX="5.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_ARTICULO_C" Width="1.5" PointX="31.25" PointY="67" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_ARTICULO_D" Width="1.5" PointX="31.25" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_CLIENTE_CTL" Width="1.5" PointX="25.5" PointY="210" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_CLIENTE_DET" Width="1.5" PointX="25.5" PointY="212.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_PROVEEDOR_CTL" Width="1.5" PointX="19.5" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.AGRUPACION_PROVEEDOR_DET" Width="1.5" PointX="19.5" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ANTIGUEDAD_SALDOS_CXC" Width="1.5" PointX="21" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.APERTURA_CIERRE_CAJERO" Width="1.5" PointX="18.5" PointY="160.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARQUEO_CAJERO_HOSPITAL_PT" Width="1.5" PointX="21.5" PointY="160.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_AGRUPACION" Width="1.5" PointX="33.5" PointY="71.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_BODEGA_PRES" Width="1.5" PointX="25.25" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_DESC_ADIC" Width="1.5" PointX="27.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_LOTE_SERIE" Width="1.5" PointX="27.5" PointY="141.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_PRESUPUESTO_TRIT" Width="1.5" PointX="35.5" PointY="78" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_REQUISICION" Width="1.5" PointX="33.5" PointY="98.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULO_TABLA" Width="1.5" PointX="25.25" PointY="79.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ARTICULOS_ALTERNOS" Width="1.5" PointX="27.5" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ATENCIONES_MEDICAS_CONTROL" Width="1.5" PointX="13.5" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ATENCIONES_MEDICAS_DETALLE" Width="1.5" PointX="19.75" PointY="112.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.BANCO_TABLA" Width="1.5" PointX="20" PointY="163.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.BASE_INFO_CENTRAL" Width="1.5" PointX="6.75" PointY="104" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.BENEFICIARIO_TABLA" Width="1.5" PointX="28" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.BODEGA_TABLA" Width="1.5" PointX="23" PointY="88.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.BODEGA_TIPO_CUENTA_CONTAB" Width="1.5" PointX="28.25" PointY="92.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CAJERO_TABLA" Width="1.5" PointX="16.25" PointY="153.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CALENDARIO_DETALLE_FECHAS" Width="1.5" PointX="21" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CALENDARIO_PHYSICAL_TABLE" Width="1.5" PointX="18.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CATALOGO_CONTABLE_CONSOLIDADO" Width="1.5" PointX="17" PointY="83.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CATALOGO_CONTABLE_IDIOMA" Width="1.5" PointX="27.25" PointY="103.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CATALOGO_DE_CUENTAS" Width="1.5" PointX="14" PointY="89.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CAUSAS_DE_AUMENTO" Width="1.5" PointX="6.75" PointY="122.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CAUSAS_DE_BAJA" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CENTRO_DE_CAPACITACION_PT" Width="1.5" PointX="20" PointY="90.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CENTRO_DE_COSTO" Width="1.5" PointX="25.25" PointY="89" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CHEQUE_GENERADO_TABLA" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CHEQUES_NO_CONCILIADOS" Width="1.5" PointX="24.5" PointY="166.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CICLO_DE_VACACIONES_PHYST" Width="1.5" PointX="17" PointY="101.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CICLO_INVENTARIO_FISICO_T" Width="1.5" PointX="17.25" PointY="111.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CITAS_MEDICAS_CONTROL" Width="1.5" PointX="13.5" PointY="116.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CITAS_MEDICAS_DETALLE_PHT" Width="1.5" PointX="19.5" PointY="119" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CLASE_DE_PLANILLA" Width="1.5" PointX="0.75" PointY="114.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CLASE_PLANILLA_ESTRUCTURA" Width="1.5" PointX="3" PointY="116.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CLIENTE_AGRUPACION" Width="1.5" PointX="27.75" PointY="138.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CLIENTE_DESCUENTO" Width="1.5" PointX="29.75" PointY="141.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CLIENTE_TABLA" Width="1.5" PointX="22.5" PointY="139.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COBRADOR_TABLA" Width="1.5" PointX="9" PointY="99.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CODIGOS_TRANSACCION_ESTADOCTA" Width="1.5" PointX="11.25" PointY="147.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPANIA" Width="1.5" PointX="14.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPAÑIA_MODULO" Width="1.5" PointX="17" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPAÑIA_NOMBRE_CONTABLES" Width="1.5" PointX="17" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPLEMENTO_LOTES_DE_INVT" Width="1.5" PointX="34.75" PointY="137.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPLEMENTO_LOTES_TRANSFT" Width="1.5" PointX="29.75" PointY="108.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPRA_DETALLE" Width="1.5" PointX="25.5" PointY="121.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COMPRA_TABLA" Width="1.5" PointX="17.25" PointY="120.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONCILIACION_BANCARIA_CTL" Width="1.5" PointX="32.5" PointY="103.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONCILIACION_BANCARIA_DET" Width="1.5" PointX="37.75" PointY="126.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONCILIACION_BANCARIA_RES" Width="1.5" PointX="34.75" PointY="126.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONDICIONES_COBRO" Width="1.5" PointX="20.25" PointY="156.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONDICIONES_PAGO" Width="1.5" PointX="12.25" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONTRATO_SERVICIOS_CONTROL" Width="1.5" PointX="32.75" PointY="120" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONTRATO_SERVICIOS_DETALLE" Width="1.5" PointX="33.5" PointY="87.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CONTRATO_SERVICIOS_NEG_ESP" Width="1.5" PointX="33.5" PointY="82.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CORRELATIVOS_SISTEM" Width="1.5" PointX="15.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COTIZACION_CONTROL" Width="1.5" PointX="19.5" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COTIZACION_DETALLE" Width="1.5" PointX="26.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COTIZACION_PROVEEDOR" Width="1.5" PointX="21.75" PointY="71.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COTIZACION_RESPUESTA" Width="1.5" PointX="29" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.COTIZACION_SELECCIONADA" Width="1.5" PointX="31.25" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CTAS_DISTRIBUCION_CTO_INDIRECTOS" Width="1.5" PointX="16.25" PointY="89.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUENTA_DE_BANCO" Width="1.5" PointX="22.25" PointY="129" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUENTAS_INVENTARIO" Width="1.5" PointX="30.25" PointY="104.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUESTIONARIO_EVALUACION_CONCEPTO" Width="1.5" PointX="20.25" PointY="172.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUESTIONARIO_EVALUACION_CONTROL" Width="1.5" PointX="18" PointY="156.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUESTIONARIO_EVALUACION_FACTORES" Width="1.5" PointX="23.25" PointY="153.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUESTIONARIO_EVALUACION_PREGUNTA" Width="1.5" PointX="25.5" PointY="153.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUESTIONARIO_EVALUACION_RESPUEST" Width="1.5" PointX="29.75" PointY="157.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CURSO_DE_CAPACITACION_PHT" Width="1.5" PointX="20" PointY="86.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CXP_FACTURASPENDIENTEXPRT" Width="1.5" PointX="23" PointY="78.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CXP_MULTIPLE_DOCUMENT6KUT" Width="1.5" PointX="19" PointY="74.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CXP_MULTIPLE_DOCUMENT6L0T" Width="1.5" PointX="28.25" PointY="95" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CXP_MULTIPLE_DOCUMENTOS_T" Width="1.5" PointX="16.75" PointY="69" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DATOS_ADICIONALES_AF" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEF_TRN_PLA_ACUM" Width="1.5" PointX="11.25" PointY="111.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEF_TRN_PLA_CTL" Width="1.5" PointX="6" PointY="112" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEF_TRN_PLA_DET" Width="1.5" PointX="8.25" PointY="126.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DENOMINACION_MONEDAS" Width="1.5" PointX="17.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEPARTAMENTO_TABLA" Width="1.5" PointX="6.75" PointY="134.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEPENDIENTES_EMPLEADO" Width="1.5" PointX="11.25" PointY="107.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DEPENDIENTES_EMPLEADO_NUM" Width="1.5" PointX="19.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DESCUENTOS_PHYSICAL_TABLE" Width="1.5" PointX="27.5" PointY="165.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DETALLE_DEL_SERVICIO_PHYT" Width="1.5" PointX="28.25" PointY="87.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DISTRIBUCION_COSTOS_INDIRECTOS" Width="1.5" PointX="38.5" PointY="73.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.DOCTOR" Width="1.5" PointX="11.25" PointY="115" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.dtproperties" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPAQUE_TABLA" Width="1.5" PointX="25.25" PointY="100.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_AGRUP" Width="1.5" PointX="11.25" PointY="119.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_CARNET_ACTIVO" Width="1.5" PointX="11.25" PointY="123.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_DISTRIBUCION_CONTABLE" Width="1.5" PointX="16.25" PointY="115.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_DOCUMENTOS" Width="1.5" PointX="11.25" PointY="127.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_EDUCACION" Width="1.5" PointX="14.25" PointY="106.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_EVALUACION_CONTROL" Width="1.5" PointX="20.25" PointY="124" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_EVALUACION_FACTORES" Width="1.5" PointX="25.5" PointY="127.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_EVALUACION_RESPUESTAS" Width="1.5" PointX="27.75" PointY="125.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_EXPERIENCIA_LABORAL" Width="1.5" PointX="11.25" PointY="139.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_HABILIDADES" Width="1.5" PointX="22.25" PointY="111.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_OFICIO" Width="1.5" PointX="17.25" PointY="126.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_PROFESION" Width="1.5" PointX="22.25" PointY="120.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_RESUMEN_HORARIO" Width="1.5" PointX="11.25" PointY="150.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_TABLA" Width="1.5" PointX="9" PointY="108.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_TIEMPOS_TABLA" Width="1.5" PointX="11.25" PointY="158.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_TRN_FIJAS_PHYSIT" Width="1.5" PointX="11.25" PointY="143" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_TURNOS" Width="1.5" PointX="22.25" PointY="108.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ENFERMEDAD_TABLA" Width="1.5" PointX="21.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ENSAMBLE_DE_ARTICULO" Width="1.5" PointX="39.5" PointY="85.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESCALAS_DE_DESCUENTO_PHYT" Width="1.5" PointX="29.75" PointY="165.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTADO_FINANCIERO_CTA_COL" Width="1.5" PointX="28.25" PointY="99.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTADO_FINANCIERO_CTL" Width="1.5" PointX="23.75" PointY="67.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTADO_FINANCIERO_CUENTAS" Width="1.5" PointX="28.25" PointY="83.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTADO_FINANCIERO_DET" Width="1.5" PointX="26" PointY="65.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTRUC_DATOS_ADIC_AF" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTRUCTURA_ESTADO_CUENTA" Width="1.5" PointX="24.5" PointY="170.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTRUCTURA_FACTURA_ADUANERA" Width="1.5" PointX="37.75" PointY="132.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURA_AGENTE_ADUANERO_CTL" Width="1.5" PointX="34.75" PointY="113.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURA_AGENTE_ADUANERO_DET" Width="1.5" PointX="40" PointY="117.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURA_DIARIA_CONTROL" Width="1.5" PointX="37.25" PointY="103.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURA_DIARIA_DETALLE" Width="1.5" PointX="39.5" PointY="89.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURA_DIARIA_DETALLE_PAGOS" Width="1.5" PointX="42.5" PointY="100.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURAS_SERVICIOS_CONTROL" Width="1.5" PointX="35.75" PointY="120.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FACTURAS_SERVICIOS_DETALLE" Width="1.5" PointX="33.5" PointY="92.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FICHA_DE_GRABACION_NOMINT" Width="1.5" PointX="8.25" PointY="140.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FICHA_DE_GRABACION_RECOLT" Width="1.5" PointX="14.25" PointY="110.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FORMAS_DE_PAGO" Width="1.5" PointX="16.75" PointY="65.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUENTE_DE_FINANCIAMIENTO" Width="1.5" PointX="28" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUNCIONES_DEL_MENU" Width="1.5" PointX="16" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_ACTIVO_FIJO" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_DE_CURSO" Width="1.5" PointX="22.25" PointY="104" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPOS_SERVICIOS_HOSPITALARIOS" Width="1.5" PointX="22.25" PointY="205.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HABILIDADES_PHYSICAL_TABT" Width="1.5" PointX="20" PointY="80" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.hbs003" Width="1.5" PointX="21.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HISTORIAL_DE_CAPACITACION" Width="1.5" PointX="23.25" PointY="123.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HISTORIAL_DEPREC" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HISTORIAL_DEPREC_DT" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HISTORIAL_SALARIAL" Width="1.5" PointX="11.25" PointY="103.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HORARIOS" Width="1.5" PointX="6.75" PointY="100.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.HOSPITALES" Width="1.5" PointX="33.25" PointY="79.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.IDIOMA_TABLA" Width="1.5" PointX="25" PointY="59.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.IMPUESTOS_TABLA" Width="1.5" PointX="30.5" PointY="87.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.IN_PROMPTU_CONTROL_DIARIO" Width="1.5" PointX="29.75" PointY="198.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INCIDENCIAS_EMPLEADO" Width="1.5" PointX="14.25" PointY="102.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INCIDENCIAS_RECURSOS_HUMT" Width="1.5" PointX="12" PointY="77.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INFORMACION_CENTRAL" Width="1.5" PointX="3.75" PointY="120.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INFORMACION_CENTRAL_M" Width="1.5" PointX="6" PointY="126" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INFORMACION_CENTRAL_NATUR" Width="1.5" PointX="6" PointY="129.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INFORMACION_CENTRAL_PROCT" Width="1.5" PointX="32.5" PointY="116" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INFORMACION_CNTRL_E" Width="1.5" PointX="30.25" PointY="112.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INSTRUCTOR_PHYSICAL_TABLE" Width="1.5" PointX="20" PointY="83.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INTEGRADOR_REPORTES" Width="1.5" PointX="16" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INTEGRADOR_REPORTES_DATOS" Width="1.5" PointX="20.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INTEGRADOR_REPORTES_PARA" Width="1.5" PointX="18.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.INVENTARIO_FISICO" Width="1.5" PointX="24.5" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LAGUNAS_Y_VIVEROS_FARO" Width="1.5" PointX="22.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LISTA_DE_PRECIO_CONTROL" Width="1.5" PointX="14" PointY="85" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LISTA_DE_PRECIO_DETALLE" Width="1.5" PointX="30.5" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LOTE_PARTIDA_CONTABILIDAT" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MANEJO_DE_MERCADERIAS" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MARCA_TABLA" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MATERIA_PRIMA_Y_MAT_CTRL" Width="1.5" PointX="27.5" PointY="168.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MATERIA_PRIMA_Y_MAT_DET" Width="1.5" PointX="32.75" PointY="130.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MATERIA_PRIMA_Y_MATERIALT" Width="1.5" PointX="32.75" PointY="150.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MODELO_TABLA" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MODULO" Width="1.5" PointX="13.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MONEDA_TABLA" Width="1.5" PointX="11.75" PointY="87.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.MOVIMIENTO_ACTIVO" Width="1.5" PointX="11.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.NIVEL_DE_EDUCACION_TABLA" Width="1.5" PointX="12" PointY="73.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.NIVEL_JERARQUIA" Width="1.5" PointX="14.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.NOMINA_EN_PROCESO_PHYSICT" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.NOTAS_DBT_CRD_AGENTE_ADUANA" Width="1.5" PointX="27.75" PointY="147.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.NUMERACION_PARTIDAS" Width="1.5" PointX="9" PointY="149.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OBJETO_DEL_GASTO_TABLA" Width="1.5" PointX="28" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OFICIO_TABLA" Width="1.5" PointX="15" PointY="143" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_ATENCION_MEDICA_CTL" Width="1.5" PointX="19.5" PointY="106.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_ATENCION_MEDICA_DET" Width="1.5" PointX="21.75" PointY="94.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_COMPRA_CTRL" Width="1.5" PointX="16.75" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_COMPRA_DET" Width="1.5" PointX="28.5" PointY="64.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_DE_TRABAJO_CONTROL" Width="1.5" PointX="30.75" PointY="144.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORDEN_DE_TRABAJO_DETALLE" Width="1.5" PointX="43" PointY="106.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORGANISMO_FINANCIADOR" Width="1.5" PointX="28" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORIGEN_DE_LOS_FONDOS" Width="1.5" PointX="16.25" PointY="160.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ORIGEN_DE_LOS_FONDOS_DIST" Width="1.5" PointX="18.5" PointY="167.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OS12T" Width="1.5" PointX="28" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OS20T" Width="1.5" PointX="23.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OS4T" Width="1.5" PointX="23.5" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.OSgT" Width="1.5" PointX="25.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE" Width="1.5" PointX="17.5" PointY="93" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE_ARCHIVO_GRAFICT" Width="1.5" PointX="19.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE_CRONICO_CONTROL" Width="1.5" PointX="36.5" PointY="89.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE_CRONICO_DETALLT" Width="1.5" PointX="38.75" PointY="77.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE_CRONICOS_OTROHSD" Width="1.5" PointX="10" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PACIENTE_CRONICOS_OTROHSP" Width="1.5" PointX="7.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PAIS_PHYSICAL_TABLE" Width="1.5" PointX="4.5" PointY="106.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PARAMETROS_DEL_SISTEMA" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PERIODO_CONTABLE" Width="1.5" PointX="9.75" PointY="79.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PERIODO_DE_PLANILLA" Width="1.5" PointX="5.25" PointY="142.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_ACTIVIDAD_U_OBRA" Width="1.5" PointX="28" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_CUENTA_PRESUPUESTO" Width="1.5" PointX="30.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_DESCENTRALIZADA" Width="1.5" PointX="25.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_INSTITUCION" Width="1.5" PointX="25.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_PROGRAMA" Width="1.5" PointX="25.75" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_PROYECTO" Width="1.5" PointX="25.75" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_SALDO_CUENTAS_PRESUPUESTO" Width="1.5" PointX="32.5" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_SUBPROGRAMA" Width="1.5" PointX="25.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_SUBUNIDAD_EJECUTORA" Width="1.5" PointX="28" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_AFEC_CONTABLE" Width="1.5" PointX="32.5" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_BENEFICIARIOS" Width="1.5" PointX="36.5" PointY="85.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_CONTROL" Width="1.5" PointX="30.25" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_CONTROL_PAGOS" Width="1.5" PointX="32.5" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_INICIAL" Width="1.5" PointX="32.5" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_ORDEN_CONTROL" Width="1.5" PointX="32.5" PointY="60.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_ORDEN_DETALLE" Width="1.5" PointX="34.75" PointY="102.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_TRN_PRESUPUESTO_RETEN_DEDUC" Width="1.5" PointX="35.5" PointY="59.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PG_UNIDAD_EJECUTORA" Width="1.5" PointX="25.75" PointY="53.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PLANILLA_HISTORICA" Width="1.5" PointX="14.25" PointY="125.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PLANILLA_MENSUAL_CTL_HOSPITAL" Width="1.5" PointX="12" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PLANILLA_MENSUAL_DET_HOSPITAL" Width="1.5" PointX="14.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PLANILLA_MENSUAL_PDA_HOSPITAL" Width="1.5" PointX="14.25" PointY="121.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PLAZA_PHYSICAL_TABLE" Width="1.5" PointX="19.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PRESENTACION_TABLA" Width="1.5" PointX="25.25" PointY="93.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PROFESION_TABLA" Width="1.5" PointX="20" PointY="152.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PROGRAMA_DE_VACACIONES" Width="1.5" PointX="21.5" PointY="100.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PROVEEDOR_AGRUPACION" Width="1.5" PointX="21.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PROVEEDOR_TABLA" Width="1.5" PointX="14.5" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PUESTO_PHYSICAL_TABLE" Width="1.5" PointX="17" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PUNTO_DE_VENTA" Width="1.5" PointX="35" PointY="130.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PUNTO_DE_VENTA_USUARIO" Width="1.5" PointX="37.25" PointY="82.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECETA_MASIVA_MEDICAM6HXT" Width="1.5" PointX="42.75" PointY="96.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECETA_MASIVA_MEDICAMENTT" Width="1.5" PointX="38.5" PointY="120.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECETA_PLANTILLA_MEDICAMT" Width="1.5" PointX="35.5" PointY="74.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECETA_TABLA" Width="1.5" PointX="16.5" PointY="105.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECETAS_SIN_DESPACHAR" Width="1.5" PointX="22.5" PointY="114.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECIBO_SERVICIOS_HOSPITAL_CTL" Width="1.5" PointX="24.5" PointY="158.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RECIBO_SERVICIOS_HOSPITAL_DET" Width="1.5" PointX="26.75" PointY="159.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REFERENCIAS_EMPLEADO" Width="1.5" PointX="11.25" PointY="184.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RELACION_LABORAL" Width="1.5" PointX="6.75" PointY="150" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RELACIONES_BIC" Width="1.5" PointX="7.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RELACIONES_FAMILIARES_PHT" Width="1.5" PointX="9" PointY="106" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REQUISICION_CONTROL" Width="1.5" PointX="25.25" PointY="114.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REQUISICION_DETALLE" Width="1.5" PointX="27.5" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REQUISICION_IMPORTADO_CONTROL" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REQUISICION_IMPORTADO_DETALLE" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.REQUISICION_IMPORTADO_LOTES" Width="1.5" PointX="12.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RESOLUCION_DEI_ARTICULOS" Width="1.5" PointX="32.5" PointY="133.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RESOLUCION_DEI_ITEMS" Width="1.5" PointX="30.25" PointY="154.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RESOLUCION_DEI_RESOLUCION" Width="1.5" PointX="28" PointY="154.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RETENCIONES_DEDUCCIONES" Width="1.5" PointX="33.25" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RUTAS_MENSAJERIA_CONTROT" Width="1.5" PointX="6.75" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.RUTAS_MENSAJERIA_DETALLT" Width="1.5" PointX="9" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDO_CONTABLE" Width="1.5" PointX="16.25" PointY="163.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDO_DE_ARTICULO" Width="1.5" PointX="25.25" PointY="135.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDO_DE_CLIENTE_PHYSICAT" Width="1.5" PointX="24.75" PointY="192.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDO_EN_BANCOS_PHYSICAT" Width="1.5" PointX="24.5" PointY="173.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDO_PRESUPUESTO_PRIVADA" Width="1.5" PointX="28.25" PointY="76.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDOS_CONTABLES_CONSOLIDADO" Width="1.5" PointX="19.25" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDOS_DE_PLANILLA" Width="1.5" PointX="14.25" PointY="130.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDOS_DE_PROVEEDOR_PHYST" Width="1.5" PointX="16.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SALDOS_DE_VACACIONES" Width="1.5" PointX="19.25" PointY="102.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SECTOR_SOCIOECONOMICO" Width="1.5" PointX="27.5" PointY="201.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIO_HOSPITAL" Width="1.5" PointX="24.5" PointY="204.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIO_HOSPITAL_COMPONENTE" Width="1.5" PointX="26.75" PointY="204.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIOS_HOSPITAL_COMPONENTEART" Width="1.5" PointX="30" PointY="150.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIOS_HOSPITAL_COMPONENTECTO" Width="1.5" PointX="32" PointY="140.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIOS_HOSPITAL_CUOTA" Width="1.5" PointX="29.75" PointY="205.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SERVICIOS_PHYSICAL_TABLE" Width="1.5" PointX="23.75" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SOLICITUD_PAGO_CTL" Width="1.5" PointX="31" PointY="73.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SOLICITUD_PAGO_CTL_N" Width="1.5" PointX="9.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SOLICITUD_PAGO_DET" Width="1.5" PointX="33.25" PointY="76.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBCATALOGO_CONTABLE_1" Width="1.5" PointX="11.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBCATALOGO_CONTABLE_2" Width="1.5" PointX="13.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBCATALOGO_CONTABLE_3" Width="1.5" PointX="23.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBDEPARTAMENTO" Width="1.5" PointX="9" PointY="156.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBMODULOS" Width="1.5" PointX="16" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBSIDIOS_HOSPITALARIOS" Width="1.5" PointX="23.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBSUBTIPO_ACTIVO" Width="1.5" PointX="5.25" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBSUBTIPO_DE_INVENTARIT" Width="1.5" PointX="27.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBTIPO_ACT_FIJO" Width="1.5" PointX="3" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBTIPO_DE_CUENTA" Width="1.5" PointX="11.75" PointY="95" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBTIPO_DE_INVENTARIO_PHT" Width="1.5" PointX="25.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUPERVISION_Y_REGISTRO_ADUANAL" Width="1.5" PointX="23.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.sysdiagrams" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TAREAS_HOSPITALARIAS" Width="1.5" PointX="24.5" PointY="216.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TARIFAS_POR_NACIONALIZACION" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TARJETAS_DE_CREDITO" Width="1.5" PointX="22.25" PointY="163.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TASA_DE_MORA_PHYSICAL_TAT" Width="1.5" PointX="18.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TASAS_DE_CAMBIO" Width="1.5" PointX="14" PointY="146.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TECNICO_TABLA" Width="1.5" PointX="9" PointY="96.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_ACTIVO_FIJO" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_ACUMULADOS" Width="1.5" PointX="0.75" PointY="102.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_CLIENTE" Width="1.5" PointX="16.25" PointY="176.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_CUENTA_EN_BANCO" Width="1.5" PointX="20" PointY="169.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_DE_CUENTA" Width="1.5" PointX="11.75" PointY="98.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_DE_GASTO" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_DE_PLANILLA" Width="1.5" PointX="3" PointY="172" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_INVENTARIO" Width="1.5" PointX="23" PointY="82.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_INVENTARIO_CUENTA" Width="1.5" PointX="25.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_MOVIMIENTO_ACTIVO_FIJO" Width="1.5" PointX="9" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_PROVEEDOR" Width="1.5" PointX="12.25" PointY="70.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPO_SALDOS_PLA" Width="1.5" PointX="8.25" PointY="145.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPOS_DE_PLANTILLA" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TIPOS_DE_SERVICIOS_PHYSIT" Width="1.5" PointX="26" PointY="61.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.Tnac01_01_15" Width="1.5" PointX="20.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRABAJO_NOMINA" Width="1.5" PointX="17.25" PointY="130.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSAC_PLA_CTL" Width="1.5" PointX="14.25" PointY="137.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSAC_PLA_DET" Width="1.5" PointX="19.5" PointY="129.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSACCIONES_ICP" Width="1.5" PointX="30.25" PointY="132.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSACCIONES_MENSAJERIT" Width="1.5" PointX="9" PointY="89.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSFERENCIA_INVENTA3E4T" Width="1.5" PointX="27.5" PointY="107.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRANSFERENCIA_INVENTARIT" Width="1.5" PointX="25.25" PointY="109" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CLIENTE_DIARIO_DET" Width="1.5" PointX="40.25" PointY="107.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CLIENTE_HIST_DETALLT" Width="1.5" PointX="40.25" PointY="98.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CNT_DIARIO_PLA_NUM" Width="1.5" PointX="8.25" PointY="131" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIA_CTL" Width="1.5" PointX="28" PointY="129.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIA_DET" Width="1.5" PointX="7.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIA_NUM" Width="1.5" PointX="9.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_AF" Width="1.5" PointX="30.25" PointY="117.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_AF_NUM" Width="1.5" PointX="11.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_INV" Width="1.5" PointX="13.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_PLA" Width="1.5" PointX="11.25" PointY="132" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_HISTORIC3N9T" Width="1.5" PointX="16.25" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_HISTORICO_TT" Width="1.5" PointX="30" PointY="122.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONVERSION_HIST_DETAT" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_HIST_BANCO_DET" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_INVENTARIO_HIST_DET" Width="1.5" PointX="32.5" PointY="107.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_INVENTARIO_HIST_VENCT" Width="1.5" PointX="34.75" PointY="109.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_INVENTARIO_X_AGENCIT" Width="1.5" PointX="42.5" PointY="92.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_PRESUPUESTO_PRIVADA_CTL" Width="1.5" PointX="17" PointY="136.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_PRESUPUESTO_PRIVADA_DET" Width="1.5" PointX="31.25" PointY="91.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_PROVEEDOR_DIARIO_DETT" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_PROVEEDOR_HIST_DETALT" Width="1.5" PointX="36.25" PointY="95.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TURNO_DATOS_ADICIONALES" Width="1.5" PointX="22.25" PointY="176.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TURNO_EXCEPCIONES_TABLA" Width="1.5" PointX="22.25" PointY="145.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TURNOS" Width="1.5" PointX="20" PointY="136.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.UNIDAD_MEDIDA_TBL" Width="1.5" PointX="25.25" PointY="131.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.USUARIO_DE_FACTURACION" Width="1.5" PointX="30.25" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.VALORES_DEL_SISTEMA_POR_DEFAULT" Width="1.5" PointX="17" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.VEHICULO_TABLA" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.VENDEDOR_TABLA" Width="1.5" PointX="30.5" PointY="129.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.WINPT" Width="1.5" PointX="9.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ZONA" Width="1.5" PointX="28.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ACTIVO_FIJO_TABLA_" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.cicontro" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.cideta" Width="1.5" PointX="4.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUENTA_DE_PRESUPUESTO" Width="1.5" PointX="30.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.CUENTAS_TIPOS_INVENTARIT" Width="1.5" PointX="30.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.EMPLEADO_DISTRIBUCION_PHT" Width="1.5" PointX="18.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTRUCTURA_PRESUPUESTO" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.ESTRUCUTRA_PRESUPUESTO" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUNCION_PHYSICAL_TABLE" Width="1.5" PointX="30.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUNCION_POR_USUARIO_TABLA" Width="1.5" PointX="31.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUNCION_USUARIO_PHYSICAT" Width="1.5" PointX="11.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.FUNCIONES_TABLA" Width="1.5" PointX="32.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_DE_FUNCIONES_PHYSIT" Width="1.5" PointX="13.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_DE_FUNCIONES_TABLA" Width="1.5" PointX="32.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_DE_USUARIOS_PHYSICT" Width="1.5" PointX="32.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_FUNCIONES_PHYSICAT" Width="1.5" PointX="32.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.GRUPO_USUARIOS_PHYSICAL_T" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LISTA_DE_PRECIO_CONTROL_T" Width="1.5" PointX="33.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.LISTA_DE_PRECIO_DETALLE_T" Width="1.5" PointX="33.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PARTIDAS_INVENTARIO_INCOT" Width="1.5" PointX="33.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.PRODUCTO" Width="1.5" PointX="6.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.recicontro" Width="1.5" PointX="34.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.recideta" Width="1.5" PointX="34.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.requicon" Width="1.5" PointX="34.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.requideta" Width="1.5" PointX="34.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SSACCTA" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SSADPOH" Width="1.5" PointX="2.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.SUBSUBTINVE" Width="1.5" PointX="35.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_PLA_NUM" Width="1.5" PointX="35.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_T5KPT" Width="1.5" PointX="11.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_CONTABLE_DIARIO_TEMPT" Width="1.5" PointX="13.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.TRN_PRESUPUESTO_GOBIERNT" Width="1.5" PointX="35.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIT_LESPModel.USUARIO_PHYSICAL_TABLE" Width="1.5" PointX="36.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ACTIVO_FI__TIPO___5708E33C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACION_ACT_F__5CC1BC92" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DATOS_ADICIONALE__5F691F13" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL_DEPREC__438BFA74" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MOVIMIENTO_ACTIV__611C5D5B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ACUMULADO__CODIG__57FD0775" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ACUMULADO__CODIG__58F12BAE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ACUMULADO__TIPO___59E54FE7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTAS_I__CODIG__47919582" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_A__CODIG__231F2AE2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__NOTAS_DBT__CODIG__62108194" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___CODIG__444B1483" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVEN__CODIG__5911273F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUP_EMP__CODIG__627A95E8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__6CC31A31" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_AGRUP__6DB73E6A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACIO__CODIG__5BCD9859" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACIO__CODIG__5AD97420" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACIO__CODIG__5DB5E0CB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__664B26CC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO_AGRUPAC__673F4B05" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACIO__AGRUP__5EAA0504" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_A__AGRUP__1411F17C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_AGRUPACI__15FA39EE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__AGRUPACIO__AGRUP__5F9E293D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR__AGRUP__3CA9F2BB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR_AGRUPA__3E923B2D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ANTIGUEDA__TASA___636EBA21" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__APERTURA___CODIG__5BB889C0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__APERTURA___CODIG__5CACADF9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARQUEO_CA__CODIG__5DA0D232" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARQUEO_CA__CODIG__5E94F66B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__65570293" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__68336F3E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__69279377" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO_BODEGA___6A1BB7B0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DETALLE__2AF556D4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_DIARIA_D__335592AB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE_TRABAJO__705EA0EB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICION_DETA__66A02C87" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__6B0FDBE9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO_LOTE_SE__6DEC4894" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPLEMENTO_LOTE__2354350C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPLEMENTO_LOTE__253C7D7E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__6EE06CCD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__6FD49106" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__70C8B53F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__71BCD978" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__72B0FDB1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__73A521EA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__74994623" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__758D6A5C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULO___CODIG__7869D707" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ARTICULOS__CODIG__6462DE5A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DE__CODIG__2630A1B7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ENSAMBLE___ARTIC__12E8C319" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__2F8501C7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__LISTA_DE___CODIG__5887175A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MATERIA_P__CODIG__5E3FF0B0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_COM__CODIG__68BD7F23" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE___CODIG__6D823440" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PACIENTE___CODIG__01892CED" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_MA__CODIG__4DD47EBD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_PL__CODIG__538D5813" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_TA__CODIG__5669C4BE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETAS_S__CODIG__4AF81212" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__5FF32EF8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__CODIG__22B5168E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVEN__CODIG__51700577" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ATENCIONE__CODIG__795DFB40" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ATENCIONES_MEDIC__7B4643B2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ATENCIONE__EXPED__7A521F79" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__BANCO_TAB__CODIG__7C3A67EB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__CODIG__4A6E022D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TARJETAS___CODIG__0DB9F9A8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__BASE_INFO__CODIG__7D2E8C24" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CAJERO_TA__CODIG__7E22B05D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_T__CODIG__18D6A699" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COBRADOR___CODIG__1BB31344" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__049AA3C2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INSTRUCTO__CODIG__4EFDAD20" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PR__CODIG__21F5FC7F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR__CODIG__3F865F66" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___CODIG__4356F04A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RUTAS_MEN__CODIG__6B64E1A4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SOLICITUD__CODIG__024846FC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TECNICO_T__CODIG__10966653" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__VENDEDOR___CODIG__6E0C4425" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA__CODIG__0B129727" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__BODEGA_TI__CODIG__6A06A917" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DE__CODIG__2724C5F0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_TA__CODIG__2CDD9F46" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTAS_I__CODIG__469D7149" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__29CC2871" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE___CODIG__6E765879" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___CODIG__453F38BC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_MA__CODIG__51A50FA1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_PL__CODIG__529933DA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETAS_S__CODIG__4CE05A84" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__5D16C24D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__63C3BFDC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__BODEG__20CCCE1C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__BODEG__21C0F255" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__BODEG__2779CBAB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__BODEG__286DEFE4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVEN__CODIG__526429B0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__BODEGA_TI__CODIG__6AFACD50" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECIBO_SE__CODIG__607D3EDD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CALENDARI__CALEN__7F16D496" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__000AF8CF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__00FF1D08" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__01F34141" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO_CONTABL__02E7657A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_CONTABLES__6C5905DD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__03DB89B3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___IDIOM__04CFADEC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__05C3D225" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO___CODIG__06B7F65E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CATALOGO_DE_CUEN__07AC1A97" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CTAS_DIST__CODIG__45A94D10" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__CODIG__4C564A9F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTAS_I__CODIG__4885B9BB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTI__CODIG__5B988E2F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DETALLE_D__CODIG__670A40DB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7187CF4E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTADO_FI__CODIG__15C52FC4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTADO_FI__CODIG__17AD7836" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__IMPUESTOS__CODIG__4850AF91" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INFORMACI__CODIG__4D1564AE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORIGEN_DE__CODIG__7152C524" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA___CODIG__3508D0F3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDO_CON__CODIG__7211DF33" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDO_PRE__CODIG__77CAB889" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TIPO_CLIE__CODIG__127EAEC5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__33DFA290" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__38A457AD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__44160A59" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PRESU__CODIG__5CE1B823" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__058EC7FB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL__CODIG__475C8B58" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__GRUPO_DE___CODIG__3FBB6990" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DISTRIBUC__CODIG__6ECB5E34" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_ATE__ASIGN__64ECEE3F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_MA__CODIG__4FBCC72F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_TA__CODIG__54817C4C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETAS_S__CODIG__490FC9A0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__5B2E79DB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__60E75331" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CHEQUES_NO_CONCI__08A03ED0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_DE_VACACI__711DBAFA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CICLO_INV__CODIG__0E591826" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CICLO_INVENTARIO__0F4D3C5F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INVENTARIO_FISIC__53C2623D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CITAS_MED__CODIG__06A2E7C5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CITAS_MED__CODIG__07970BFE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CITAS_MED__EXPED__088B3037" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLASE_PLA__CODIG__131DCD43" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEF_TRN_P__CODIG__62458BBE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0682EC34" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0D2FE9C3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FICHA_DE___CODIG__3726238F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FICHA_DE___CODIG__3A02903A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PERIODO_D__CODIG__04659998" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TIPO_DE_P__CODIG__1372D2FE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_P__CODIG__1B13F4C6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_A__CODIG__150615B5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_D__CODIG__16EE5E27" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_D__CODIG__17E28260" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_T__CODIG__19CACAD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CLIENTE_T__CODIG__1ABEEF0B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___CLIEN__3572E547" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_A__CODIG__24134F1B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__28D80438" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS___CLIEN__1C722D53" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__NOTAS_DBT__CODIG__6304A5CD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE___CLIEN__6AA5C795" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDO_DE___CODIG__75E27017" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIEN__CLIEN__2A563856" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIEN__CLIEN__2E26C93A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CODIGOS_T__PREFI__1CA7377D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPAÑIA___CODIG__1D9B5BB6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPAÑIA___CODIG__1F83A428" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__VALORES_D__CODIG__6B2FD77A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPAÑIA___CODIG__1E8F7FEF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPLEMEN__DEFIN__226010D3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPLEMENTO_LOTE__24485945" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DE__CODIG__2818EA29" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DE__NUMER__290D0E62" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DETALLE__2A01329B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_DETALLE__2BE97B0D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_TA__CODIG__2DD1C37F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_TA__RECIB__2EC5E7B8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COMPRA_TABLA__2FBA0BF1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONCILIACION_BAN__30AE302A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONCILIACION_BAN__31A25463" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONCILIACION_BAN__338A9CD5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONCILIACION_BAN__347EC10E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONCILIAC__PREFI__3296789C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR__CONDI__407A839F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___CLIEN__384F51F2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___CLIEN__3A379A64" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___MONED__36670980" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___VENDE__375B2DB9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO_SERVICI__3943762B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO___CODIG__3B2BBE9D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO_SERVICI__3C1FE2D6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO_SERVICI__3D14070F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CONTRATO_SERVICI__3E082B48" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACIO__NUMER__3EFC4F81" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACIO__NUMER__40E497F3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACION_RESPU__41D8BC2C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACION_SELEC__43C1049E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACIO__CODIG__3FF073BA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACION_RESPU__42CCE065" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__COTIZACION_SELEC__44B528D7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__CODIG__4B622666" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__NUMER__4D4A6ED8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__NUMER__4E3E9311" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__NUMER__4F32B74A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__NUMER__5026DB83" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTA_DE__TIPO___511AFFBC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTRUCTURA_ESTAD__1A89E4E1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDO_EN_BANCOS___76D69450" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUENTAS_I__DEFIN__4979DDF4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUESTIONA__CUEST__520F23F5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUESTIONA__CUEST__5303482E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CUEST__764C846B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUESTIONARIO_EVA__53F76C67" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUESTIONARIO_EVA__54EB90A0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_EVALUAC__7928F116" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CUESTIONARIO_EVA__55DFB4D9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_EVALUAC__7C055DC1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__GRUPO_DE___CODIG__3EC74557" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL__CODIG__457442E6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_FACTU__CODIG__56D3D912" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_FACTU__CODIG__57C7FD4B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTI__CODIG__58BC2184" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTI__CODIG__59B045BD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTIPLE_DOC__5AA469F6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTIPLE_DOC__5C8CB268" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTI__CODIG__5D80D6A1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__CXP_MULTIPLE_DOC__5E74FADA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEF_TRN_P__CODIG__605D434C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEF_TRN_P__TIPO___61516785" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEF_TRN_P__CODIG__642DD430" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEF_TRN_P__DEFIN__6339AFF7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0E240DFC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7093AB15" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FICHA_DE___CODIG__381A47C8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FICHA_DE___CODIG__3AF6B473" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA___CODIG__30441BD6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA___CODIG__3414ACBA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TIPO_SALD__CODIG__155B1B70" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_P__CODIG__1C0818FF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CNT_D__CODIG__31F75A1E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__37B03374" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0777106D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_MA__CODIG__50B0EB68" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_TA__CODIG__5575A085" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETAS_S__CODIG__4A03EDD9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__5C229E14" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__61DB776A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIO___CODIG__7F6BDA51" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBDEPART__CODIG__0618D7E0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRABAJO_N__CODIG__174363E2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEPENDIEN__CODIG__6521F869" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DEPENDIEN__CODIG__66161CA2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESCALAS_D__CODIG__14D10B8B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DETALLE_DEL_SERV__67FE6514" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS_SERVICI__222B06A9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DISTRIBUCION_COS__6FBF826D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__DOCTOR__CODIGO_B__6ADAD1BF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_ATE__CODIG__65E11278" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_TA__CODIG__575DE8F7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETAS_S__CODIG__4BEC364B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__CODIG__23A93AC7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__6BCEF5F8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__6EAB62A3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__6F9F86DC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__727BF387" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__737017C0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___NIVEL__74643BF9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__75586032" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___EVALU__7740A8A4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_EVALUAC__7834CCDD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_EVALUAC__7A1D154F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_EVALUAC__7B113988" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7CF981FA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7DEDA633" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7EE1CA6C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__7FD5EEA5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___OFICI__00CA12DE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__01BE3717" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___PROFE__02B25B50" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__03A67F89" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__086B34A6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__095F58DF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0B47A151" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__0C3BC58A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__100C566E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___PAIS___0A537D18" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL__CODIG__44801EAD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL__CODIG__4668671F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INCIDENCI__CODIG__4944D3CA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA___CODIG__2F4FF79D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REFERENCI__CODIG__5A3A55A2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__CODIG__62CF9BA3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__SOLIC__5EFF0ABF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_DE__CODIG__6D4D2A16" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_DE__CODIG__702996C1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRABAJO_N__CODIG__164F3FA9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_P__CODIG__1EE485AA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__SOLIC__2962141D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_TRN_FIJ__0F183235" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO___CODIG__11007AA7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__EMPLEADO_TURNOS__11F49EE0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ENSAMBLE_DE_ARTI__13DCE752" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTADO_FINANCIER__16B953FD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTADO_FI__CODIG__1995C0A8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTADO_FINANCIER__18A19C6F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ESTRUC_DA__TIPO___1B7E091A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_A__LINEA__26EFBBC6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_A__PREFI__25077354" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_AGENTE_A__25FB978D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_AGENTE_A__27E3DFFF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__2AC04CAA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__MONED__2BB470E3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__PREFI__2CA8951C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__PUNTO__2D9CB955" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_DIARIA_C__2E90DD8E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_DIARIA_D__316D4A39" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_DIARIA_D__3631FF56" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__30792600" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_DIARIA_D__32616E72" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__CODIG__3449B6E4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURA_D__MONED__353DDB1D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS___DEFIN__1D66518C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS___MONED__1E5A75C5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS___NUMER__2136E270" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS___VENDE__1F4E99FE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FACTURAS_SERVICI__2042BE37" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FICHA_DE_GRABACI__390E6C01" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___CODIG__46335CF5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA__FUENT__0C06BB60" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__FUNCIONES__CODIG__3BEAD8AC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__GRUPO_DE___CODIG__40AF8DC9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL_DEPREC__41A3B202" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__HISTORIAL_DEPREC__4297D63B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TURNOS__CODIGO_D__675F4696" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PR__CODIG__28A2FA0E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__IN_PROMPT__SECTO__55AAAAAF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INCIDENCI__CODIG__4A38F803" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INFORMACI__DEFIN__4B2D1C3C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INFORMACI__DEFIN__4E0988E7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INFORMACI__DEFIN__729BEF18" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PR__DEFIN__23DE44F1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICI__DEFIN__5E0AE686" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSACCI__DEFIN__192BAC54" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INFORMACION_CENT__4C214075" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INTEGRADO__CODIG__4FF1D159" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INTEGRADO__SURRO__50E5F592" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INTEGRADO__SURRO__52CE3E04" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INTEGRADOR_REPOR__51DA19CB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__INVENTARIO_FISIC__54B68676" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__LISTA_DE___CODIG__569ECEE8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__LISTA_DE___CODIG__5792F321" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__LISTA_DE_PRECIO___597B3B93" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MODELO_TA__NOMBR__5F3414E9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__VEHICULO___NOMBR__6C23FBB3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MATERIA_P__CODIG__5A6F5FCC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MATERIA_P__CODIG__5C57A83E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MATERIA_P__CODIG__5D4BCC77" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MATERIA_P__CODIG__5B638405" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__VEHICULO_TABLA__6D181FEC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBMODULO__CODIG__070CFC19" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDO_PRE__CODIG__78BEDCC2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SOLICITUD__CODIG__033C6B35" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TASAS_DE___CODIG__0EAE1DE1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TASAS_DE___MONED__0FA2421A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIEN__MONED__2B4A5C8F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIEN__MONED__2F1AED73" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__34D3C6C9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__39987BE6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__3C74E891" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__450A2E92" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__CODIG__47E69B3D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVEN__CODIG__53584DE9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PRESU__CODIG__5AF96FB1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PRESU__CODIG__5DD5DC5C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PROVE__MONED__6482D9EB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__MOVIMIENT__TIPO___60283922" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROFESION__NIVEL__3AC1AA49" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUESTO_PH__NIVEL__4262CC11" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__NOTAS_DBT__PREFI__63F8CA06" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE___PREFI__6B99EBCE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__PREFI__35C7EB02" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__PREFI__3A8CA01F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__PREFI__3D690CCA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTA__PREFI__48DABF76" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PRESU__PREFI__5BED93EA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA__OBJET__0CFADF99" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_ATENCION_M__3726238F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_COM__CODIG__67C95AEA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_COM__NUMER__69B1A35C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE___PUNTO__6C8E1007" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORDEN_DE_TRABAJO__6F6A7CB2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA__ORGAN__0DEF03D2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__ORIGEN_DE__CODIG__7246E95D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECIBO_SE__CODIG__5F891AA4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___OS4sA__481BA567" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__USUARIO_D__OS4sA__6A3BB341" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PACIENTE___EXPED__027D5126" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PACIENTE___EXPED__7FA0E47B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PACIENTE_CRONICO__0371755F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PACIENTE_CRONICO__009508B4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PERIODO_DE_PLANI__064DE20A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA_MENSUAL__322C6448" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS_HOSPIT__7C8F6DA6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SOLICITUD_PAGO_C__04308F6E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIENTE_DIAR__2D32A501" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIENTE_HIST__310335E5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_DIA__36BC0F3B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_DIA__3E5D3103" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_HIS__46F27704" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_HIS__49CEE3AF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_H__5540965B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PROVEEDOR_HI__666B225D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PERIODO_DE_PLANI__0559BDD1" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA_HISTORI__3138400F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRABAJO_NOMINA__1837881B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_PLA_CTL__1DF06171" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CNT_DIARIO_P__32EB7E57" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_DIA__3B80C458" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_ACTIVI__INSTI__07420643" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_ACTIVIDAD_U_O__08362A7C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_ACTIVIDAD_U_O__092A4EB5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_ACTIVIDAD_U_O__0A1E72EE" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA_PRESUP__12B3B8EF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA_PRESUP__0EE3280B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA_PRESUP__0FD74C44" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA_PRESUP__10CB707D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_CUENTA_PRESUP__11BF94B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SALDO_CUENTAS__1A54DAB7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__2101D846" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__26BAB19C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_DESCEN__INSTI__1590259A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SUBUNIDAD_EJE__1E256B9B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_UNIDAD_EJECUT__2E5BD364" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_PROGRA__INSTI__168449D3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_PROYEC__INSTI__17786E0C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SUBPRO__INSTI__1B48FEF0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SUBUNI__INSTI__1D314762" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_UNIDAD__INSTI__2D67AF2B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_PROYECTO__186C9245" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SUBPROGRAMA__1C3D2329" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_PROYECTO__1960B67E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_SUBUNIDAD_EJE__1F198FD4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__200DB40D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__2A8B4280" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__22EA20B8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__24D2692A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__25C68D63" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__27AED5D5" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PRESUPUES__2C738AF2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PR__MEDID__29971E47" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PG_TRN_PR__RETEN__2B7F66B9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA_MENSUAL__33208881" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLANILLA_MENSUAL__35FCF52C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PLAZA_PHY__CODIG__36F11965" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICION_DETA__65AC084E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS_HOSPIT__7AA72534" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERENCIA_IN__2685A772" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_H__5634BA94" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROGRAMA_DE_VACA__3BB5CE82" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR__CODIG__3D9E16F4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PROVEEDOR__TIPO___416EA7D8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_DE__CODIG__6F357288" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PROVE__CODIG__638EB5B2" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__PUNTO_DE___CODIG__4727812E" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECETA_MASIVA_ME__4EC8A2F6" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECIBO_SERVICIOS__6265874F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RECIBO_SE__SERVI__61716316" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICION_DETA__64B7E415" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICION_IMPO__522F1F86" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__REQUISICION_IMPO__532343BF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RESOLUCIO__CODIG__679450C0" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RESOLUCION_DEI_A__688874F9" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RESOLUCIO__NUMER__697C9932" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__RUTAS_MEN__CODIG__6A70BD6B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSACCI__CODIG__1A1FD08D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_H__5728DECD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SALDOS_DE__CODIG__6E414E4F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS__SECTO__7D8391DF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIO___SERVI__015422C3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS__SERVI__7E77B618" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIO___LH6za__005FFE8A" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS_HOSPIT__79B300FB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SERVICIOS_HOSPIT__7B9B496D" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TIPOS_DE___CODIG__118A8A8C" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SOLICITUD__NUMER__0524B3A7" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBSUBTIP__TIPO___08012052" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBSUBTIPO_ACTIV__08F5448B" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBSUBTIPO_DE_IN__09E968C4" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBTIPO_A__TIPO___0ADD8CFD" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBTIPO_D__CODIG__0BD1B136" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__SUBTIPO_D__CODIG__0CC5D56F" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_PLA_CTL__1CFC3D38" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TIPO_INVE__CODIG__6541F3FA" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSAC_PLA_DET__1FD8A9E3" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_H__544C7222" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_X__5A054B78" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__CODIG__249D5F00" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRANSFERE__NUMER__25918339" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIENTE_DIAR__2C3E80C8" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CLIENTE_HIST__300F11AC" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_CONTABLE_HIS__45FE52CB" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PROVEEDOR_HI__6576FE24" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_INVENTARIO_H__581D0306" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TRN_PRESUPUESTO___5ECA0095" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TURNO_DATOS_ADIC__68536ACF" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.FK__TURNO_EXCEPCIONE__69478F08" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.AGRUPACION_SERVICIOS_HOSPITAL" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.ARTICULO_IMPUESTO" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.ARTICULO_SUSTITUTO" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.COMPAÑIA_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.GRUPO_CURSO_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OS1cT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OS1oT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OS2aT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OS2kT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OS2uT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.OSqT" ManuallyRouted="false" />
+        <AssociationConnector Association="BIT_LESPModel.PG_CUENTA_PRESUP_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

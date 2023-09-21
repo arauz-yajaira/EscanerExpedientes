@@ -91,3 +91,4 @@ C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\Sistema
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Threading.AccessControl.xml
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.Fody.CopyLocal.cache
+C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.FORM.Expediente.resources
