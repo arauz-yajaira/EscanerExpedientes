@@ -92,3 +92,13 @@ C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\Sistema
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Threading.AccessControl.xml
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.Fody.CopyLocal.cache
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.FORM.Expediente.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.AssemblyReference.cache
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.FORM.Expediente.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.Login.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.Properties.Resources.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.USUARIOS.AgregarUsuario.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.USUARIOS.InicioSesion.resources
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.GenerateResource.cache
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.CoreCompileInputs.cache
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.exe
+C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.pdb
