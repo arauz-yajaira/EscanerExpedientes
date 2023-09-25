@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f4df1ef8c1f446768219552e81d6fc75" Name="Diagram1">
+      <Diagram DiagramId="f4df1ef8c1f446768219552e81d6fc75" Name="Diagram1" ZoomLevel="29">
         <EntityTypeShape EntityType="BIT_LESPModel.ACTIVO_FIJO_TABLA" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BIT_LESPModel.ACUMULADOS_PLANILLA" Width="1.5" PointX="3" PointY="112.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BIT_LESPModel.AGENCIA" Width="1.5" PointX="28" PointY="58.5" IsExpanded="true" />
