@@ -396,7 +396,6 @@ namespace SistemaEscaner.USUARIOS
                            };
             DGVUsuarios.DataSource = TUsuario.CopyAnonymusToDataTable();
             DGVUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
         }
 
         private void LblModificar_TextChanged(object sender, EventArgs e)

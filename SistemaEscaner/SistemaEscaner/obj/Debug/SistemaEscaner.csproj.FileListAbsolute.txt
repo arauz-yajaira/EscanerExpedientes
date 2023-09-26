@@ -46,7 +46,6 @@ C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\Sistema
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csprojAssemblyReference.cache
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.Login.resources
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.Properties.Resources.resources
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.USUARIOS.AgregarUsuario.resources
@@ -102,3 +101,4 @@ C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\Sistem
 C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.CoreCompileInputs.cache
 C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.exe
 C:\Users\WilmerG\Documents\Repositorios\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.pdb
+C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.AssemblyReference.cache

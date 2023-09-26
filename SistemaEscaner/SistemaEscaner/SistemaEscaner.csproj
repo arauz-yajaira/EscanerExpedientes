@@ -332,23 +332,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelExpedientes.Context.cs">
+    <Compile Include="ModelProyecto.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelExpedientes.Context.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelExpedientes.cs">
+    <Compile Include="ModelProyecto.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelExpedientes.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelExpedientes.Designer.cs">
+    <Compile Include="ModelProyecto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelExpedientes.edmx</DependentUpon>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
     </Compile>
     <Compile Include="PACIENTE.cs">
-      <DependentUpon>ModelExpedientes.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.cs">
       <DependentUpon>BDEscaner.tt</DependentUpon>
@@ -402,12 +402,12 @@
     <None Include="BDEscaner.edmx.diagram">
       <DependentUpon>BDEscaner.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="ModelExpedientes.edmx">
+    <EntityDeploy Include="ModelProyecto.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelExpedientes.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelProyecto.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelExpedientes.edmx.diagram">
-      <DependentUpon>ModelExpedientes.edmx</DependentUpon>
+    <None Include="ModelProyecto.edmx.diagram">
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -434,15 +434,15 @@
       <DependentUpon>BDEscaner.edmx</DependentUpon>
       <LastGenOutput>BDEscaner.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelExpedientes.Context.tt">
+    <Content Include="ModelProyecto.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelExpedientes.edmx</DependentUpon>
-      <LastGenOutput>ModelExpedientes.Context.cs</LastGenOutput>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelExpedientes.tt">
+    <Content Include="ModelProyecto.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelExpedientes.edmx</DependentUpon>
-      <LastGenOutput>ModelExpedientes.cs</LastGenOutput>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.cs</LastGenOutput>
     </Content>
     <None Include="RECURSOS\Recurso 5.png" />
     <None Include="RECURSOS\R.png" />
