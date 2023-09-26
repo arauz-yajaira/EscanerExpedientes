@@ -444,6 +444,9 @@
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
       <LastGenOutput>ModelProyecto.cs</LastGenOutput>
     </Content>
+    <None Include="RECURSOS\beyondhealth_willkommen-01-50eba149.png" />
+    <None Include="RECURSOS\5ff78c60095b7a30b6ab03c4_investigation.png" />
+    <None Include="RECURSOS\Raa.png" />
     <None Include="RECURSOS\Recurso 5.png" />
     <None Include="RECURSOS\R.png" />
     <None Include="RECURSOS\3667025.png" />

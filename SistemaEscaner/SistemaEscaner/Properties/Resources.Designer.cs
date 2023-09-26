@@ -83,6 +83,26 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5ff78c60095b7a30b6ab03c4_investigation {
+            get {
+                object obj = ResourceManager.GetObject("5ff78c60095b7a30b6ab03c4_investigation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beyondhealth_willkommen_01_50eba149 {
+            get {
+                object obj = ResourceManager.GetObject("beyondhealth_willkommen-01-50eba149", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OIP__2_ {
             get {
                 object obj = ResourceManager.GetObject("OIP (2)", resourceCulture);
@@ -106,6 +126,16 @@ namespace SistemaEscaner.Properties {
         internal static System.Drawing.Bitmap R1 {
             get {
                 object obj = ResourceManager.GetObject("R1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Raa {
+            get {
+                object obj = ResourceManager.GetObject("Raa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
