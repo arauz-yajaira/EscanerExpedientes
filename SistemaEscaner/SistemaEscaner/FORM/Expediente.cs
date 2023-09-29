@@ -22,11 +22,32 @@ namespace SistemaEscaner.FORM
             InitializeComponent();
             CargarDGV();
             txtBuscarExp.Enabled = false;
+            TooltipsProyecto();
+            lbEXP.Visible = false;
+            lbP.Visible = false;
+
+            BTN_AGDOC.Enabled = false;
+            BTN_EXPDF.Enabled = false;
+            BTN_VIEW.Enabled = false;
         }
-        
+       
+        public void TooltipsProyecto()
+        {
+            var tt = new ToolTip();
+            tt.SetToolTip(imgHospital, "Hospital Enrique Aguilar Cerrato");
+         
+
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(BTN_AGDOC, "Agregue documentos al expediente del Paciente");
+            toolTip.SetToolTip(BTN_EXPDF, "Exporta expediente a PDF");
+            toolTip.SetToolTip(BTN_VIEW, "Visualizar el Expediente de Paciente");
+            toolTip.SetToolTip(BTNCerrar, "Cerrar ventana");
+            toolTip.SetToolTip(txtBuscarExp, "Busca paciente con una opcion de filtrado");
+        }
         private void CargarDGV()
         {
 
+        
             var TPaciente = from p in Entity.PACIENTE
                             .Take(25)
                             select new 
@@ -93,8 +114,6 @@ namespace SistemaEscaner.FORM
 
                                 where 
                                     B.NOMBRES_DEL_PACIENTE.Contains(Paciente)
-                                   
-                                // orderby B.NOMBRES_DEL_PACIENTE, B.APELLIDO_1_DEL_PACIENTE, B.APELLIDO_2_DEL_PACIENTE,B.IDENTIDAD_DEL_PACIENTE, B.EXPEDIENTE
                                 select new
                                 {
                                  
@@ -116,7 +135,6 @@ namespace SistemaEscaner.FORM
                                     B.APELLIDO_1_DEL_PACIENTE.Contains(Paciente) ||
                                     B.APELLIDO_2_DEL_PACIENTE.Contains(Paciente) 
                                     )
-                                // orderby B.NOMBRES_DEL_PACIENTE, B.APELLIDO_1_DEL_PACIENTE, B.APELLIDO_2_DEL_PACIENTE,B.IDENTIDAD_DEL_PACIENTE, B.EXPEDIENTE
                                 select new
                                 {
                                     B.NOMBRES_DEL_PACIENTE,
@@ -225,5 +243,51 @@ namespace SistemaEscaner.FORM
         }
 
         #endregion
+
+        private void BTN_AGDOC_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funciona Boton");
+        }
+
+        private void BTN_EXPDF_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funciona Boton");
+        }
+
+        private void BTN_VIEW_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funciona Boton");
+        }
+
+        private void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TooltipsProyecto();
+            BTN_AGDOC.Enabled = true;
+            BTN_EXPDF.Enabled = true;
+            BTN_VIEW.Enabled = true;
+            lbEXP.Visible = true;
+            lbP.Visible = true;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Obtiene el valor de la celda EXP
+                DataGridViewCell expedienteCell = DGVDatos.Rows[e.RowIndex].Cells["Expediente"];
+
+                if (expedienteCell.Value != null)
+                {
+                    // AJUNTA EXP
+                    string numeroExpediente = expedienteCell.Value.ToString();
+
+                    // Asigna el valor combinado al TextBox
+                    lbEXP.Text = numeroExpediente;
+                    
+                }
+                else
+                {
+                    
+                    lbEXP.Text = string.Empty; 
+
+                }
+            }
+        }
     }
 }

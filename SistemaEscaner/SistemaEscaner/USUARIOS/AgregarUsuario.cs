@@ -48,6 +48,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void CargarDatosDGV()
         {
+
             var TUsuario = from p in Entity.Usuarios
                            select new
                            {
