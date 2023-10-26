@@ -113,6 +113,16 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R {
             get {
                 object obj = ResourceManager.GetObject("R", resourceCulture);

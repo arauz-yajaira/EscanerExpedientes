@@ -1,6 +1,8 @@
 ﻿using System;
+using WIA;
 using System.Collections;
 using System.Drawing;
+using System.IO;
 using System.Configuration;
 using System.Data;
 using System.Linq;
@@ -14,8 +16,10 @@ namespace SistemaEscaner.FORM
 {
     public partial class Expediente : Form
     {
-       
+        
         ExpEntity Entity = new ExpEntity();
+        ExpedienteEntities Entities = new ExpedienteEntities();
+  
 
         public Expediente()
         {
@@ -26,9 +30,6 @@ namespace SistemaEscaner.FORM
             lbEXP.Visible = false;
             lbP.Visible = false;
 
-            BTN_AGDOC.Enabled = false;
-            BTN_EXPDF.Enabled = false;
-            BTN_VIEW.Enabled = false;
         }
        
         public void TooltipsProyecto()
@@ -38,15 +39,14 @@ namespace SistemaEscaner.FORM
          
 
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(BTN_AGDOC, "Agregue documentos al expediente del Paciente");
-            toolTip.SetToolTip(BTN_EXPDF, "Exporta expediente a PDF");
-            toolTip.SetToolTip(BTN_VIEW, "Visualizar el Expediente de Paciente");
+            /* toolTip.SetToolTip(BTN_AGDOC, "Agregue documentos al expediente del Paciente");
+             toolTip.SetToolTip(BTN_EXPDF, "Exporta expediente a PDF");
+             toolTip.SetToolTip(BTN_VIEW, "Visualizar el Expediente de Paciente");*/
             toolTip.SetToolTip(BTNCerrar, "Cerrar ventana");
             toolTip.SetToolTip(txtBuscarExp, "Busca paciente con una opcion de filtrado");
         }
         private void CargarDGV()
         {
-
         
             var TPaciente = from p in Entity.PACIENTE
                             .Take(25)
@@ -152,7 +152,16 @@ namespace SistemaEscaner.FORM
 
         private void BTNCerrar_Click(object sender, EventArgs e)
         {
-            Close();
+            // Mostrar un cuadro de diálogo de confirmación
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar si el usuario hizo clic en "Sí"
+            if (result == DialogResult.Yes)
+            {
+                // Si se hace clic en "Sí", cerrar la aplicación
+               Close();
+
+            }
 
         }
 
@@ -243,10 +252,12 @@ namespace SistemaEscaner.FORM
         }
 
         #endregion
+        #region
 
         private void BTN_AGDOC_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Funciona Boton");
+           
         }
 
         private void BTN_EXPDF_Click(object sender, EventArgs e)
@@ -258,36 +269,31 @@ namespace SistemaEscaner.FORM
         {
             MessageBox.Show("Funciona Boton");
         }
+        #endregion
 
-        private void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+
+
+        public event Action<string, string> RowClicked;
+
+        public void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            TooltipsProyecto();
-            BTN_AGDOC.Enabled = true;
-            BTN_EXPDF.Enabled = true;
-            BTN_VIEW.Enabled = true;
-            lbEXP.Visible = true;
-            lbP.Visible = true;
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            if (e.RowIndex >= 0) // Asegurarse de que se hizo clic en una fila válida
             {
-                // Obtiene el valor de la celda EXP
-                DataGridViewCell expedienteCell = DGVDatos.Rows[e.RowIndex].Cells["Expediente"];
+                int filaSeleccionada = e.RowIndex;
+                DataGridViewRow fila = DGVDatos.Rows[filaSeleccionada];               
+                string nombre = fila.Cells["NOMBRES_DEL_PACIENTE"].Value.ToString();
+                string apellido = fila.Cells["APELLIDO_1_DEL_PACIENTE"].Value.ToString();
 
-                if (expedienteCell.Value != null)
-                {
-                    // AJUNTA EXP
-                    string numeroExpediente = expedienteCell.Value.ToString();
-
-                    // Asigna el valor combinado al TextBox
-                    lbEXP.Text = numeroExpediente;
-                    
-                }
-                else
-                {
-                    
-                    lbEXP.Text = string.Empty; 
-
-                }
+                // Abrir el segundo formulario y pasar los datos
+                Escaner form2 = new Escaner(nombre, apellido);
+                form2.Show();
+                this.Hide();
             }
+           
+        }
+        private void lbEXP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,7 +28,7 @@ namespace SistemaEscaner
         public virtual DbSet<EstadoUsuario> EstadoUsuario { get; set; }
         public virtual DbSet<Hoja> Hoja { get; set; }
         public virtual DbSet<Pacientes> Pacientes { get; set; }
-       // public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TipoUsuario> TipoUsuario { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbuscar = new System.Windows.Forms.Label();
             this.txtBuscarExp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbEXP = new System.Windows.Forms.Label();
+            this.lbP = new System.Windows.Forms.Label();
             this.ckNE = new System.Windows.Forms.CheckBox();
             this.ckApellido = new System.Windows.Forms.CheckBox();
             this.ckNombre = new System.Windows.Forms.CheckBox();
@@ -47,19 +49,12 @@
             this.BTNCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.BTN_VIEW = new System.Windows.Forms.PictureBox();
-            this.BTN_EXPDF = new System.Windows.Forms.PictureBox();
-            this.BTN_AGDOC = new System.Windows.Forms.PictureBox();
             this.imgHospital = new System.Windows.Forms.PictureBox();
-            this.lbP = new System.Windows.Forms.Label();
-            this.lbEXP = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_VIEW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_EXPDF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_AGDOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHospital)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,23 +93,23 @@
             this.DGVDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVDatos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVDatos.Location = new System.Drawing.Point(81, 254);
             this.DGVDatos.MultiSelect = false;
             this.DGVDatos.Name = "DGVDatos";
@@ -140,6 +135,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 117);
             this.panel1.TabIndex = 8;
+            // 
+            // lbEXP
+            // 
+            this.lbEXP.AutoSize = true;
+            this.lbEXP.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEXP.Location = new System.Drawing.Point(903, 80);
+            this.lbEXP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbEXP.Name = "lbEXP";
+            this.lbEXP.Size = new System.Drawing.Size(143, 18);
+            this.lbEXP.TabIndex = 11;
+            this.lbEXP.Text = "EXPEDIENTE/ID";
+            this.lbEXP.Click += new System.EventHandler(this.lbEXP_Click);
+            // 
+            // lbP
+            // 
+            this.lbP.AutoSize = true;
+            this.lbP.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbP.Location = new System.Drawing.Point(720, 80);
+            this.lbP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbP.Name = "lbP";
+            this.lbP.Size = new System.Drawing.Size(183, 18);
+            this.lbP.TabIndex = 10;
+            this.lbP.Text = " Paciente Expediente:";
             // 
             // ckNE
             // 
@@ -254,87 +272,27 @@
             this.bunifuElipse2.ElipseRadius = 5;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // BTN_VIEW
-            // 
-            this.BTN_VIEW.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_VIEW.Image = global::SistemaEscaner.Properties.Resources._5ff78c60095b7a30b6ab03c4_investigation;
-            this.BTN_VIEW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BTN_VIEW.Location = new System.Drawing.Point(1280, 586);
-            this.BTN_VIEW.Name = "BTN_VIEW";
-            this.BTN_VIEW.Size = new System.Drawing.Size(95, 92);
-            this.BTN_VIEW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BTN_VIEW.TabIndex = 37;
-            this.BTN_VIEW.TabStop = false;
-            this.BTN_VIEW.Click += new System.EventHandler(this.BTN_VIEW_Click);
-            // 
-            // BTN_EXPDF
-            // 
-            this.BTN_EXPDF.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_EXPDF.Image = global::SistemaEscaner.Properties.Resources.Raa;
-            this.BTN_EXPDF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BTN_EXPDF.Location = new System.Drawing.Point(1280, 443);
-            this.BTN_EXPDF.Name = "BTN_EXPDF";
-            this.BTN_EXPDF.Size = new System.Drawing.Size(95, 92);
-            this.BTN_EXPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BTN_EXPDF.TabIndex = 36;
-            this.BTN_EXPDF.TabStop = false;
-            this.BTN_EXPDF.Click += new System.EventHandler(this.BTN_EXPDF_Click);
-            // 
-            // BTN_AGDOC
-            // 
-            this.BTN_AGDOC.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_AGDOC.Image = global::SistemaEscaner.Properties.Resources.beyondhealth_willkommen_01_50eba149;
-            this.BTN_AGDOC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BTN_AGDOC.Location = new System.Drawing.Point(1259, 303);
-            this.BTN_AGDOC.Name = "BTN_AGDOC";
-            this.BTN_AGDOC.Size = new System.Drawing.Size(126, 134);
-            this.BTN_AGDOC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BTN_AGDOC.TabIndex = 35;
-            this.BTN_AGDOC.TabStop = false;
-            this.BTN_AGDOC.Click += new System.EventHandler(this.BTN_AGDOC_Click);
-            // 
             // imgHospital
             // 
             this.imgHospital.BackColor = System.Drawing.Color.Transparent;
             this.imgHospital.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
             this.imgHospital.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.imgHospital.Location = new System.Drawing.Point(1269, 80);
+            this.imgHospital.Location = new System.Drawing.Point(1246, 80);
             this.imgHospital.Name = "imgHospital";
             this.imgHospital.Size = new System.Drawing.Size(95, 92);
             this.imgHospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgHospital.TabIndex = 34;
             this.imgHospital.TabStop = false;
             // 
-            // lbP
+            // openFileDialog1
             // 
-            this.lbP.AutoSize = true;
-            this.lbP.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbP.Location = new System.Drawing.Point(720, 80);
-            this.lbP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lbP.Name = "lbP";
-            this.lbP.Size = new System.Drawing.Size(183, 18);
-            this.lbP.TabIndex = 10;
-            this.lbP.Text = " Paciente Expediente:";
-            // 
-            // lbEXP
-            // 
-            this.lbEXP.AutoSize = true;
-            this.lbEXP.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEXP.Location = new System.Drawing.Point(903, 80);
-            this.lbEXP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lbEXP.Name = "lbEXP";
-            this.lbEXP.Size = new System.Drawing.Size(143, 18);
-            this.lbEXP.TabIndex = 11;
-            this.lbEXP.Text = "EXPEDIENTE/ID";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Expediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 885);
-            this.Controls.Add(this.BTN_VIEW);
-            this.Controls.Add(this.BTN_EXPDF);
-            this.Controls.Add(this.BTN_AGDOC);
             this.Controls.Add(this.imgHospital);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label4);
@@ -352,9 +310,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_VIEW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_EXPDF)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_AGDOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHospital)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -379,11 +334,9 @@
         private System.Windows.Forms.CheckBox ckApellido;
         private System.Windows.Forms.CheckBox ckNombre;
         private System.Windows.Forms.CheckBox ckId;
-        private System.Windows.Forms.PictureBox BTN_VIEW;
-        private System.Windows.Forms.PictureBox BTN_EXPDF;
-        private System.Windows.Forms.PictureBox BTN_AGDOC;
         protected System.Windows.Forms.DataGridView DGVDatos;
         private System.Windows.Forms.Label lbEXP;
         private System.Windows.Forms.Label lbP;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
