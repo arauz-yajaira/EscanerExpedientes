@@ -61,7 +61,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbHora = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            //this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.BTNCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
@@ -276,8 +276,8 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 30;
-            this.bunifuElipse1.TargetControl = this;
+           // this.bunifuElipse1.ElipseRadius = 30;
+           // this.bunifuElipse1.TargetControl = this;
             // 
             // BTNCerrar
             // 
@@ -354,6 +354,6 @@
         private System.Windows.Forms.Label lbHora;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button BTNCerrar;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        //private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
