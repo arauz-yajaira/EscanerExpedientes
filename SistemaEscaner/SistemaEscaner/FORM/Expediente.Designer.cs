@@ -43,11 +43,12 @@
             this.ckId = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbUsuario = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BTNCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.imgHospital = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.imgHospital = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,10 +112,11 @@
             this.DGVDatos.MultiSelect = false;
             this.DGVDatos.Name = "DGVDatos";
             this.DGVDatos.ReadOnly = true;
-            this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.DGVDatos.Size = new System.Drawing.Size(1146, 568);
             this.DGVDatos.TabIndex = 7;
             this.DGVDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellClick);
+            this.DGVDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDatos_CellDoubleClick);
             // 
             // panel1
             // 
@@ -214,12 +216,26 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.lbUsuario);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.BTNCerrar);
             this.panel2.Location = new System.Drawing.Point(-16, -3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1445, 46);
             this.panel2.TabIndex = 9;
+            // 
+            // lbUsuario
+            // 
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lbUsuario.ForeColor = System.Drawing.Color.White;
+            this.lbUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbUsuario.Location = new System.Drawing.Point(48, 21);
+            this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(50, 12);
+            this.lbUsuario.TabIndex = 49;
+            this.lbUsuario.Text = "Usuario";
             // 
             // pictureBox3
             // 
@@ -259,6 +275,10 @@
             this.panel3.Size = new System.Drawing.Size(1443, 46);
             this.panel3.TabIndex = 10;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // imgHospital
             // 
             this.imgHospital.BackColor = System.Drawing.Color.Transparent;
@@ -270,10 +290,6 @@
             this.imgHospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgHospital.TabIndex = 34;
             this.imgHospital.TabStop = false;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Expediente
             // 
@@ -292,10 +308,12 @@
             this.Name = "Expediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expediente";
+            this.Load += new System.EventHandler(this.Expediente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHospital)).EndInit();
             this.ResumeLayout(false);
@@ -323,5 +341,6 @@
         private System.Windows.Forms.Label lbEXP;
         private System.Windows.Forms.Label lbP;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lbUsuario;
     }
 }

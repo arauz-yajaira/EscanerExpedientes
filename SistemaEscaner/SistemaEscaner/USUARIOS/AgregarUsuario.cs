@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using SistemaEscaner;
 using System.Windows.Forms;
 using ClosedXML.Excel;
+using static SistemaEscaner.USUARIOS.InicioSesion;
 
 namespace SistemaEscaner.USUARIOS
 {
@@ -26,6 +27,7 @@ namespace SistemaEscaner.USUARIOS
         public AgregarUsuario()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             CargarDatosDGV();
             TootTipsProyecto();
             BTNContra.Visible = false;
@@ -504,8 +506,6 @@ namespace SistemaEscaner.USUARIOS
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            lbHora.Text = ("Hora:") + DateTime.Now.ToString(" hh:mm");
-            lbFecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void BTNCerrar_Click(object sender, EventArgs e)
@@ -522,6 +522,68 @@ namespace SistemaEscaner.USUARIOS
             }
             return;
 
+        }
+
+        private void lbFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgregarUsuario_Load(object sender, EventArgs e)
+        {
+            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
+            {
+                SelectNextControl(ActiveControl, true, true, true, true);
+                e.Handled = true;
+            }
+        }
+
+        private void txtContra_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
+            {
+                SelectNextControl(ActiveControl, true, true, true, true);
+                e.Handled = true;
+            }
+        }
+
+        private void txtConfir_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
+            {
+                SelectNextControl(ActiveControl, true, true, true, true);
+                e.Handled = true;
+            }
+        }
+
+        private void cbTipoUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
+            {
+                SelectNextControl(ActiveControl, true, true, true, true);
+                e.Handled = true;
+            }
+        }
+
+        private void cbEstado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
+            {
+                SelectNextControl(ActiveControl, true, true, true, true);
+                e.Handled = true;
+            }
+        }
+
+        private void BTN_Regresar_Click(object sender, EventArgs e)
+        {
+            FORM.MenuAdmin admin = new FORM.MenuAdmin();
+            admin.Show();
+            this.Close();
         }
     }
 }

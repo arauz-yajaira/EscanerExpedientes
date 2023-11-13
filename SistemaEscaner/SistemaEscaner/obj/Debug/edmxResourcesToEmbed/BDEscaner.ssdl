@@ -12,22 +12,12 @@
       <PropertyRef Name="IdHoja" />
     </Key>
     <Property Name="IdHoja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPacienteESC" Type="int" />
     <Property Name="HojaAgregada" Type="varbinary(max)" />
     <Property Name="usuarioCreo" Type="int" />
     <Property Name="usuarioModificado" Type="int" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
     <Property Name="FechaModificado" Type="date" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Pacientes">
-    <Key>
-      <PropertyRef Name="NExpediente" />
-    </Key>
-    <Property Name="NExpediente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdExpedienteBIT" Type="int" Nullable="false" />
-    <Property Name="FechaIngreso" Type="date" Nullable="false" />
-    <Property Name="FechaModificado" Type="date" Nullable="false" />
-    <Property Name="usuarioCreo" Type="int" />
-    <Property Name="usuarioModificado" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -82,10 +72,40 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="ExpedienteModelStoreContainer">
     <EntitySet Name="EstadoUsuario" EntityType="Self.EstadoUsuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hoja" EntityType="Self.Hoja" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Pacientes" EntityType="Self.Pacientes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />

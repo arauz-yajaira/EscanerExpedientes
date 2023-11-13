@@ -4,10 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fedb378f105940879547161393c936a7" Name="Diagram1">
+      <Diagram DiagramId="fedb378f105940879547161393c936a7" Name="Diagram1" ZoomLevel="112">
         <EntityTypeShape EntityType="ExpedienteModel.EstadoUsuario" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ExpedienteModel.Hoja" Width="3.125" PointX="7.5" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExpedienteModel.Pacientes" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ExpedienteModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ExpedienteModel.TipoUsuario" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ExpedienteModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />

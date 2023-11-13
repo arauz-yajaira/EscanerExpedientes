@@ -10,15 +10,10 @@
 namespace SistemaEscaner
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Pacientes
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int NExpediente { get; set; }
-        public int IdExpedienteBIT { get; set; }
-        public System.DateTime FechaIngreso { get; set; }
-        public System.DateTime FechaModificado { get; set; }
-        public Nullable<int> usuarioCreo { get; set; }
-        public Nullable<int> usuarioModificado { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

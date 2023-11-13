@@ -20,5 +20,6 @@ namespace SistemaEscaner
         public Nullable<int> usuarioModificado { get; set; }
         public System.DateTime FechaIngreso { get; set; }
         public System.DateTime FechaModificado { get; set; }
+        public Nullable<int> IdPacienteESC { get; set; }
     }
 }

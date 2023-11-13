@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using SistemaEscaner.FORM;
+using static SistemaEscaner.USUARIOS.InicioSesion;
 
 namespace SistemaEscaner.FORM
 {
@@ -19,7 +20,7 @@ namespace SistemaEscaner.FORM
         
         ExpEntity Entity = new ExpEntity();
         ExpedienteEntities Entities = new ExpedienteEntities();
-  
+        internal static int exp = 0;
 
         public Expediente()
         {
@@ -277,22 +278,32 @@ namespace SistemaEscaner.FORM
 
         public void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegurarse de que se hizo clic en una fila válida
-            {
-                int filaSeleccionada = e.RowIndex;
-                DataGridViewRow fila = DGVDatos.Rows[filaSeleccionada];               
-                string nombre = fila.Cells["NOMBRES_DEL_PACIENTE"].Value.ToString();
-                string apellido = fila.Cells["APELLIDO_1_DEL_PACIENTE"].Value.ToString();
 
-                // Abrir el segundo formulario y pasar los datos
-                Escaner form2 = new Escaner(nombre, apellido);
-                form2.Show();
-                this.Hide();
-            }
-           
+            Escaner escaner = new Escaner();
+            escaner.lbExpe.Text = this.DGVDatos.CurrentRow.Cells[0].Value.ToString();
+            escaner.txtNombre.Text = this.DGVDatos.CurrentRow.Cells[1].Value.ToString();
+            escaner.txtApellido.Text = this.DGVDatos.CurrentRow.Cells[2].Value.ToString();
+            escaner.ShowDialog();
+
         }
         private void lbEXP_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Expediente_Load(object sender, EventArgs e)
+        {
+            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void DGVDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
 
         }
     }

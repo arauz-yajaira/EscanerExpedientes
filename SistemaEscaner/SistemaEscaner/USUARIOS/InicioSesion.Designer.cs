@@ -51,13 +51,14 @@
             this.BTNAgregar.BackColor = System.Drawing.Color.Indigo;
             this.BTNAgregar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNAgregar.ForeColor = System.Drawing.Color.White;
-            this.BTNAgregar.Location = new System.Drawing.Point(95, 434);
+            this.BTNAgregar.Location = new System.Drawing.Point(110, 426);
             this.BTNAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BTNAgregar.Name = "BTNAgregar";
             this.BTNAgregar.Size = new System.Drawing.Size(334, 50);
             this.BTNAgregar.TabIndex = 26;
             this.BTNAgregar.Text = "Ingresar";
             this.BTNAgregar.UseVisualStyleBackColor = false;
+            this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
             // 
             // txtConfir
             // 
@@ -67,6 +68,7 @@
             this.txtConfir.PasswordChar = '*';
             this.txtConfir.Size = new System.Drawing.Size(223, 20);
             this.txtConfir.TabIndex = 20;
+            this.txtConfir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfir_KeyDown);
             // 
             // label7
             // 
@@ -87,6 +89,7 @@
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(223, 20);
             this.txtContra.TabIndex = 19;
+            this.txtContra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContra_KeyDown);
             // 
             // txtUsuario
             // 
@@ -95,6 +98,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(223, 20);
             this.txtUsuario.TabIndex = 18;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // label4
             // 
@@ -173,6 +177,7 @@
             this.IMGVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.IMGVer.TabIndex = 27;
             this.IMGVer.TabStop = false;
+            this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
             // 
             // InicioSesion
             // 

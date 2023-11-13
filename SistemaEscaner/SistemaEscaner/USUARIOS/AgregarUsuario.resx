@@ -125,10 +125,13 @@
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 18pt, style=Bold</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>515, 9</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
@@ -151,7 +154,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;lblModificar.Name" xml:space="preserve">
     <value>lblModificar</value>
@@ -367,13 +370,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblModificar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblModificar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
+  </data>
+  <data name="lblModificar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblModificar.Location" type="System.Drawing.Point, System.Drawing">
     <value>52, 482</value>
@@ -401,6 +407,9 @@
   </data>
   <data name="&gt;&gt;lblModificar.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="BTNContra.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="BTNContra.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 513</value>
@@ -432,6 +441,9 @@
   <data name="BTNAgregar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans Typewriter, 14.25pt, style=Bold</value>
   </data>
+  <data name="BTNAgregar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="BTNAgregar.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 413</value>
   </data>
@@ -458,6 +470,9 @@
   </data>
   <data name="&gt;&gt;BTNAgregar.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="BTNLimpiar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="BTNLimpiar.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 329</value>
@@ -519,6 +534,9 @@
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 9pt, style=Bold</value>
   </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 239</value>
   </data>
@@ -545,33 +563,6 @@
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="IMGVer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 182</value>
-  </data>
-  <data name="IMGVer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="IMGVer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
-  </data>
-  <data name="IMGVer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="IMGVer.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Name" xml:space="preserve">
-    <value>IMGVer</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="cbEstado.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 329</value>
@@ -678,6 +669,9 @@
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
   </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>106, 329</value>
   </data>
@@ -710,6 +704,9 @@
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 281</value>
@@ -744,6 +741,9 @@
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
   </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 182</value>
   </data>
@@ -777,6 +777,9 @@
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
   </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 140</value>
   </data>
@@ -809,6 +812,9 @@
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 21.75pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 56</value>
@@ -859,7 +865,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DGVUsuarios.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 168</value>
@@ -880,31 +886,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBuscar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1353, 76</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 92</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="BTNExcel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="BTNExcel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1118, 124</value>
@@ -928,16 +913,64 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTNExcel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;BTNCerrar.Name" xml:space="preserve">
+    <value>BTNCerrar</value>
+  </data>
+  <data name="&gt;&gt;BTNCerrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTNCerrar.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;BTNCerrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbUsuario.Name" xml:space="preserve">
+    <value>lbUsuario</value>
+  </data>
+  <data name="&gt;&gt;lbUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbUsuario.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;lbUsuario.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-19, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1539, 48</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BTNCerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="BTNCerrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans Typewriter, 14.25pt, style=Bold</value>
+  </data>
+  <data name="BTNCerrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="BTNCerrar.Location" type="System.Drawing.Point, System.Drawing">
     <value>1493, 6</value>
@@ -963,128 +996,41 @@
   <data name="&gt;&gt;BTNCerrar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lbHora.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbUsuario.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbHora.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 8.25pt, style=Bold</value>
   </data>
-  <data name="lbHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lbHora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1370, 21</value>
-  </data>
-  <data name="lbHora.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lbHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 12</value>
-  </data>
-  <data name="lbHora.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lbHora.Text" xml:space="preserve">
-    <value>Hora</value>
-  </data>
-  <data name="&gt;&gt;lbHora.Name" xml:space="preserve">
-    <value>lbHora</value>
-  </data>
-  <data name="&gt;&gt;lbHora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbHora.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbHora.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans, 8.25pt, style=Bold</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbUsuario.Location" type="System.Drawing.Point, System.Drawing">
     <value>51, 21</value>
   </data>
-  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbUsuario.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 12</value>
   </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
+  <data name="lbUsuario.Text" xml:space="preserve">
     <value>Usuario</value>
   </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
+  <data name="&gt;&gt;lbUsuario.Name" xml:space="preserve">
+    <value>lbUsuario</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbUsuario.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbUsuario.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbFecha.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbFecha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans, 8.25pt, style=Bold</value>
-  </data>
-  <data name="lbFecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1145, 21</value>
-  </data>
-  <data name="lbFecha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lbFecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 12</value>
-  </data>
-  <data name="lbFecha.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;lbUsuario.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="lbFecha.Text" xml:space="preserve">
-    <value>Fecha</value>
-  </data>
-  <data name="&gt;&gt;lbFecha.Name" xml:space="preserve">
-    <value>lbFecha</value>
-  </data>
-  <data name="&gt;&gt;lbFecha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbFecha.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbFecha.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-19, 0</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1539, 48</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
@@ -1117,13 +1063,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 8.25pt, style=Bold</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>659, 17</value>
@@ -1158,6 +1107,9 @@
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans, 12pt, style=Bold</value>
   </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>594, 136</value>
   </data>
@@ -1183,7 +1135,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1191,9 +1143,90 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>104, 17</value>
   </metadata>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>268, 17</value>
-  </metadata>
+  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1353, 76</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 92</value>
+  </data>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="IMGVer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="IMGVer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 182</value>
+  </data>
+  <data name="IMGVer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="IMGVer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 24</value>
+  </data>
+  <data name="IMGVer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="IMGVer.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Name" xml:space="preserve">
+    <value>IMGVer</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BTN_Regresar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BTN_Regresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 54</value>
+  </data>
+  <data name="BTN_Regresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 46</value>
+  </data>
+  <data name="BTN_Regresar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="BTN_Regresar.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;BTN_Regresar.Name" xml:space="preserve">
+    <value>BTN_Regresar</value>
+  </data>
+  <data name="&gt;&gt;BTN_Regresar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Regresar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_Regresar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1211,6 +1244,9 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans Typewriter, 9.75pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
@@ -1232,12 +1268,6 @@
   </data>
   <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
-    <value>bunifuElipse1</value>
-  </data>
-  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AgregarUsuario</value>
