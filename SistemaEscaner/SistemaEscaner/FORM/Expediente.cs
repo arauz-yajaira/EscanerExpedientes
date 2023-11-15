@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using SistemaEscaner.FORM;
 using static SistemaEscaner.USUARIOS.InicioSesion;
+using SistemaEscaner.Clases;
 
 namespace SistemaEscaner.FORM
 {
@@ -276,16 +277,31 @@ namespace SistemaEscaner.FORM
 
         public event Action<string, string> RowClicked;
 
+
+        //public class IDPA
+        //{
+        //    public int PublicExpeInfo { get; set; }
+        //}
+
         public void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             Escaner escaner = new Escaner();
-            escaner.lbExpe.Text = this.DGVDatos.CurrentRow.Cells[0].Value.ToString();
+        
+            //IDPA idPA = new IDPA();
+
+        /*    idPA.PublicExpeInfo*/ 
+            paciente.expediente= int.Parse(this.DGVDatos.CurrentRow.Cells[0].Value.ToString());
+            escaner.lbExpe.Text = paciente.expediente.ToString();
             escaner.txtNombre.Text = this.DGVDatos.CurrentRow.Cells[1].Value.ToString();
             escaner.txtApellido.Text = this.DGVDatos.CurrentRow.Cells[2].Value.ToString();
             escaner.ShowDialog();
+          
 
         }
+        
+  
+
+
         private void lbEXP_Click(object sender, EventArgs e)
         {
 

@@ -34,6 +34,7 @@ namespace SistemaEscaner.FORM
             this.lbE = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsuario = new System.Windows.Forms.Label();
+            this.txtNUM = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@ namespace SistemaEscaner.FORM
             // 
             this.lbE.AutoSize = true;
             this.lbE.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbE.Location = new System.Drawing.Point(11, 160);
+            this.lbE.Location = new System.Drawing.Point(709, 110);
             this.lbE.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbE.Name = "lbE";
             this.lbE.Size = new System.Drawing.Size(99, 18);
@@ -73,7 +74,7 @@ namespace SistemaEscaner.FORM
             this.pictureBox1.Location = new System.Drawing.Point(118, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(583, 987);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,11 +91,19 @@ namespace SistemaEscaner.FORM
             this.lbUsuario.TabIndex = 50;
             this.lbUsuario.Text = "Usuario";
             // 
+            // txtNUM
+            // 
+            this.txtNUM.Location = new System.Drawing.Point(24, 110);
+            this.txtNUM.Name = "txtNUM";
+            this.txtNUM.Size = new System.Drawing.Size(59, 20);
+            this.txtNUM.TabIndex = 51;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 1061);
+            this.Controls.Add(this.txtNUM);
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.lbE);
             this.Controls.Add(this.pictureBox1);
@@ -116,5 +125,6 @@ namespace SistemaEscaner.FORM
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbUsuario;
         public System.Windows.Forms.Label lbE;
+        public System.Windows.Forms.TextBox txtNUM;
     }
 }

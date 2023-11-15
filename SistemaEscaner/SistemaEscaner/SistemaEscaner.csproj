@@ -312,6 +312,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDEscaner.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\paciente.cs" />
     <Compile Include="EstadoUsuario.cs">
       <DependentUpon>BDEscaner.tt</DependentUpon>
     </Compile>

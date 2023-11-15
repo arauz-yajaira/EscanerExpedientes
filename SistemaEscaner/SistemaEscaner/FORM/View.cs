@@ -14,6 +14,10 @@ using SistemaEscaner.FORM;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using static SistemaEscaner.USUARIOS.InicioSesion;
+using static SistemaEscaner.FORM.Expediente;
+using static SistemaEscaner.FORM.Escaner;
+using SistemaEscaner.Clases;
+
 
 
 namespace SistemaEscaner.FORM
@@ -23,63 +27,68 @@ namespace SistemaEscaner.FORM
         ExpEntity Entity = new ExpEntity();
         ExpedienteEntities Entities = new ExpedienteEntities();
         Escaner escaner = new Escaner();
-        public int id = Escaner.Ide;
+        public int IDE = paciente.expediente;
+
+        public PictureBox PictureBox1; // Asegúrate de tener un PictureBox en tu formulario
 
         public View()
         {
+   
             InitializeComponent();
             BTN_ATRAS.Visible = false;
-            LoadImage(); // Cargar la imagen cuando se crea el formulario
-            lbE.Text = id.ToString();
+            //lbE.Text = IDP.ToString();
+            txtNUM.Text = IDE.ToString();
+            MostrarImagen();
         }
 
-        public void LoadImage()
+
+
+        public void MostrarImagen()
         {
-            //Asegúrate de declarar la variable id y asignarle el valor de lbE.Text
-        
-                using (var Entities = new ExpedienteEntities())
-                {
-                    var hojas = Entities.Hoja.Where(
-                        h => h.IdPacienteESC == id)
-                        .ToList();
+            var paciente = Entities.Hoja.FirstOrDefault(p => p.IdPacienteESC == IDE);
 
+            if (paciente != null && paciente.HojaAgregada != null)
+            {
+                // Convertimos el array de bytes a una imagen
+                Image imagen = ByteArrayToImage(paciente.HojaAgregada);
 
-                    totalESC = hojas.Count;
-
-                    if (totalESC > 0)
-                    {
-                        if (indiceActual >= 0 && indiceActual < totalESC)
-                        {
-                            byte[] imageData = hojas[indiceActual].HojaAgregada;
-                            using (MemoryStream ms = new MemoryStream(imageData))
-                            {
-                                pictureBox1.Image = Image.FromStream(ms);
-                            }
-
-                            // Actualiza la visibilidad del botón "BTN_ATRAS"
-                            BTN_ATRAS.Visible = indiceActual > 0;
-                        }
-                    }
-                    else
-                    {
-                        // Si no se encuentran imágenes, muestra un mensaje de error o una imagen predeterminada.
-                        pictureBox1.Image = Properties.Resources.noEncontrada; // Reemplaza con tu imagen predeterminada.
-                    }
-                }
-         
+                // Mostramos la imagen en el pictureBox1
+                pictureBox1.Image = imagen;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo encontrar el paciente con ID " + IDE);
+            }
         }
 
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(byteArray))
+                {
+                    Image image = Image.FromStream(ms);
+                    return image;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al convertir bytes a imagen: " + ex.Message);
+                return null;
+            }
+        }
 
         public int indiceActual = 0;
         public int totalESC = 0;
 
         private void BTN_ATRAS_Click(object sender, EventArgs e)
         {
-            if (indiceActual > 0)
-            {
-                indiceActual--;
-                LoadImage();
-            }
+              if (indiceActual > 0)
+              {
+                  indiceActual--;
+                  MostrarImagen();
+              }
         }
 
         private void BTN_SIGUE_Click(object sender, EventArgs e)
@@ -87,19 +96,19 @@ namespace SistemaEscaner.FORM
             if (indiceActual < totalESC - 1)
             {
                 indiceActual++;
-                LoadImage();
+                MostrarImagen();
             }
         }
 
         private void View_Load(object sender, EventArgs e)
         {
             lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
         }
     }
-
 }

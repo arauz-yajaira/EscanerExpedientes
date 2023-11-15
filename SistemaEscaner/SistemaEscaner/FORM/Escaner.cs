@@ -15,9 +15,10 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using SistemaEscaner.Clases;
 using static SistemaEscaner.USUARIOS.InicioSesion;
-
-
+using static SistemaEscaner.FORM.Expediente;
+using Image = System.Drawing.Image;
 
 namespace SistemaEscaner.FORM
 {
@@ -26,26 +27,27 @@ namespace SistemaEscaner.FORM
     {
         ExpEntity Entity = new ExpEntity();
         ExpedienteEntities Entities = new ExpedienteEntities();
-        public int id = Expediente.exp;
+        Expediente expe = new Expediente();
+        public int EXPED = Expediente.exp;
+        internal static int IDP = 0 ;
         public string nombre;
         public string apellido;
-        //internal static int expe = 0;
-        internal static int Ide = 0;
 
         public Escaner()
         {
-           
-            InitializeComponent();
+               InitializeComponent();   
             txtNombre.Text = nombre;
             txtApellido.Text = apellido;
-
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
-           // lbExpe.Text = expe.ToString();
+            ///lbExpe.Text = idPA.PublicExpeInfo.ToString();
+            //lbExpe.Text = EXPED.ToString();
             BTN_AGDOC.Enabled = false;
-        
+          
 
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
           
@@ -69,23 +71,18 @@ namespace SistemaEscaner.FORM
 
         public byte[] ImageToByteArray(System.Drawing.Image imagen)
         {
-             OpenFileDialog getImage = new OpenFileDialog();
-            getImage.InitialDirectory = "C:\\";
-            getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png";
-            MemoryStream ms = new MemoryStream();
-            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            return ms.ToArray();
-           
-
+            // Utilizar using statement para garantizar la liberación adecuada de recursos
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
         }
 
 
         private void BTN_AGDOC_Click(object sender, EventArgs e)
         {
-            if (true)
-            {
-                
-                if (int.TryParse(lbExpe.Text, out int idPaciente))
+                try
                 {
                     // Convertir la imagen del PictureBox a un arreglo de bytes
                     byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
@@ -94,7 +91,7 @@ namespace SistemaEscaner.FORM
                     Hoja hoja = new Hoja
                     {
                         HojaAgregada = byteArrayImagen,
-                        IdPacienteESC = idPaciente
+                        IdPacienteESC = EXPED
                     };
 
                     // Agregar el objeto Hoja a la base de datos y guardar los cambios
@@ -103,16 +100,11 @@ namespace SistemaEscaner.FORM
 
                     MessageBox.Show("Guardado Satisfactoriamente");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("El ID del paciente no es un número válido. Escanee imagen antes de guardar.");
+                    MessageBox.Show("Error al guardar la imagen: " + ex.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Escanee imagen antes de guardar");
-            }
-
+            
 
         }
 
@@ -195,18 +187,21 @@ namespace SistemaEscaner.FORM
 
     private void BTN_VIEW_Click(object sender, EventArgs e)
         {
+            
             View viewForm = new View();
-            viewForm.Show(); // Mostrar el formulario "ViewForm"
+            viewForm.Show();
 
-            viewForm.lbE.Text = lbExpe.Text;
-            //viewForm.ShowDialog();
+           //idPA.PublicExpeInfo = int.Parse(lbExpe.Text.ToString());
+           viewForm.lbE.Text = paciente.expediente.ToString();
+            //idPA.PublicExpeInfo = IDP;
+
         }
 
         public void ConvertirImagenesAPDF()
         {
             using (var Entities = new ExpedienteEntities())
             {
-                var hojas = Entities.Hoja.Where(h => h.IdPacienteESC == id).ToList();
+                var hojas = Entities.Hoja.Where(h => h.IdPacienteESC == EXPED).ToList();
                 totalESC = hojas.Count;
 
                 if (totalESC > 0)
@@ -221,7 +216,7 @@ namespace SistemaEscaner.FORM
                         {
                             using (Document doc = new Document()) 
                             {
-                                using (PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create)))
+                                using (PdfWriter writer = PdfWriter.GetInstance (doc, new FileStream(sfd.FileName, FileMode.Create)))
                                 {
                                     doc.Open();
 
@@ -272,6 +267,55 @@ namespace SistemaEscaner.FORM
         private void timer1_Tick(object sender, EventArgs e)
         {
             
+        }
+
+        private void BTN_Vista_Click(object sender, EventArgs e)
+        {
+            MostrarImagen();
+        }
+        public void MostrarImagen()
+        {
+           
+            if (EXPED != null)
+            {
+                var paciente = Entities.Hoja.FirstOrDefault(p => p.IdPacienteESC == EXPED);
+
+                if (paciente != null && paciente.HojaAgregada != null)
+                {
+
+                    Image imagen = ByteArrayToImage(paciente.HojaAgregada);
+
+                    pictureBox1.Image = imagen;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo encontrar el paciente con ID " + EXPED);
+                }
+            }
+            else
+            {
+                MessageBox.Show("ID del paciente no válido.");
+            }
+
+        }
+
+
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(byteArray))
+                {
+                    Image image = Image.FromStream(ms);
+                    return image;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al convertir bytes a imagen: " + ex.Message);
+                return null;
+            }
         }
     }
 

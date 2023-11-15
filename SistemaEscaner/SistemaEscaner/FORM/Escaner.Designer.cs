@@ -53,6 +53,7 @@ namespace SistemaEscaner.FORM
             this.BTN_Regresar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BTN_Vista = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -242,7 +243,6 @@ namespace SistemaEscaner.FORM
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.BTNEscaner);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
@@ -257,7 +257,7 @@ namespace SistemaEscaner.FORM
             // 
             // BTNEscaner
             // 
-            this.BTNEscaner.Location = new System.Drawing.Point(141, 11);
+            this.BTNEscaner.Location = new System.Drawing.Point(508, 74);
             this.BTNEscaner.Name = "BTNEscaner";
             this.BTNEscaner.Size = new System.Drawing.Size(105, 35);
             this.BTNEscaner.TabIndex = 2;
@@ -312,11 +312,23 @@ namespace SistemaEscaner.FORM
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // BTN_Vista
+            // 
+            this.BTN_Vista.Location = new System.Drawing.Point(392, 76);
+            this.BTN_Vista.Name = "BTN_Vista";
+            this.BTN_Vista.Size = new System.Drawing.Size(110, 35);
+            this.BTN_Vista.TabIndex = 46;
+            this.BTN_Vista.Text = "Visualizar ";
+            this.BTN_Vista.UseVisualStyleBackColor = true;
+            this.BTN_Vista.Click += new System.EventHandler(this.BTN_Vista_Click);
+            // 
             // Escaner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1347, 1100);
+            this.Controls.Add(this.BTN_Vista);
+            this.Controls.Add(this.BTNEscaner);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.BTN_Regresar);
             this.Controls.Add(this.panel3);
@@ -372,5 +384,6 @@ namespace SistemaEscaner.FORM
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Label lbExpe;
+        private System.Windows.Forms.Button BTN_Vista;
     }
 }
