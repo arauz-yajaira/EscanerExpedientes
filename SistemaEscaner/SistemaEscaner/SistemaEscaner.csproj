@@ -476,6 +476,8 @@
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
       <LastGenOutput>ModelProyecto.cs</LastGenOutput>
     </Content>
+    <None Include="RECURSOS\ImagenSistema.png" />
+    <None Include="RECURSOS\Agregar un título %282%29.png" />
     <None Include="RECURSOS\2 - copia - copia.png" />
     <None Include="RECURSOS\2 - copia - copia %282%29.png" />
     <None Include="RECURSOS\barra.jpg" />

@@ -24,26 +24,51 @@ namespace SistemaEscaner.FORM
 
         private void BTN_AgreUsuario_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void BTN_Digit_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void MenuAdmin_Load(object sender, EventArgs e)
+        {
+            lbUser.Text = "Usuario Ingresado: " + UsuarioIngresado.UsuarioNombre;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
             USUARIOS.AgregarUsuario AGG = new AgregarUsuario();
             AGG.Show();
             this.Close();
         }
 
-        private void BTN_Digit_Click(object sender, EventArgs e)
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             FORM.Expediente exp = new Expediente();
             exp.Show();
             this.Close();
         }
 
-        private void MenuAdmin_Load(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario:" + UsuarioIngresado.UsuarioNombre;
-        }
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-          
+            if (result == DialogResult.Yes)
+            {
+                Close(); ;
+
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

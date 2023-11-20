@@ -134,6 +134,16 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agregar_un_título__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Agregar un título (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barra {
             get {
                 object obj = ResourceManager.GetObject("barra", resourceCulture);
@@ -144,9 +154,29 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barra1 {
+            get {
+                object obj = ResourceManager.GetObject("barra1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beyondhealth_willkommen_01_50eba149 {
             get {
                 object obj = ResourceManager.GetObject("beyondhealth_willkommen-01-50eba149", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImagenSistema {
+            get {
+                object obj = ResourceManager.GetObject("ImagenSistema", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
