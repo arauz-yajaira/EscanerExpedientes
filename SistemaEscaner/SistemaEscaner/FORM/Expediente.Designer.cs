@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbuscar = new System.Windows.Forms.Label();
             this.txtBuscarExp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,11 +43,11 @@
             this.ckId = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.idUsuario = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BTNCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.imgHospital = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,23 +91,23 @@
             this.DGVDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVDatos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle4;
             this.DGVDatos.Location = new System.Drawing.Point(81, 254);
             this.DGVDatos.MultiSelect = false;
             this.DGVDatos.Name = "DGVDatos";
@@ -216,6 +216,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.idUsuario);
             this.panel2.Controls.Add(this.lbUsuario);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.BTNCerrar);
@@ -224,13 +225,26 @@
             this.panel2.Size = new System.Drawing.Size(1445, 46);
             this.panel2.TabIndex = 9;
             // 
+            // idUsuario
+            // 
+            this.idUsuario.AutoSize = true;
+            this.idUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
+            this.idUsuario.ForeColor = System.Drawing.Color.White;
+            this.idUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.idUsuario.Location = new System.Drawing.Point(29, 21);
+            this.idUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.Size = new System.Drawing.Size(17, 12);
+            this.idUsuario.TabIndex = 50;
+            this.idUsuario.Text = "id";
+            // 
             // lbUsuario
             // 
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.lbUsuario.ForeColor = System.Drawing.Color.White;
             this.lbUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUsuario.Location = new System.Drawing.Point(48, 21);
+            this.lbUsuario.Location = new System.Drawing.Point(85, 21);
             this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(50, 12);
@@ -274,10 +288,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1443, 46);
             this.panel3.TabIndex = 10;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // imgHospital
             // 
@@ -340,7 +350,7 @@
         protected System.Windows.Forms.DataGridView DGVDatos;
         private System.Windows.Forms.Label lbEXP;
         private System.Windows.Forms.Label lbP;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.Label idUsuario;
     }
 }

@@ -38,7 +38,7 @@ namespace SistemaEscaner.FORM
 
         private void MenuAdmin_Load(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+            lbUsuario.Text = "Usuario:" + UsuarioIngresado.UsuarioNombre;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -15,7 +15,6 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using SistemaEscaner.Clases;
 using static SistemaEscaner.USUARIOS.InicioSesion;
 using static SistemaEscaner.FORM.Expediente;
 using Image = System.Drawing.Image;
@@ -25,26 +24,32 @@ namespace SistemaEscaner.FORM
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public partial class Escaner : Form
     {
-        ExpEntity Entity = new ExpEntity();
-        ExpedienteEntities Entities = new ExpedienteEntities();
-        Expediente expe = new Expediente();
+        ExpEntity Entity = new ExpEntity(); // SIGAF
+        ExpedienteEntities Entities = new ExpedienteEntities(); //sistema escaner
+        Expediente expe = new Expediente(); // no se
+   
         public int EXPED = Expediente.exp;
-        internal static int IDP = 0 ;
+        int IDE = Expediente.exp;
         public string nombre;
         public string apellido;
 
+      //  int nexpe = paciente.expediente;
+
         public Escaner()
         {
-               InitializeComponent();   
-            txtNombre.Text = nombre;
-            txtApellido.Text = apellido;
+            InitializeComponent();
+            string k = IDE.ToString();
+            var paciente = Entity.PACIENTE.FirstOrDefault(u => u.EXPEDIENTE == IDE);
+            lbExpe.Text = paciente.EXPEDIENTE.ToString();
+            txtNombre.Text = paciente.NOMBRES_DEL_PACIENTE;
+            txtApellido.Text = paciente.APELLIDO_1_DEL_PACIENTE;
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             ///lbExpe.Text = idPA.PublicExpeInfo.ToString();
             //lbExpe.Text = EXPED.ToString();
             BTN_AGDOC.Enabled = false;
-          
-
+           
+           // IDE = Convert.ToInt32(lbExpe.Text);
         }
 
 
@@ -82,17 +87,23 @@ namespace SistemaEscaner.FORM
 
         private void BTN_AGDOC_Click(object sender, EventArgs e)
         {
-                try
-                {
-                    // Convertir la imagen del PictureBox a un arreglo de bytes
-                    byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+            Escaner escaner = new Escaner();
+            try
+            {
+                // Convertir la imagen del PictureBox a un arreglo de bytes
+                byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
 
-                    // Crear un objeto Hoja con los datos necesarios
-                    Hoja hoja = new Hoja
-                    {
-                        HojaAgregada = byteArrayImagen,
-                        IdPacienteESC = EXPED
-                    };
+                // Crear un objeto Hoja con los datos necesarios
+                Hoja hoja = new Hoja
+                {
+                  //  usuarioCreo = escaner.lbUsuario.Text,
+                    HojaAgregada = byteArrayImagen,
+                    IdPacienteESC = IDE,
+                    FechaIngreso = DateTime.Now,
+                    usuarioCreo = UsuarioIngresado.IdUsuario
+
+
+                };
 
                     // Agregar el objeto Hoja a la base de datos y guardar los cambios
                     Entities.Hoja.Add(hoja);
@@ -190,10 +201,8 @@ namespace SistemaEscaner.FORM
             
             View viewForm = new View();
             viewForm.Show();
+           viewForm.lbE.Text = IDE.ToString();
 
-           //idPA.PublicExpeInfo = int.Parse(lbExpe.Text.ToString());
-           viewForm.lbE.Text = paciente.expediente.ToString();
-            //idPA.PublicExpeInfo = IDP;
 
         }
 
@@ -201,7 +210,8 @@ namespace SistemaEscaner.FORM
         {
             using (var Entities = new ExpedienteEntities())
             {
-                var hojas = Entities.Hoja.Where(h => h.IdPacienteESC == EXPED).ToList();
+                var hojas = Entities.Hoja.Where(h => h.IdPacienteESC == IDE).ToList();
+                MessageBox.Show(IDE.ToString());
                 totalESC = hojas.Count;
 
                 if (totalESC > 0)
@@ -214,9 +224,9 @@ namespace SistemaEscaner.FORM
 
                         if (sfd.ShowDialog() == DialogResult.OK)
                         {
-                            using (Document doc = new Document()) 
+                            using (Document doc = new Document())
                             {
-                                using (PdfWriter writer = PdfWriter.GetInstance (doc, new FileStream(sfd.FileName, FileMode.Create)))
+                                using (PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create)))
                                 {
                                     doc.Open();
 
@@ -226,12 +236,19 @@ namespace SistemaEscaner.FORM
                                         using (MemoryStream ms = new MemoryStream(imageData))
                                         {
                                             iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(ms);
+
+                                            // Centrar la imagen en la página
+                                            float width = PageSize.LETTER.Width - doc.LeftMargin - doc.RightMargin;
+                                            float height = PageSize.LETTER.Height - doc.TopMargin - doc.BottomMargin;
+                                            img.Alignment = iTextSharp.text.Image.ALIGN_CENTER | iTextSharp.text.Image.ALIGN_MIDDLE;
+                                            img.ScaleToFit(width, height);
+
                                             doc.Add(img);
                                         }
                                     }
                                     doc.Close();
                                 }
-                              
+
                             }
 
                             MessageBox.Show("Expediente Digital PDF exportado y guardado en " + sfd.FileName);
@@ -240,12 +257,11 @@ namespace SistemaEscaner.FORM
                 }
                 else
                 {
-                    // Si no se encuentran imágenes, muestra un mensaje de error o una imagen predeterminada.
-                    pictureBox1.Image = Properties.Resources.noEncontrada; // Reemplaza con tu imagen predeterminada.
+                    pictureBox1.Image = Properties.Resources.noEncontrada;
                 }
             }
         }
-        
+
 
         public int indiceActual = 0;
         public int totalESC = 0;
@@ -261,7 +277,27 @@ namespace SistemaEscaner.FORM
         private void Escaner_Load(object sender, EventArgs e)
         {
             lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
-        
+            idUsuario.Text = "Id " + UsuarioIngresado.IdUsuario;
+
+            // Verificar si el usuario es de tipo 3 (Usuario)
+            if (UsuarioIngresado.TipoUsuario == 3)
+            {
+                // Bloquear los botones de agregar y escanear
+                BTNEscaner.Visible = false;
+                BTN_AGDOC.Visible = false;
+
+                // Mostrar los botones de visualización y exportar
+                BTN_VIEW.Visible = true;
+                BTN_EXPDF.Visible = true;
+            }
+            else
+            {
+                BTNEscaner.Visible= true;
+                BTN_AGDOC.Visible = true;
+                BTN_VIEW.Visible = true;
+                BTN_EXPDF.Visible = true;
+            }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -271,36 +307,8 @@ namespace SistemaEscaner.FORM
 
         private void BTN_Vista_Click(object sender, EventArgs e)
         {
-            MostrarImagen();
+          
         }
-        public void MostrarImagen()
-        {
-           
-            if (EXPED != null)
-            {
-                var paciente = Entities.Hoja.FirstOrDefault(p => p.IdPacienteESC == EXPED);
-
-                if (paciente != null && paciente.HojaAgregada != null)
-                {
-
-                    Image imagen = ByteArrayToImage(paciente.HojaAgregada);
-
-                    pictureBox1.Image = imagen;
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo encontrar el paciente con ID " + EXPED);
-                }
-            }
-            else
-            {
-                MessageBox.Show("ID del paciente no válido.");
-            }
-
-        }
-
-
-
         private Image ByteArrayToImage(byte[] byteArray)
         {
             try

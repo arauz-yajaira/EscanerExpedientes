@@ -25,24 +25,21 @@ namespace SistemaEscaner.USUARIOS
         }
         
         
-        private bool showPassword = false;
-
-      
-
+        private bool verContra = false;
 
         private void IMGVer_Click(object sender, System.EventArgs e)
         {
-            showPassword = !showPassword;
+            verContra = !verContra;
 
-            if (showPassword)
+            if (verContra)
             {
                 txtContra.PasswordChar = '\0'; // Mostrar contraseña en texto normal
-                txtConfir.PasswordChar = '\0';
+             
             }
             else
             {
                 txtContra.PasswordChar = '*'; // Ocultar contraseña con asteriscos
-                txtConfir.PasswordChar = '*';
+             
             }
 
         }
@@ -66,10 +63,14 @@ namespace SistemaEscaner.USUARIOS
         public static class UsuarioIngresado
         {
             public static string UsuarioNombre { get; private set; }
+            public static int IdUsuario { get; private set; }
+            public static int TipoUsuario { get; private set; }
 
-            public static void IniciarSesion(string nombreUsuario)
+            public static void IniciarSesion(string nombreUsuario, int IdU, int Tipo)
             {
                 UsuarioNombre = nombreUsuario;
+                IdUsuario = IdU;
+                TipoUsuario = Tipo;
             }
 
             public static void CerrarSesion()
@@ -99,14 +100,27 @@ namespace SistemaEscaner.USUARIOS
                     {
                         // Inicio de sesión exitoso
                         MessageBox.Show("Inicio de sesión exitoso");
-                        UsuarioIngresado.IniciarSesion(nombreUsuario);
-                        FORM.MenuAdmin admin = new FORM.MenuAdmin();
-                        admin.Show();
-                       /* FORM.Expediente expediente = new FORM.Expediente();
-                        expediente.Show();*/
+
+                        // Obtener el tipo de usuario
+                        int tipoUsuario = usuario.IdTipoUsuario;
+
+                        // Enviar los valores a UsuarioIngresado
+                        UsuarioIngresado.IniciarSesion(usuario.Usuario, usuario.IdUsuario, tipoUsuario);
+
+                        // Redirigir según el tipo de usuario
+                        if (tipoUsuario == 1) // Admin
+                        {
+                            FORM.MenuAdmin admin = new FORM.MenuAdmin();
+                            admin.Show();
+                        }
+                        else if (tipoUsuario == 2 || tipoUsuario == 3) // Digitalizador o Usuario
+                        {
+                            FORM.Expediente expediente = new FORM.Expediente();
+                            expediente.Show();
+                        }
+
+                        // Ocultar el formulario actual
                         this.Hide();
-
-
                     }
                     else
                     {
@@ -120,7 +134,6 @@ namespace SistemaEscaner.USUARIOS
                     MessageBox.Show("Usuario no encontrado. Verifica tus datos ingresados.");
                 }
 
-               
             }
 
         }
@@ -145,11 +158,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void txtConfir_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
-            {
-                SelectNextControl(ActiveControl, true, true, true, true);
-                e.Handled = true;
-            }
+            
         }
     }
 }

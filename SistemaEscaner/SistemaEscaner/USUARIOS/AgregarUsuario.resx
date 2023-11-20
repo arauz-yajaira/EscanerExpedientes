@@ -156,6 +156,18 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;BTNEliminar.Name" xml:space="preserve">
+    <value>BTNEliminar</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;lblModificar.Name" xml:space="preserve">
     <value>lblModificar</value>
   </data>
@@ -166,7 +178,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lblModificar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;BTNContra.Name" xml:space="preserve">
     <value>BTNContra</value>
@@ -178,7 +190,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNContra.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;BTNAgregar.Name" xml:space="preserve">
     <value>BTNAgregar</value>
@@ -190,7 +202,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNAgregar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;BTNLimpiar.Name" xml:space="preserve">
     <value>BTNLimpiar</value>
@@ -202,7 +214,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNLimpiar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;txtConfir.Name" xml:space="preserve">
     <value>txtConfir</value>
@@ -214,7 +226,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtConfir.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -226,7 +238,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;IMGVer.Name" xml:space="preserve">
     <value>IMGVer</value>
@@ -238,7 +250,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;IMGVer.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;cbEstado.Name" xml:space="preserve">
     <value>cbEstado</value>
@@ -250,7 +262,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbEstado.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;cbTipoUsuario.Name" xml:space="preserve">
     <value>cbTipoUsuario</value>
@@ -262,7 +274,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbTipoUsuario.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;txtContra.Name" xml:space="preserve">
     <value>txtContra</value>
@@ -274,7 +286,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtContra.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;txtUsuario.Name" xml:space="preserve">
     <value>txtUsuario</value>
@@ -286,7 +298,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -298,7 +310,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -310,7 +322,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -322,7 +334,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -334,7 +346,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -346,7 +358,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 112</value>
@@ -355,7 +367,7 @@
     <value>4, 3, 4, 3</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 589</value>
+    <value>483, 629</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -370,7 +382,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
+  </data>
+  <data name="BTNEliminar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BTNEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 574</value>
+  </data>
+  <data name="BTNEliminar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="BTNEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 40</value>
+  </data>
+  <data name="BTNEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="BTNEliminar.Text" xml:space="preserve">
+    <value>Eliminar Usuario</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.Name" xml:space="preserve">
+    <value>BTNEliminar</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;BTNEliminar.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lblModificar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,7 +448,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lblModificar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BTNContra.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -436,7 +478,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNContra.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BTNAgregar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans Typewriter, 14.25pt, style=Bold</value>
@@ -469,7 +511,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNAgregar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BTNLimpiar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -499,7 +541,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;BTNLimpiar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtConfir.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 235</value>
@@ -526,7 +568,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtConfir.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -562,7 +604,37 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="IMGVer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="IMGVer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 182</value>
+  </data>
+  <data name="IMGVer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="IMGVer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 24</value>
+  </data>
+  <data name="IMGVer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="IMGVer.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Name" xml:space="preserve">
+    <value>IMGVer</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;IMGVer.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="cbEstado.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 329</value>
@@ -586,7 +658,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbEstado.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="cbTipoUsuario.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 281</value>
@@ -610,7 +682,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbTipoUsuario.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txtContra.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 182</value>
@@ -637,7 +709,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtContra.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtUsuario.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 135</value>
@@ -661,7 +733,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -697,7 +769,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -733,7 +805,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -769,7 +841,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -805,7 +877,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -841,7 +913,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="DGVUsuarios.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 211</value>
@@ -865,7 +937,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DGVUsuarios.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
     <value>597, 168</value>
@@ -886,34 +958,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBuscar.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="BTNExcel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BTNExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1118, 124</value>
-  </data>
-  <data name="BTNExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 44</value>
-  </data>
-  <data name="BTNExcel.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="BTNExcel.Text" xml:space="preserve">
-    <value>exportar a excel</value>
-  </data>
-  <data name="&gt;&gt;BTNExcel.Name" xml:space="preserve">
-    <value>BTNExcel</value>
-  </data>
-  <data name="&gt;&gt;BTNExcel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BTNExcel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BTNExcel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1168,37 +1213,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="IMGVer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="IMGVer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 182</value>
-  </data>
-  <data name="IMGVer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="IMGVer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
-  </data>
-  <data name="IMGVer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="IMGVer.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Name" xml:space="preserve">
-    <value>IMGVer</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;IMGVer.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="BTN_Regresar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1245,9 +1260,6 @@
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Sans Typewriter, 9.75pt</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
@@ -1255,7 +1267,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AgregarUsuario</value>
+    <value>r</value>
   </data>
   <data name="&gt;&gt;timer1.Name" xml:space="preserve">
     <value>timer1</value>

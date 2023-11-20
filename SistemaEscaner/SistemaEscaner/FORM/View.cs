@@ -16,7 +16,6 @@ using System.Diagnostics;
 using static SistemaEscaner.USUARIOS.InicioSesion;
 using static SistemaEscaner.FORM.Expediente;
 using static SistemaEscaner.FORM.Escaner;
-using SistemaEscaner.Clases;
 
 
 
@@ -27,7 +26,8 @@ namespace SistemaEscaner.FORM
         ExpEntity Entity = new ExpEntity();
         ExpedienteEntities Entities = new ExpedienteEntities();
         Escaner escaner = new Escaner();
-        public int IDE = paciente.expediente;
+       // public int IDE = paciente.expediente;
+        int IDE = Expediente.exp;
 
         public PictureBox PictureBox1; // Asegúrate de tener un PictureBox en tu formulario
 
@@ -35,9 +35,9 @@ namespace SistemaEscaner.FORM
         {
    
             InitializeComponent();
-            BTN_ATRAS.Visible = false;
-            //lbE.Text = IDP.ToString();
-            txtNUM.Text = IDE.ToString();
+            BTN_ATRAS.Visible = false;   
+            var paciente = Entity.PACIENTE.FirstOrDefault(u => u.EXPEDIENTE == IDE);
+            lbE.Text = paciente.EXPEDIENTE.ToString();
             MostrarImagen();
         }
 
@@ -45,23 +45,34 @@ namespace SistemaEscaner.FORM
 
         public void MostrarImagen()
         {
-            var paciente = Entities.Hoja.FirstOrDefault(p => p.IdPacienteESC == IDE);
-
-            if (paciente != null && paciente.HojaAgregada != null)
+            using (var Entities = new ExpedienteEntities())
             {
-                // Convertimos el array de bytes a una imagen
-                Image imagen = ByteArrayToImage(paciente.HojaAgregada);
+                var hojas = Entities.Hoja.Where(
+                    h => h.IdPacienteESC == IDE)
+                    .ToList();
+                totalESC = hojas.Count;
+                if (totalESC > 0)
+                {
+                    if (indiceActual >= 0 && indiceActual < totalESC)
+                    {
+                        byte[] imageData = hojas[indiceActual].HojaAgregada;
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            pictureBox1.Image = Image.FromStream(ms);
+                        }
+                        // Actualiza la visibilidad del botón "BTN_ATRAS"
+                        BTN_ATRAS.Visible = indiceActual > 0;
+                    }
+                }
+                else
+                {
+                    // Si no se encuentran imágenes, muestra un mensaje de error o una imagen predeterminada.
+                    pictureBox1.Image = Properties.Resources.noEncontrada; // Reemplaza con tu imagen predeterminada.
+                }
+            }
 
-                // Mostramos la imagen en el pictureBox1
-                pictureBox1.Image = imagen;
-            }
-            else
-            {
-                MessageBox.Show("No se pudo encontrar el paciente con ID " + IDE);
-            }
         }
-
-
+        /*
         private Image ByteArrayToImage(byte[] byteArray)
         {
             try
@@ -77,7 +88,10 @@ namespace SistemaEscaner.FORM
                 MessageBox.Show("Error al convertir bytes a imagen: " + ex.Message);
                 return null;
             }
-        }
+        }*/
+
+
+
 
         public int indiceActual = 0;
         public int totalESC = 0;
@@ -103,6 +117,24 @@ namespace SistemaEscaner.FORM
         private void View_Load(object sender, EventArgs e)
         {
             lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+            lbId.Text = "Id " + UsuarioIngresado.IdUsuario;
+
+            // Verificar si el usuario es de tipo 3 (Usuario)
+            if (UsuarioIngresado.TipoUsuario == 3)
+            {
+                // Bloquear los botones de agregar y escanear
+                BTN_Eliminar.Visible = false;
+
+                // Mostrar los botones de visualización y exportar
+                BTN_ATRAS.Visible = true;
+                BTN_SIGUE.Visible = true;
+            }
+            else
+            {
+                BTN_Eliminar.Visible = true;
+                BTN_ATRAS.Visible = true;
+                BTN_SIGUE.Visible = true;
+            }
 
         }
 
@@ -110,5 +142,48 @@ namespace SistemaEscaner.FORM
         {
 
         }
+
+        private void BTN_Eliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de que quieres eliminar esta hoja?", "Confirmar eliminación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                EliminarHoja();
+            }
+        }
+        public void EliminarHoja()
+        {
+            try
+            {
+                using (var entities = new ExpedienteEntities())
+                {
+                    var hojaActual = entities.Hoja
+                        .Where(h => h.IdPacienteESC == IDE)
+                        .OrderBy(h => h.IdHoja) 
+                        .Skip(indiceActual)
+                        .FirstOrDefault();
+
+                    if (hojaActual != null)
+                    {
+                      
+                        entities.Hoja.Remove(hojaActual);
+                        entities.SaveChanges();
+
+                        // restar el contador total
+                        totalESC--;
+                        MostrarImagen();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar la hoja: " + ex.Message);
+            }
+        }
+
+
+
+
     }
 }

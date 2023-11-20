@@ -12,7 +12,6 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using SistemaEscaner.FORM;
 using static SistemaEscaner.USUARIOS.InicioSesion;
-using SistemaEscaner.Clases;
 
 namespace SistemaEscaner.FORM
 {
@@ -21,7 +20,7 @@ namespace SistemaEscaner.FORM
         
         ExpEntity Entity = new ExpEntity();
         ExpedienteEntities Entities = new ExpedienteEntities();
-        internal static int exp = 0;
+        public static int exp = 0;
 
         public Expediente()
         {
@@ -160,9 +159,15 @@ namespace SistemaEscaner.FORM
             // Comprobar si el usuario hizo clic en "Sí"
             if (result == DialogResult.Yes)
             {
-                // Si se hace clic en "Sí", cerrar la aplicación
-               Close();
-
+                Expediente expediente = new Expediente();
+                expediente.Close();
+                USUARIOS.InicioSesion inicio = new USUARIOS.InicioSesion();
+                inicio.Show();
+              
+            }
+            else
+            {
+                return;
             }
 
         }
@@ -285,17 +290,35 @@ namespace SistemaEscaner.FORM
 
         public void DGVDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Escaner escaner = new Escaner();
-        
+            try
+            {
+                exp = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
+                
+                Escaner escaner = new Escaner();
+                escaner.ShowDialog();
+                Expediente expediente = new Expediente();
+                expediente.Hide();
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+
+            // no tocar
+           /* Escaner escaner = new Escaner();
+
             //IDPA idPA = new IDPA();
 
-        /*    idPA.PublicExpeInfo*/ 
-            paciente.expediente= int.Parse(this.DGVDatos.CurrentRow.Cells[0].Value.ToString());
-            escaner.lbExpe.Text = paciente.expediente.ToString();
+            /*   idPA.PublicExpeInfo
+            MessageBox.Show(DGVDatos.CurrentRow.Cells[0].Selected.ToString());
+            exp = 0;
+           // escaner.lbExpe.Text = paciente.expediente.ToString();
+            escaner.lbExpe.Text = exp.ToString();
             escaner.txtNombre.Text = this.DGVDatos.CurrentRow.Cells[1].Value.ToString();
             escaner.txtApellido.Text = this.DGVDatos.CurrentRow.Cells[2].Value.ToString();
-            escaner.ShowDialog();
-          
+            escaner.ShowDialog();*/
+            
 
         }
         
@@ -310,6 +333,7 @@ namespace SistemaEscaner.FORM
         private void Expediente_Load(object sender, EventArgs e)
         {
             lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+            idUsuario.Text = "Id " + UsuarioIngresado.IdUsuario;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

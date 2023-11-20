@@ -29,7 +29,6 @@ namespace SistemaEscaner.FORM
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Escaner));
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,6 +38,7 @@ namespace SistemaEscaner.FORM
             this.lbuscar = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.idUsuario = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,13 +47,11 @@ namespace SistemaEscaner.FORM
             this.BTN_EXPDF = new System.Windows.Forms.PictureBox();
             this.BTN_VIEW = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
-            this.BTNEscaner = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTNEscaner = new System.Windows.Forms.Button();
             this.BTN_Regresar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.BTN_Vista = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -140,13 +138,27 @@ namespace SistemaEscaner.FORM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.idUsuario);
             this.panel2.Controls.Add(this.lbUsuario);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(-110, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1457, 44);
+            this.panel2.Size = new System.Drawing.Size(1551, 44);
             this.panel2.TabIndex = 11;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.AutoSize = true;
+            this.idUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
+            this.idUsuario.ForeColor = System.Drawing.Color.White;
+            this.idUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.idUsuario.Location = new System.Drawing.Point(130, 20);
+            this.idUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.Size = new System.Drawing.Size(17, 12);
+            this.idUsuario.TabIndex = 51;
+            this.idUsuario.Text = "id";
             // 
             // lbUsuario
             // 
@@ -154,7 +166,7 @@ namespace SistemaEscaner.FORM
             this.lbUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.lbUsuario.ForeColor = System.Drawing.Color.White;
             this.lbUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUsuario.Location = new System.Drawing.Point(155, 20);
+            this.lbUsuario.Location = new System.Drawing.Point(168, 20);
             this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(50, 12);
@@ -171,7 +183,7 @@ namespace SistemaEscaner.FORM
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold);
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(1402, 1);
+            this.button1.Location = new System.Drawing.Point(1496, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 43);
             this.button1.TabIndex = 40;
@@ -243,27 +255,18 @@ namespace SistemaEscaner.FORM
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.BTNEscaner);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(649, 74);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(606, 74);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(596, 990);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(713, 990);
             this.bunifuGradientPanel1.TabIndex = 45;
-            // 
-            // BTNEscaner
-            // 
-            this.BTNEscaner.Location = new System.Drawing.Point(508, 74);
-            this.BTNEscaner.Name = "BTNEscaner";
-            this.BTNEscaner.Size = new System.Drawing.Size(105, 35);
-            this.BTNEscaner.TabIndex = 2;
-            this.BTNEscaner.Text = "Escanear";
-            this.BTNEscaner.UseVisualStyleBackColor = true;
-            this.BTNEscaner.Click += new System.EventHandler(this.BTNEscaner_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -278,10 +281,20 @@ namespace SistemaEscaner.FORM
             // 
             this.pictureBox1.Location = new System.Drawing.Point(18, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(561, 922);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(666, 922);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // BTNEscaner
+            // 
+            this.BTNEscaner.Location = new System.Drawing.Point(493, 11);
+            this.BTNEscaner.Name = "BTNEscaner";
+            this.BTNEscaner.Size = new System.Drawing.Size(105, 35);
+            this.BTNEscaner.TabIndex = 2;
+            this.BTNEscaner.Text = "Escanear";
+            this.BTNEscaner.UseVisualStyleBackColor = true;
+            this.BTNEscaner.Click += new System.EventHandler(this.BTNEscaner_Click);
             // 
             // BTN_Regresar
             // 
@@ -301,34 +314,18 @@ namespace SistemaEscaner.FORM
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(1261, 54);
+            this.pictureBox3.Location = new System.Drawing.Point(1349, 48);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(74, 77);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 39;
             this.pictureBox3.TabStop = false;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // BTN_Vista
-            // 
-            this.BTN_Vista.Location = new System.Drawing.Point(392, 76);
-            this.BTN_Vista.Name = "BTN_Vista";
-            this.BTN_Vista.Size = new System.Drawing.Size(110, 35);
-            this.BTN_Vista.TabIndex = 46;
-            this.BTN_Vista.Text = "Visualizar ";
-            this.BTN_Vista.UseVisualStyleBackColor = true;
-            this.BTN_Vista.Click += new System.EventHandler(this.BTN_Vista_Click);
-            // 
             // Escaner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1347, 1100);
-            this.Controls.Add(this.BTN_Vista);
-            this.Controls.Add(this.BTNEscaner);
+            this.ClientSize = new System.Drawing.Size(1435, 1100);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.BTN_Regresar);
             this.Controls.Add(this.panel3);
@@ -380,10 +377,9 @@ namespace SistemaEscaner.FORM
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbUsuario;
-        private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Label lbExpe;
-        private System.Windows.Forms.Button BTN_Vista;
+        private System.Windows.Forms.Label idUsuario;
     }
 }

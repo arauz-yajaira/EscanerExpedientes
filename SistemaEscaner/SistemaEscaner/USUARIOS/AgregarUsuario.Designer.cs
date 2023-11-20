@@ -32,12 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTNEliminar = new System.Windows.Forms.Button();
             this.lblModificar = new System.Windows.Forms.Label();
             this.BTNContra = new System.Windows.Forms.Button();
             this.BTNAgregar = new System.Windows.Forms.Button();
             this.BTNLimpiar = new System.Windows.Forms.Button();
             this.txtConfir = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.IMGVer = new System.Windows.Forms.PictureBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.txtContra = new System.Windows.Forms.TextBox();
@@ -49,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.BTNExcel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BTNCerrar = new System.Windows.Forms.Button();
             this.lbUsuario = new System.Windows.Forms.Label();
@@ -59,14 +60,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.IMGVer = new System.Windows.Forms.PictureBox();
             this.BTN_Regresar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_Regresar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BTNEliminar);
             this.panel1.Controls.Add(this.lblModificar);
             this.panel1.Controls.Add(this.BTNContra);
             this.panel1.Controls.Add(this.BTNAgregar);
@@ -97,6 +98,13 @@
             this.panel1.Controls.Add(this.label2);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // BTNEliminar
+            // 
+            resources.ApplyResources(this.BTNEliminar, "BTNEliminar");
+            this.BTNEliminar.Name = "BTNEliminar";
+            this.BTNEliminar.UseVisualStyleBackColor = true;
+            this.BTNEliminar.Click += new System.EventHandler(this.BTNEliminar_Click);
             // 
             // lblModificar
             // 
@@ -137,6 +145,15 @@
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
+            // 
+            // IMGVer
+            // 
+            this.IMGVer.BackColor = System.Drawing.Color.Transparent;
+            this.IMGVer.Image = global::SistemaEscaner.Properties.Resources.OIP__2_;
+            resources.ApplyResources(this.IMGVer, "IMGVer");
+            this.IMGVer.Name = "IMGVer";
+            this.IMGVer.TabStop = false;
+            this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
             // 
             // cbEstado
             // 
@@ -203,13 +220,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
-            // BTNExcel
-            // 
-            resources.ApplyResources(this.BTNExcel, "BTNExcel");
-            this.BTNExcel.Name = "BTNExcel";
-            this.BTNExcel.UseVisualStyleBackColor = true;
-            this.BTNExcel.Click += new System.EventHandler(this.BTNExcel_Click);
-            // 
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
@@ -267,15 +277,6 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
-            // IMGVer
-            // 
-            this.IMGVer.BackColor = System.Drawing.Color.Transparent;
-            this.IMGVer.Image = global::SistemaEscaner.Properties.Resources.OIP__2_;
-            resources.ApplyResources(this.IMGVer, "IMGVer");
-            this.IMGVer.Name = "IMGVer";
-            this.IMGVer.TabStop = false;
-            this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
-            // 
             // BTN_Regresar
             // 
             this.BTN_Regresar.BackColor = System.Drawing.Color.Transparent;
@@ -293,7 +294,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.BTNExcel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.DGVUsuarios);
@@ -304,13 +304,13 @@
             this.Load += new System.EventHandler(this.AgregarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_Regresar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,7 +340,6 @@
         private System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.Button BTNContra;
         private System.Windows.Forms.Button BTNAgregar;
-        private System.Windows.Forms.Button BTNExcel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbUsuario;
         private System.Windows.Forms.Panel panel3;
@@ -350,6 +349,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button BTNCerrar;
         private System.Windows.Forms.PictureBox BTN_Regresar;
+        private System.Windows.Forms.Button BTNEliminar;
         //private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

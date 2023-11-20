@@ -15,9 +15,7 @@
     <Property Name="IdPacienteESC" Type="int" />
     <Property Name="HojaAgregada" Type="varbinary(max)" />
     <Property Name="usuarioCreo" Type="int" />
-    <Property Name="usuarioModificado" Type="int" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
-    <Property Name="FechaModificado" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

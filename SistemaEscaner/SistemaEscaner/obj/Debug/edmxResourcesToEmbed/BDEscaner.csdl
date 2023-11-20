@@ -15,9 +15,7 @@
     <Property Name="IdHoja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HojaAgregada" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="usuarioCreo" Type="Int32" />
-    <Property Name="usuarioModificado" Type="Int32" />
     <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="FechaModificado" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="IdPacienteESC" Type="Int32" />
   </EntityType>
   <EntityType Name="sysdiagrams">

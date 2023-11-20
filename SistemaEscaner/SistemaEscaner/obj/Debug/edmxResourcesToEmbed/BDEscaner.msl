@@ -16,9 +16,7 @@
           <ScalarProperty Name="IdHoja" ColumnName="IdHoja" />
           <ScalarProperty Name="HojaAgregada" ColumnName="HojaAgregada" />
           <ScalarProperty Name="usuarioCreo" ColumnName="usuarioCreo" />
-          <ScalarProperty Name="usuarioModificado" ColumnName="usuarioModificado" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
-          <ScalarProperty Name="FechaModificado" ColumnName="FechaModificado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -14,7 +14,7 @@ namespace SistemaEscaner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FORM.Expediente());
+            Application.Run(new USUARIOS.InicioSesion());
            
             //METODO PARA CREAR CARPETA AL EJECUTAR EL ARCHIVO
             string carpetaExpedientes = @"C:\Archivos_y_Expedientes_Respaldo_HEAC"; // Direccion de la carpeta 

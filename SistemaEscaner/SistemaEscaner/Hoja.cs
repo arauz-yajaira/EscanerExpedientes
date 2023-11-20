@@ -17,9 +17,7 @@ namespace SistemaEscaner
         public int IdHoja { get; set; }
         public byte[] HojaAgregada { get; set; }
         public Nullable<int> usuarioCreo { get; set; }
-        public Nullable<int> usuarioModificado { get; set; }
         public System.DateTime FechaIngreso { get; set; }
-        public System.DateTime FechaModificado { get; set; }
         public Nullable<int> IdPacienteESC { get; set; }
     }
 }

@@ -31,6 +31,7 @@ namespace SistemaEscaner.USUARIOS
             CargarDatosDGV();
             TootTipsProyecto();
             BTNContra.Visible = false;
+            BTNEliminar.Visible = false;
             lblModificar.Visible = false;
             timer1.Enabled = true;
         }
@@ -154,7 +155,7 @@ namespace SistemaEscaner.USUARIOS
                     TUsuarios.IdEstado = cbEstado.SelectedIndex + 1;
                     if (txtContra.Enabled == true && txtConfir.Enabled == true)
                     {
-                        TUsuarios.Contra = Pass; 
+                        TUsuarios.Contra = Pass;
                     }
 
                     if (ValidarContra())
@@ -163,6 +164,7 @@ namespace SistemaEscaner.USUARIOS
                         //MessageBox.Show("Usuario Guardado con Exito!");
                         // MessageBox.Show(Pass.Length.ToString());
                         MessageBox.Show("Usuario Modificado con Exito!");
+                        TUsuarios.FechaModificado = DateTime.Now;
                         Entity.SaveChanges();
                         ReiniciarForm();
                     }
@@ -198,8 +200,7 @@ namespace SistemaEscaner.USUARIOS
 
                     Usuario = txtUsuario.Text,
                     Contra = Pass,
-                    FechaIngreso = DateTime.Now,
-                    FechaModificado = DateTime.Now,
+                    FechaIngreso = DateTime.Now,                    
                     IdEstado = cbEstado.SelectedIndex+1,
                     IdTipoUsuario = cbTipoUsuario.SelectedIndex+1
                 };
@@ -211,7 +212,7 @@ namespace SistemaEscaner.USUARIOS
 
                 // Definir una expresión regular para verificar si la contraseña cumple con los requisitos
                 // al menos 6 espacios letras
-                string patron = @"^(.*[A-Za-z0-9]){6}$";
+                string patron = @"^(.*[A-Za-z0-9]){4}$";
 
 
                 // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
@@ -246,12 +247,12 @@ namespace SistemaEscaner.USUARIOS
             CargarDatosDGV();
         }
 
-        //metodo contra 6 espacios
+        //metodo contra 4 espacios
         private bool ValidarContra()
         {
             String Pass = Hash.obtenerHash256(txtContra.Text);
             String confirmPass = Hash.obtenerHash256(txtConfir.Text);
-            string patron = @"^(.*[A-Za-z0-9]){6}$";
+            string patron = @"^(.*[A-Za-z0-9]){4}$";
 
 
             // Comprobar si la contraseña cumple con la expresión regular  // Compara las contraseñas
@@ -275,7 +276,7 @@ namespace SistemaEscaner.USUARIOS
             else
             {
 
-                MessageBox.Show("La contraseña debe contener al menos 6 letras y al menos un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La contraseña debe contener al menos 4 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtContra.Focus();
                 tam = 0;
                 return false;
@@ -299,6 +300,8 @@ namespace SistemaEscaner.USUARIOS
             BTNContra.Enabled = false;
             BTNContra.Visible = false;
             lblModificar.Visible = false;
+            BTNContra.Enabled = false;
+            BTNContra.Visible = false;
 
         }
 
@@ -369,6 +372,8 @@ namespace SistemaEscaner.USUARIOS
                // lblModificar.Text = Modificar.ToString();
                 BTNContra.Enabled = true;
                 BTNContra.Visible = true;
+                BTNEliminar.Visible = true;
+                BTNEliminar.Enabled = true;
                 lblModificar.Text = "Si desea cambiar contraseña de click aqui ->";
                 lblModificar.Visible = true;
                 IMGVer.Enabled = false;
@@ -381,6 +386,30 @@ namespace SistemaEscaner.USUARIOS
 
             }
         }
+        public void EliminarUsuario()
+        {
+            try
+            {
+                long idUsuario = Convert.ToInt64(DGVUsuarios.SelectedCells[0].Value);
+
+                // Obtener el usuario de la base de datos usando Entity Framework
+                var usuarioAEliminar = Entity.Usuarios.FirstOrDefault(x => x.IdUsuario == idUsuario);
+
+                if (usuarioAEliminar != null)
+                {
+                    Entity.Usuarios.Remove(usuarioAEliminar);
+                    Entity.SaveChanges();  // Guardar los cambios en la base de datos
+                    LimpiarForm();
+                    CargarDatosDGV();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el usuario: " + ex.Message);
+            }
+        }
+
+
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
@@ -447,9 +476,9 @@ namespace SistemaEscaner.USUARIOS
         }
 
         
-        //Instalar Nuget ClosedXML 
+    //Instalar Nuget ClosedXML 
         private void BTNExcel_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 //Indica donde guardaremos
@@ -501,7 +530,7 @@ namespace SistemaEscaner.USUARIOS
             catch (Exception ex)
             {
                 MessageBox.Show("Error al exportar a Excel: " + ex.Message);
-            }
+            }*/
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -584,6 +613,20 @@ namespace SistemaEscaner.USUARIOS
             FORM.MenuAdmin admin = new FORM.MenuAdmin();
             admin.Show();
             this.Close();
+        }
+
+        private void BTNEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("¿Desea eliminar este Usuario?", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EliminarUsuario();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el usuario: " + ex.Message);
+            }
+
         }
     }
 }

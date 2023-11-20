@@ -91,6 +91,7 @@ namespace SistemaEscaner.FORM
             this.Controls.Add(this.BTN_Digit);
             this.Controls.Add(this.BTN_AgreUsuario);
             this.Name = "MenuAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdmin";
             this.Load += new System.EventHandler(this.MenuAdmin_Load);
             this.ResumeLayout(false);

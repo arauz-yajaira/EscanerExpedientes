@@ -20,9 +20,7 @@
           <Property Name="IdPacienteESC" Type="int" />
           <Property Name="HojaAgregada" Type="varbinary(max)" />
           <Property Name="usuarioCreo" Type="int" />
-          <Property Name="usuarioModificado" Type="int" />
           <Property Name="FechaIngreso" Type="date" Nullable="false" />
-          <Property Name="FechaModificado" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -142,9 +140,7 @@
           <Property Name="IdHoja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HojaAgregada" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="usuarioCreo" Type="Int32" />
-          <Property Name="usuarioModificado" Type="Int32" />
           <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="FechaModificado" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IdPacienteESC" Type="Int32" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -280,9 +276,7 @@
                 <ScalarProperty Name="IdHoja" ColumnName="IdHoja" />
                 <ScalarProperty Name="HojaAgregada" ColumnName="HojaAgregada" />
                 <ScalarProperty Name="usuarioCreo" ColumnName="usuarioCreo" />
-                <ScalarProperty Name="usuarioModificado" ColumnName="usuarioModificado" />
                 <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
-                <ScalarProperty Name="FechaModificado" ColumnName="FechaModificado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
