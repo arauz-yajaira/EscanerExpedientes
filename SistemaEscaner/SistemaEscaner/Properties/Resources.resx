@@ -118,37 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="beyondhealth_willkommen-01-50eba149" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\beyondhealth_willkommen-01-50eba149.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2476384" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\RECURSOS\2476384.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3667025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\3667025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5ff78c60095b7a30b6ab03c4_investigation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\5ff78c60095b7a30b6ab03c4_investigation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Recurso 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\Recurso 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OIP (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OIP (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Raa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\RECURSOS\Raa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\barra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beyondhealth_willkommen-01-50eba149" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\beyondhealth_willkommen-01-50eba149.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2 - copia - copia (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\2 - copia - copia (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="noEncontrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\RECURSOS\noEncontrada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recurso 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\Recurso 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\Raa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusiness-reportdigitalweb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusiness-reportdigitalweb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OIP (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5ff78c60095b7a30b6ab03c4_investigation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\5ff78c60095b7a30b6ab03c4_investigation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3667025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\3667025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Agregar un título" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\Agregar un título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2 - copia - copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\RECURSOS\2 - copia - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

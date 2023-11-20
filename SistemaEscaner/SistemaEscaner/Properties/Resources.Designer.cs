@@ -63,6 +63,26 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2___copia___copia {
+            get {
+                object obj = ResourceManager.GetObject("2 - copia - copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2___copia___copia__2_ {
+            get {
+                object obj = ResourceManager.GetObject("2 - copia - copia (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2476384 {
             get {
                 object obj = ResourceManager.GetObject("2476384", resourceCulture);
@@ -86,6 +106,37 @@ namespace SistemaEscaner.Properties {
         internal static System.Drawing.Bitmap _5ff78c60095b7a30b6ab03c4_investigation {
             get {
                 object obj = ResourceManager.GetObject("5ff78c60095b7a30b6ab03c4_investigation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_smooth_dark_blue_with_black_vignette_studio_well_use_as_backgroundbusiness_reportdigitalweb {
+            get {
+                object obj = ResourceManager.GetObject("abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusine" +
+                        "ss-reportdigitalweb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Agregar_un_título {
+            get {
+                object obj = ResourceManager.GetObject("Agregar un título", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barra {
+            get {
+                object obj = ResourceManager.GetObject("barra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

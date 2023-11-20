@@ -476,6 +476,11 @@
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
       <LastGenOutput>ModelProyecto.cs</LastGenOutput>
     </Content>
+    <None Include="RECURSOS\2 - copia - copia.png" />
+    <None Include="RECURSOS\2 - copia - copia %282%29.png" />
+    <None Include="RECURSOS\barra.jpg" />
+    <None Include="RECURSOS\abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusiness-reportdigitalweb.jpg" />
+    <None Include="RECURSOS\Agregar un título.png" />
     <None Include="RECURSOS\noEncontrada.jpg" />
     <None Include="Resources\png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo.png" />
     <None Include="RECURSOS\beyondhealth_willkommen-01-50eba149.png" />

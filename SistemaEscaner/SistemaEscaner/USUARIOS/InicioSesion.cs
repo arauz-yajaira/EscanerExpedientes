@@ -22,6 +22,7 @@ namespace SistemaEscaner.USUARIOS
         {
             InitializeComponent();
             this.KeyPreview = true;
+            txtContra.isPassword = true;
         }
         
         
@@ -33,13 +34,13 @@ namespace SistemaEscaner.USUARIOS
 
             if (verContra)
             {
-                txtContra.PasswordChar = '\0'; // Mostrar contraseña en texto normal
-             
+
+                txtContra.isPassword = false; // Mostrar contraseña en texto normal
             }
             else
             {
-                txtContra.PasswordChar = '*'; // Ocultar contraseña con asteriscos
-             
+               
+                txtContra.isPassword = true; // Ocultar contraseña con asteriscos
             }
 
         }
@@ -159,6 +160,36 @@ namespace SistemaEscaner.USUARIOS
         private void txtConfir_KeyDown(object sender, KeyEventArgs e)
         {
             
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void InicioSesion_Load(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void txtContra_OnValueChanged(object sender, EventArgs e)
+        {
+            txtContra.isPassword = true;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Close();;
+
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
