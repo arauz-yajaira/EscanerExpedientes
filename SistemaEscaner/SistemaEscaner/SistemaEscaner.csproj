@@ -312,6 +312,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDEscaner.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Bunifu\Framework\UI.cs" />
     <Compile Include="EstadoUsuario.cs">
       <DependentUpon>BDEscaner.tt</DependentUpon>
     </Compile>
@@ -476,6 +477,8 @@
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
       <LastGenOutput>ModelProyecto.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo - copia.png" />
+    <None Include="Resources\Malote-digital-2.png" />
     <None Include="RECURSOS\ImagenSistema.png" />
     <None Include="RECURSOS\Agregar un título %282%29.png" />
     <None Include="RECURSOS\2 - copia - copia.png" />

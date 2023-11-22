@@ -26,8 +26,7 @@ namespace SistemaEscaner.FORM
     {
         ExpEntity Entity = new ExpEntity(); // SIGAF
         ExpedienteEntities Entities = new ExpedienteEntities(); //sistema escaner
-        Expediente expe = new Expediente(); // no se
-   
+
         public int EXPED = Expediente.exp;
         int IDE = Expediente.exp;
         public string nombre;
@@ -45,32 +44,19 @@ namespace SistemaEscaner.FORM
             txtApellido.Text = paciente.APELLIDO_1_DEL_PACIENTE;
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
-            ///lbExpe.Text = idPA.PublicExpeInfo.ToString();
-            //lbExpe.Text = EXPED.ToString();
-            BTN_AGDOC.Enabled = false;
-           
-           // IDE = Convert.ToInt32(lbExpe.Text);
+            AGG_BTN.Enabled = false;
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
           
-            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                Expediente formExp = new Expediente();
-                Close();
-
-            }
         }
 
         private void BTN_Regresar_Click(object sender, EventArgs e)
         {
-            Expediente formExp = new Expediente();
-            formExp.Show();
-            Close();
+            this.Dispose();
+           
         }
 
 
@@ -87,35 +73,7 @@ namespace SistemaEscaner.FORM
 
         private void BTN_AGDOC_Click(object sender, EventArgs e)
         {
-            Escaner escaner = new Escaner();
-            try
-            {
-                // Convertir la imagen del PictureBox a un arreglo de bytes
-                byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
-
-                // Crear un objeto Hoja con los datos necesarios
-                Hoja hoja = new Hoja
-                {
-                  //  usuarioCreo = escaner.lbUsuario.Text,
-                    HojaAgregada = byteArrayImagen,
-                    IdPacienteESC = IDE,
-                    FechaIngreso = DateTime.Now,
-                    usuarioCreo = UsuarioIngresado.IdUsuario
-
-
-                };
-
-                    // Agregar el objeto Hoja a la base de datos y guardar los cambios
-                    Entities.Hoja.Add(hoja);
-                    Entities.SaveChanges();
-
-                    MessageBox.Show("Guardado Satisfactoriamente");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar la imagen: " + ex.Message);
-                }
-            
+           
 
         }
 
@@ -163,8 +121,9 @@ namespace SistemaEscaner.FORM
 
         private void BTNEscaner_Click(object sender, EventArgs e)
         {
-           //Previsualizar();
-            BTN_AGDOC.Enabled = true;
+           Previsualizar();
+            /*
+            AGG_BTN.Enabled = true;
             OpenFileDialog getImage = new OpenFileDialog();
             getImage.InitialDirectory = "C:\\";
             getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png";
@@ -175,7 +134,7 @@ namespace SistemaEscaner.FORM
             }
             else
             {
-            }
+            }*/
 
         } 
 
@@ -198,12 +157,7 @@ namespace SistemaEscaner.FORM
 
     private void BTN_VIEW_Click(object sender, EventArgs e)
         {
-            
-            View viewForm = new View();
-            viewForm.Show();
-           viewForm.lbE.Text = IDE.ToString();
-
-
+           
         }
 
         public void ConvertirImagenesAPDF()
@@ -271,31 +225,31 @@ namespace SistemaEscaner.FORM
 
         private void BTN_EXPDF_Click(object sender, EventArgs e)
         {
-            ConvertirImagenesAPDF();
+           
         }
 
         private void Escaner_Load(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
-            idUsuario.Text = "Id " + UsuarioIngresado.IdUsuario;
+            lbUsuario.Text = UsuarioIngresado.UsuarioNombre;
+            idUsuario.Text =  UsuarioIngresado.IdUsuario.ToString();
 
             // Verificar si el usuario es de tipo 3 (Usuario)
             if (UsuarioIngresado.TipoUsuario == 3)
             {
                 // Bloquear los botones de agregar y escanear
                 BTNEscaner.Visible = false;
-                BTN_AGDOC.Visible = false;
+                AGG_BTN.Visible = false;
 
                 // Mostrar los botones de visualización y exportar
-                BTN_VIEW.Visible = true;
-                BTN_EXPDF.Visible = true;
+               VIEW_BTN.Visible = true;
+               PDF_BTN.Visible = true;
             }
             else
             {
                 BTNEscaner.Visible= true;
-                BTN_AGDOC.Visible = true;
-                BTN_VIEW.Visible = true;
-                BTN_EXPDF.Visible = true;
+                AGG_BTN.Visible = true;
+                VIEW_BTN.Visible = true;
+                PDF_BTN.Visible = true;
             }
 
         }
@@ -324,6 +278,66 @@ namespace SistemaEscaner.FORM
                 MessageBox.Show("Error al convertir bytes a imagen: " + ex.Message);
                 return null;
             }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            View viewForm = new View();
+            viewForm.Show();
+            viewForm.lbE.Text = IDE.ToString();
+        }
+
+        private void PDF_BTN_Click(object sender, EventArgs e)
+        {
+            ConvertirImagenesAPDF();
+        }
+
+        private void AGG_BTN_Click(object sender, EventArgs e)
+        {
+            Escaner escaner = new Escaner();
+            try
+            {
+                // Convertir la imagen del PictureBox a un arreglo de bytes
+                byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+
+                // Crear un objeto Hoja con los datos necesarios
+                Hoja hoja = new Hoja
+                {
+                    //  usuarioCreo = escaner.lbUsuario.Text,
+                    HojaAgregada = byteArrayImagen,
+                    IdPacienteESC = IDE,
+                    FechaIngreso = DateTime.Now,
+                    usuarioCreo = UsuarioIngresado.IdUsuario
+
+
+                };
+
+                // Agregar el objeto Hoja a la base de datos y guardar los cambios
+                Entities.Hoja.Add(hoja);
+                Entities.SaveChanges();
+
+                MessageBox.Show("Guardado Satisfactoriamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar la imagen: " + ex.Message);
+            }
+
         }
     }
 

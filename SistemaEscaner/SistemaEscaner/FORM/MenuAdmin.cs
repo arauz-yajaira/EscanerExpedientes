@@ -34,7 +34,7 @@ namespace SistemaEscaner.FORM
 
         private void MenuAdmin_Load(object sender, EventArgs e)
         {
-            lbUser.Text = "Usuario Ingresado: " + UsuarioIngresado.UsuarioNombre;
+            lbUser.Text =  UsuarioIngresado.UsuarioNombre;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -62,7 +62,9 @@ namespace SistemaEscaner.FORM
 
             if (result == DialogResult.Yes)
             {
-                Close(); ;
+                this.Dispose();
+                InicioSesion inicio = new InicioSesion();
+                inicio.Show();
 
             }
             else

@@ -81,7 +81,7 @@ namespace SistemaEscaner.USUARIOS
         }
 
 
-        private void BTNAgregar_Click(object sender, System.EventArgs e)
+        private void Ingresar()
         {
             using (ExpedienteEntities db = new ExpedienteEntities())
             {
@@ -99,8 +99,7 @@ namespace SistemaEscaner.USUARIOS
                     // Comparar el hash de la contraseña ingresada con el hash almacenado en la base de datos
                     if (usuario.Contra == contrasenaHash)
                     {
-                        // Inicio de sesión exitoso
-                        MessageBox.Show("Inicio de sesión exitoso");
+                       
 
                         // Obtener el tipo de usuario
                         int tipoUsuario = usuario.IdTipoUsuario;
@@ -136,7 +135,12 @@ namespace SistemaEscaner.USUARIOS
                 }
 
             }
+        }
 
+        private void BTNAgregar_Click(object sender, System.EventArgs e)
+        {
+
+            Ingresar();
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -150,11 +154,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void txtContra_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && ActiveControl != null && ActiveControl is TextBox)
-            {
-                SelectNextControl(ActiveControl, true, true, true, true);
-                e.Handled = true;
-            }
+          
         }
 
         private void txtConfir_KeyDown(object sender, KeyEventArgs e)
@@ -183,12 +183,48 @@ namespace SistemaEscaner.USUARIOS
 
             if (result == DialogResult.Yes)
             {
-                Close();;
-
+                // this.Dispose();
+                Application.Exit();
             }
             else
             {
                 return;
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtUsuario_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Cambia al siguiente control
+                SelectNextControl((Control)sender, true, true, true, true);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtContra_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Cambia al siguiente control
+                SelectNextControl((Control)sender, true, true, true, true);
+                e.Handled = true;
+                e.SuppressKeyPress = true; 
+            }
+
+        }
+
+        private void BTNAgregar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                Ingresar();
             }
         }
     }

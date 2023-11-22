@@ -83,6 +83,16 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2___copia___copia__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("2 - copia - copia (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2476384 {
             get {
                 object obj = ResourceManager.GetObject("2476384", resourceCulture);
@@ -106,6 +116,16 @@ namespace SistemaEscaner.Properties {
         internal static System.Drawing.Bitmap _5ff78c60095b7a30b6ab03c4_investigation {
             get {
                 object obj = ResourceManager.GetObject("5ff78c60095b7a30b6ab03c4_investigation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5ff78c60095b7a30b6ab03c4_investigation1 {
+            get {
+                object obj = ResourceManager.GetObject("5ff78c60095b7a30b6ab03c4_investigation1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -174,9 +194,39 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beyondhealth_willkommen_01_50eba1491 {
+            get {
+                object obj = ResourceManager.GetObject("beyondhealth_willkommen-01-50eba1491", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImagenSistema {
             get {
                 object obj = ResourceManager.GetObject("ImagenSistema", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImagenSistema1 {
+            get {
+                object obj = ResourceManager.GetObject("ImagenSistema1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Malote_digital_2 {
+            get {
+                object obj = ResourceManager.GetObject("Malote-digital-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -214,6 +264,36 @@ namespace SistemaEscaner.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo___copia {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo - copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo___copia1 {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo - copia1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R {
             get {
                 object obj = ResourceManager.GetObject("R", resourceCulture);
@@ -237,6 +317,16 @@ namespace SistemaEscaner.Properties {
         internal static System.Drawing.Bitmap Raa {
             get {
                 object obj = ResourceManager.GetObject("Raa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Raa1 {
+            get {
+                object obj = ResourceManager.GetObject("Raa1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

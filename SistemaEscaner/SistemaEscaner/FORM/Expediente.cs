@@ -43,7 +43,7 @@ namespace SistemaEscaner.FORM
             /* toolTip.SetToolTip(BTN_AGDOC, "Agregue documentos al expediente del Paciente");
              toolTip.SetToolTip(BTN_EXPDF, "Exporta expediente a PDF");
              toolTip.SetToolTip(BTN_VIEW, "Visualizar el Expediente de Paciente");*/
-            toolTip.SetToolTip(BTNCerrar, "Cerrar ventana");
+            toolTip.SetToolTip(pictureBox6, "Cerrar ventana");
             toolTip.SetToolTip(txtBuscarExp, "Busca paciente con una opcion de filtrado");
         }
         private void CargarDGV()
@@ -332,8 +332,8 @@ namespace SistemaEscaner.FORM
 
         private void Expediente_Load(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
-            idUsuario.Text = "Id " + UsuarioIngresado.IdUsuario;
+            lbUsuario.Text =  UsuarioIngresado.UsuarioNombre;
+            idUsuario.Text =  UsuarioIngresado.IdUsuario.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -345,6 +345,28 @@ namespace SistemaEscaner.FORM
         {
           
 
+        }
+
+        private void BTNCerrar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+                USUARIOS.InicioSesion inicio = new USUARIOS.InicioSesion();
+                inicio.Show();
+
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

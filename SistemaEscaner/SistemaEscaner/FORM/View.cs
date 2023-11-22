@@ -29,15 +29,22 @@ namespace SistemaEscaner.FORM
        // public int IDE = paciente.expediente;
         int IDE = Expediente.exp;
 
+        public int EXPED = Expediente.exp;
+
+        public string nombre;
+        public string apellido;
+
         public PictureBox PictureBox1; // Asegúrate de tener un PictureBox en tu formulario
 
         public View()
         {
    
             InitializeComponent();
-            BTN_ATRAS.Visible = false;   
+            ATRAS_BTN.Visible = false;   
             var paciente = Entity.PACIENTE.FirstOrDefault(u => u.EXPEDIENTE == IDE);
             lbE.Text = paciente.EXPEDIENTE.ToString();
+            LBNombres.Text = paciente.NOMBRES_DEL_PACIENTE;
+            LBApellidos.Text = paciente.APELLIDO_1_DEL_PACIENTE;
             MostrarImagen();
         }
 
@@ -60,14 +67,15 @@ namespace SistemaEscaner.FORM
                         {
                             pictureBox1.Image = Image.FromStream(ms);
                         }
-                        // Actualiza la visibilidad del botón "BTN_ATRAS"
-                        BTN_ATRAS.Visible = indiceActual > 0;
+
+                        LbfechaAGG.Text = hojas[indiceActual].FechaIngreso.ToString("dd/MM/yyyy");
+                        ATRAS_BTN.Visible = indiceActual > 0;
                     }
                 }
                 else
                 {
-                    // Si no se encuentran imágenes, muestra un mensaje de error o una imagen predeterminada.
                     pictureBox1.Image = Properties.Resources.noEncontrada; // Reemplaza con tu imagen predeterminada.
+                   LbfechaAGG.Text = string.Empty;
                 }
             }
 
@@ -98,26 +106,18 @@ namespace SistemaEscaner.FORM
 
         private void BTN_ATRAS_Click(object sender, EventArgs e)
         {
-              if (indiceActual > 0)
-              {
-                  indiceActual--;
-                  MostrarImagen();
-              }
+           
         }
 
         private void BTN_SIGUE_Click(object sender, EventArgs e)
         {
-            if (indiceActual < totalESC - 1)
-            {
-                indiceActual++;
-                MostrarImagen();
-            }
+         
         }
 
         private void View_Load(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
-            lbId.Text = "Id " + UsuarioIngresado.IdUsuario;
+            lbUsuario.Text = UsuarioIngresado.UsuarioNombre;
+            lbId.Text = UsuarioIngresado.IdUsuario.ToString();
 
             // Verificar si el usuario es de tipo 3 (Usuario)
             if (UsuarioIngresado.TipoUsuario == 3)
@@ -126,14 +126,14 @@ namespace SistemaEscaner.FORM
                 BTN_Eliminar.Visible = false;
 
                 // Mostrar los botones de visualización y exportar
-                BTN_ATRAS.Visible = true;
-                BTN_SIGUE.Visible = true;
+                ATRAS_BTN.Visible = true;
+                SIGUE_BTN.Visible = true;
             }
             else
             {
                 BTN_Eliminar.Visible = true;
-                BTN_ATRAS.Visible = true;
-                BTN_SIGUE.Visible = true;
+                ATRAS_BTN.Visible = true;
+                SIGUE_BTN.Visible = true;
             }
 
         }
@@ -150,6 +150,10 @@ namespace SistemaEscaner.FORM
             if (result == DialogResult.Yes)
             {
                 EliminarHoja();
+            }
+            else
+            {
+                return;
             }
         }
         public void EliminarHoja()
@@ -182,8 +186,49 @@ namespace SistemaEscaner.FORM
             }
         }
 
+        private void ATRAS_BTN_Click(object sender, EventArgs e)
+        {
+            if (indiceActual > 0)
+            {
+                indiceActual--;
+                MostrarImagen();
+            }
+        }
 
+        private void SIGUE_BTN_Click(object sender, EventArgs e)
+        {
+            if (indiceActual < totalESC - 1)
+            {
+                indiceActual++;
+                MostrarImagen();
+            }
+        }
 
+        private void LBApellidos_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BTN_Eliminar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+               Escaner inicio = new Escaner();
+                inicio.Show();
+
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

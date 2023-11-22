@@ -560,7 +560,7 @@ namespace SistemaEscaner.USUARIOS
 
         private void AgregarUsuario_Load(object sender, EventArgs e)
         {
-            lbUsuario.Text = "Usuario: " + UsuarioIngresado.UsuarioNombre;
+            lbUsuario.Text =  UsuarioIngresado.UsuarioNombre;
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -612,7 +612,7 @@ namespace SistemaEscaner.USUARIOS
         {
             FORM.MenuAdmin admin = new FORM.MenuAdmin();
             admin.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void BTNEliminar_Click(object sender, EventArgs e)
@@ -627,6 +627,13 @@ namespace SistemaEscaner.USUARIOS
                 Console.WriteLine("Error al eliminar el usuario: " + ex.Message);
             }
 
+        }
+
+        private void BTNCerrar_Click_1(object sender, EventArgs e)
+        {
+            FORM.MenuAdmin admin = new FORM.MenuAdmin();
+            admin.Show();
+            this.Dispose();
         }
     }
 }

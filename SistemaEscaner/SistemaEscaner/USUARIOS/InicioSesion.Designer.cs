@@ -36,16 +36,16 @@
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.txtUsuario = new ns1.BunifuMaterialTextbox();
             this.txtContra = new ns1.BunifuMaterialTextbox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IMGVer = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNAgregar
@@ -61,6 +61,7 @@
             this.BTNAgregar.Text = "Ingresar";
             this.BTNAgregar.UseVisualStyleBackColor = false;
             this.BTNAgregar.Click += new System.EventHandler(this.BTNAgregar_Click);
+            this.BTNAgregar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BTNAgregar_KeyDown);
             // 
             // label4
             // 
@@ -101,7 +102,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
             // txtUsuario
@@ -123,6 +124,8 @@
             this.txtUsuario.TabIndex = 40;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown_1);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContra
             // 
@@ -143,12 +146,24 @@
             this.txtContra.TabIndex = 41;
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContra.OnValueChanged += new System.EventHandler(this.txtContra_OnValueChanged);
+            this.txtContra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContra_KeyDown_1);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::SistemaEscaner.Properties.Resources.ImagenSistema;
+            this.pictureBox5.Location = new System.Drawing.Point(676, 124);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(127, 120);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 42;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::SistemaEscaner.Properties.Resources._2___copia___copia__2_;
-            this.pictureBox6.Location = new System.Drawing.Point(930, -5);
+            this.pictureBox6.Location = new System.Drawing.Point(929, -5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 27);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,17 +206,6 @@
             this.IMGVer.TabStop = false;
             this.IMGVer.Click += new System.EventHandler(this.IMGVer_Click);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::SistemaEscaner.Properties.Resources.ImagenSistema;
-            this.pictureBox5.Location = new System.Drawing.Point(676, 124);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(127, 120);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 42;
-            this.pictureBox5.TabStop = false;
-            // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,11 +228,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioSesion";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMGVer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

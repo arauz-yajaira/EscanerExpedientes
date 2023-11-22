@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbuscar = new System.Windows.Forms.Label();
             this.txtBuscarExp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,28 +43,33 @@
             this.ckNombre = new System.Windows.Forms.CheckBox();
             this.ckId = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.idUsuario = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.BTNCerrar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.imgHospital = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHospital)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // lbuscar
             // 
             this.lbuscar.AutoSize = true;
-            this.lbuscar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbuscar.Location = new System.Drawing.Point(71, 83);
+            this.lbuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbuscar.Location = new System.Drawing.Point(58, 83);
             this.lbuscar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbuscar.Name = "lbuscar";
-            this.lbuscar.Size = new System.Drawing.Size(142, 18);
+            this.lbuscar.Size = new System.Drawing.Size(155, 18);
             this.lbuscar.TabIndex = 0;
             this.lbuscar.Text = "Buscar Paciente:";
             // 
@@ -78,36 +84,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(91, 80);
+            this.label4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(76, 86);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 23);
+            this.label4.Size = new System.Drawing.Size(313, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "ARCHIVOS Y EXPEDIENTES";
+            this.label4.Text = "EXPEDIENTES PACIENTES";
             // 
             // DGVDatos
             // 
             this.DGVDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVDatos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDatos.DefaultCellStyle = dataGridViewCellStyle10;
             this.DGVDatos.Location = new System.Drawing.Point(81, 254);
             this.DGVDatos.MultiSelect = false;
             this.DGVDatos.Name = "DGVDatos";
@@ -120,7 +126,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.Controls.Add(this.lbEXP);
             this.panel1.Controls.Add(this.lbP);
             this.panel1.Controls.Add(this.ckNE);
@@ -150,20 +156,21 @@
             // lbP
             // 
             this.lbP.AutoSize = true;
-            this.lbP.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbP.Location = new System.Drawing.Point(720, 80);
+            this.lbP.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbP.Location = new System.Drawing.Point(711, 80);
             this.lbP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbP.Name = "lbP";
-            this.lbP.Size = new System.Drawing.Size(183, 18);
+            this.lbP.Size = new System.Drawing.Size(199, 18);
             this.lbP.TabIndex = 10;
             this.lbP.Text = " Paciente Expediente:";
             // 
             // ckNE
             // 
             this.ckNE.AutoSize = true;
-            this.ckNE.Location = new System.Drawing.Point(459, 31);
+            this.ckNE.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckNE.Location = new System.Drawing.Point(298, 31);
             this.ckNE.Name = "ckNE";
-            this.ckNE.Size = new System.Drawing.Size(144, 22);
+            this.ckNE.Size = new System.Drawing.Size(142, 22);
             this.ckNE.TabIndex = 9;
             this.ckNE.Text = "N° EXPEDIENTE";
             this.ckNE.UseVisualStyleBackColor = true;
@@ -172,9 +179,10 @@
             // ckApellido
             // 
             this.ckApellido.AutoSize = true;
-            this.ckApellido.Location = new System.Drawing.Point(751, 31);
+            this.ckApellido.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckApellido.Location = new System.Drawing.Point(590, 31);
             this.ckApellido.Name = "ckApellido";
-            this.ckApellido.Size = new System.Drawing.Size(112, 22);
+            this.ckApellido.Size = new System.Drawing.Size(109, 22);
             this.ckApellido.TabIndex = 8;
             this.ckApellido.Text = "APELLIDOS";
             this.ckApellido.UseVisualStyleBackColor = true;
@@ -183,9 +191,10 @@
             // ckNombre
             // 
             this.ckNombre.AutoSize = true;
-            this.ckNombre.Location = new System.Drawing.Point(624, 31);
+            this.ckNombre.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckNombre.Location = new System.Drawing.Point(463, 31);
             this.ckNombre.Name = "ckNombre";
-            this.ckNombre.Size = new System.Drawing.Size(104, 22);
+            this.ckNombre.Size = new System.Drawing.Size(102, 22);
             this.ckNombre.TabIndex = 7;
             this.ckNombre.Text = "NOMBRES";
             this.ckNombre.UseVisualStyleBackColor = true;
@@ -194,9 +203,10 @@
             // ckId
             // 
             this.ckId.AutoSize = true;
-            this.ckId.Location = new System.Drawing.Point(382, 34);
+            this.ckId.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckId.Location = new System.Drawing.Point(234, 31);
             this.ckId.Name = "ckId";
-            this.ckId.Size = new System.Drawing.Size(44, 22);
+            this.ckId.Size = new System.Drawing.Size(43, 22);
             this.ckId.TabIndex = 6;
             this.ckId.Text = "ID";
             this.ckId.UseVisualStyleBackColor = true;
@@ -205,111 +215,148 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(201, 38);
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 15);
+            this.label3.Size = new System.Drawing.Size(182, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Elija opcion de Filtrado: ";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.idUsuario);
-            this.panel2.Controls.Add(this.lbUsuario);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.BTNCerrar);
-            this.panel2.Location = new System.Drawing.Point(-16, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1445, 46);
-            this.panel2.TabIndex = 9;
             // 
             // idUsuario
             // 
             this.idUsuario.AutoSize = true;
+            this.idUsuario.BackColor = System.Drawing.Color.Navy;
             this.idUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.idUsuario.ForeColor = System.Drawing.Color.White;
             this.idUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.idUsuario.Location = new System.Drawing.Point(29, 21);
+            this.idUsuario.Location = new System.Drawing.Point(75, 16);
             this.idUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idUsuario.Name = "idUsuario";
             this.idUsuario.Size = new System.Drawing.Size(17, 12);
-            this.idUsuario.TabIndex = 50;
+            this.idUsuario.TabIndex = 59;
             this.idUsuario.Text = "id";
             // 
             // lbUsuario
             // 
             this.lbUsuario.AutoSize = true;
+            this.lbUsuario.BackColor = System.Drawing.Color.Navy;
             this.lbUsuario.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.lbUsuario.ForeColor = System.Drawing.Color.White;
             this.lbUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUsuario.Location = new System.Drawing.Point(85, 21);
+            this.lbUsuario.Location = new System.Drawing.Point(100, 16);
             this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(50, 12);
-            this.lbUsuario.TabIndex = 49;
+            this.lbUsuario.TabIndex = 58;
             this.lbUsuario.Text = "Usuario";
+            // 
+            // imgHospital
+            // 
+            this.imgHospital.BackColor = System.Drawing.Color.MidnightBlue;
+            this.imgHospital.Image = global::SistemaEscaner.Properties.Resources.ImagenSistema1;
+            this.imgHospital.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.imgHospital.Location = new System.Drawing.Point(0, 0);
+            this.imgHospital.Name = "imgHospital";
+            this.imgHospital.Size = new System.Drawing.Size(39, 38);
+            this.imgHospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgHospital.TabIndex = 63;
+            this.imgHospital.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(856, 83);
+            this.pictureBox3.Location = new System.Drawing.Point(1284, 97);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(95, 92);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabIndex = 62;
             this.pictureBox3.TabStop = false;
             // 
-            // BTNCerrar
+            // pictureBox2
             // 
-            this.BTNCerrar.BackColor = System.Drawing.Color.Red;
-            this.BTNCerrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BTNCerrar.FlatAppearance.BorderSize = 0;
-            this.BTNCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.BTNCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BTNCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNCerrar.Font = new System.Drawing.Font("Lucida Sans Typewriter", 14.25F, System.Drawing.FontStyle.Bold);
-            this.BTNCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BTNCerrar.Location = new System.Drawing.Point(1387, 3);
-            this.BTNCerrar.Name = "BTNCerrar";
-            this.BTNCerrar.Size = new System.Drawing.Size(55, 43);
-            this.BTNCerrar.TabIndex = 39;
-            this.BTNCerrar.Text = "X";
-            this.BTNCerrar.UseVisualStyleBackColor = false;
-            this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrar_Click);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::SistemaEscaner.Properties.Resources.barra1;
+            this.pictureBox2.Location = new System.Drawing.Point(-10, 858);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1431, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel3.Location = new System.Drawing.Point(0, 844);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1443, 46);
-            this.panel3.TabIndex = 10;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SistemaEscaner.Properties.Resources.barra1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1431, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
             // 
-            // imgHospital
+            // pictureBox6
             // 
-            this.imgHospital.BackColor = System.Drawing.Color.Transparent;
-            this.imgHospital.Image = global::SistemaEscaner.Properties.Resources.Recurso_5;
-            this.imgHospital.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.imgHospital.Location = new System.Drawing.Point(1246, 80);
-            this.imgHospital.Name = "imgHospital";
-            this.imgHospital.Size = new System.Drawing.Size(95, 92);
-            this.imgHospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgHospital.TabIndex = 34;
-            this.imgHospital.TabStop = false;
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::SistemaEscaner.Properties.Resources._2___copia___copia__2_;
+            this.pictureBox6.Location = new System.Drawing.Point(1373, 1);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(48, 41);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 64;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(668, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 18);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "EXPEDIENTE DIGITAL ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(737, 864);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(222, 15);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "ARCHIVOS Y EXPEDIENTES HEAC";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // Expediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 885);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.imgHospital);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.idUsuario);
+            this.Controls.Add(this.lbUsuario);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DGVDatos);
             this.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,10 +369,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgHospital)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,11 +386,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button BTNCerrar;
-        private System.Windows.Forms.PictureBox imgHospital;
         private System.Windows.Forms.CheckBox ckNE;
         private System.Windows.Forms.CheckBox ckApellido;
         private System.Windows.Forms.CheckBox ckNombre;
@@ -350,7 +393,15 @@
         protected System.Windows.Forms.DataGridView DGVDatos;
         private System.Windows.Forms.Label lbEXP;
         private System.Windows.Forms.Label lbP;
-        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label idUsuario;
+        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox imgHospital;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private ns1.BunifuElipse bunifuElipse1;
     }
 }
