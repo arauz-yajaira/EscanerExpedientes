@@ -302,6 +302,8 @@ namespace SistemaEscaner.USUARIOS
             lblModificar.Visible = false;
             BTNContra.Enabled = false;
             BTNContra.Visible = false;
+           
+
 
         }
 

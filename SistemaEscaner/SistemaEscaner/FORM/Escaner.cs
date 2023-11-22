@@ -121,9 +121,9 @@ namespace SistemaEscaner.FORM
 
         private void BTNEscaner_Click(object sender, EventArgs e)
         {
-           Previsualizar();
-            /*
-            AGG_BTN.Enabled = true;
+          Previsualizar();
+            
+            /*AGG_BTN.Enabled = true;
             OpenFileDialog getImage = new OpenFileDialog();
             getImage.InitialDirectory = "C:\\";
             getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png";
