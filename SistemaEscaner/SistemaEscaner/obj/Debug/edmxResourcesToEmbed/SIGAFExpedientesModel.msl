@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIGAFModelStoreContainer" CdmEntityContainer="SIGAFEntities">
+    <EntitySetMapping Name="PACIENTE">
+      <EntityTypeMapping TypeName="SIGAFModel.PACIENTE">
+        <MappingFragment StoreEntitySet="PACIENTE">
+          <ScalarProperty Name="EXPEDIENTE" ColumnName="EXPEDIENTE" />
+          <ScalarProperty Name="APELLIDO_1_DEL_PACIENTE" ColumnName="APELLIDO_1_DEL_PACIENTE" />
+          <ScalarProperty Name="APELLIDO_2_DEL_PACIENTE" ColumnName="APELLIDO_2_DEL_PACIENTE" />
+          <ScalarProperty Name="NOMBRES_DEL_PACIENTE" ColumnName="NOMBRES_DEL_PACIENTE" />
+          <ScalarProperty Name="FECHA_DE_NACIMIENTO_DEL_P" ColumnName="FECHA_DE_NACIMIENTO_DEL_P" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="IDENTIDAD_DEL_PACIENTE" ColumnName="IDENTIDAD_DEL_PACIENTE" />
+          <ScalarProperty Name="FECHA_CREACION_EXPEDIENTE" ColumnName="FECHA_CREACION_EXPEDIENTE" />
+          <ScalarProperty Name="NOMBRE_DEL_PADRE" ColumnName="NOMBRE_DEL_PADRE" />
+          <ScalarProperty Name="APELLIDO_DEL_PADRE" ColumnName="APELLIDO_DEL_PADRE" />
+          <ScalarProperty Name="IDENTIDAD_DEL_PADRE" ColumnName="IDENTIDAD_DEL_PADRE" />
+          <ScalarProperty Name="NOMBRE_DE_LA_MADRE" ColumnName="NOMBRE_DE_LA_MADRE" />
+          <ScalarProperty Name="APELLIDO_DE_LA_MADRE" ColumnName="APELLIDO_DE_LA_MADRE" />
+          <ScalarProperty Name="IDENTIDAD_DE_LA_MADRE" ColumnName="IDENTIDAD_DE_LA_MADRE" />
+          <ScalarProperty Name="SECTOR_SOCIOECONOMICO" ColumnName="SECTOR_SOCIOECONOMICO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="TELEFONO_DEL_PACIENTE" ColumnName="TELEFONO_DEL_PACIENTE" />
+          <ScalarProperty Name="ZONA_GEOGRAFICA" ColumnName="ZONA_GEOGRAFICA" />
+          <ScalarProperty Name="SITUACION_DEL_EXPEDIENTE" ColumnName="SITUACION_DEL_EXPEDIENTE" />
+          <ScalarProperty Name="EXPEDIENTE_PRESTADO_A" ColumnName="EXPEDIENTE_PRESTADO_A" />
+          <ScalarProperty Name="FECHA_PRESTAMO_EXPEDIENTE" ColumnName="FECHA_PRESTAMO_EXPEDIENTE" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="FECHA_ULTIMA_CONSULTA" ColumnName="FECHA_ULTIMA_CONSULTA" />
+          <ScalarProperty Name="ESTATUS_DEL_PACIENTE" ColumnName="ESTATUS_DEL_PACIENTE" />
+          <ScalarProperty Name="HORA_ADICION" ColumnName="HORA_ADICION" />
+          <ScalarProperty Name="FECHA_ADICION" ColumnName="FECHA_ADICION" />
+          <ScalarProperty Name="USUARIO_ADICION" ColumnName="USUARIO_ADICION" />
+          <ScalarProperty Name="HORA_ULTIMO_CAMBIO" ColumnName="HORA_ULTIMO_CAMBIO" />
+          <ScalarProperty Name="FECHA_ULTIMO_CAMBIO" ColumnName="FECHA_ULTIMO_CAMBIO" />
+          <ScalarProperty Name="USUARIO_ULTIMO_CAMBIO" ColumnName="USUARIO_ULTIMO_CAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

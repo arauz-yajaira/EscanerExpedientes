@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EscanerExpedientesModelStoreContainer" CdmEntityContainer="EscanerExpedienteEntinties">
+    <EntitySetMapping Name="EstadoUsuario">
+      <EntityTypeMapping TypeName="EscanerExpedientesModel.EstadoUsuario">
+        <MappingFragment StoreEntitySet="EstadoUsuario">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="EstadoUsuario1" ColumnName="EstadoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hoja">
+      <EntityTypeMapping TypeName="EscanerExpedientesModel.Hoja">
+        <MappingFragment StoreEntitySet="Hoja">
+          <ScalarProperty Name="IdHoja" ColumnName="IdHoja" />
+          <ScalarProperty Name="IdPacienteESC" ColumnName="IdPacienteESC" />
+          <ScalarProperty Name="HojaAgregada" ColumnName="HojaAgregada" />
+          <ScalarProperty Name="usuarioCreo" ColumnName="usuarioCreo" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="EscanerExpedientesModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+          <ScalarProperty Name="TipoUsuario1" ColumnName="TipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="EscanerExpedientesModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contra" ColumnName="Contra" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaModificado" ColumnName="FechaModificado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

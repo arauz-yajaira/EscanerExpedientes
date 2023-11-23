@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIGAFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PACIENTE">
+    <Key>
+      <PropertyRef Name="EXPEDIENTE" />
+    </Key>
+    <Property Name="EXPEDIENTE" Type="int" Nullable="false" />
+    <Property Name="APELLIDO_1_DEL_PACIENTE" Type="char" MaxLength="20" />
+    <Property Name="APELLIDO_2_DEL_PACIENTE" Type="char" MaxLength="20" />
+    <Property Name="NOMBRES_DEL_PACIENTE" Type="char" MaxLength="30" />
+    <Property Name="FECHA_DE_NACIMIENTO_DEL_P" Type="datetime" />
+    <Property Name="Sexo" Type="char" MaxLength="1" />
+    <Property Name="IDENTIDAD_DEL_PACIENTE" Type="char" MaxLength="13" />
+    <Property Name="FECHA_CREACION_EXPEDIENTE" Type="datetime" />
+    <Property Name="NOMBRE_DEL_PADRE" Type="char" MaxLength="30" />
+    <Property Name="APELLIDO_DEL_PADRE" Type="char" MaxLength="30" />
+    <Property Name="IDENTIDAD_DEL_PADRE" Type="char" MaxLength="13" />
+    <Property Name="NOMBRE_DE_LA_MADRE" Type="char" MaxLength="30" />
+    <Property Name="APELLIDO_DE_LA_MADRE" Type="char" MaxLength="30" />
+    <Property Name="IDENTIDAD_DE_LA_MADRE" Type="char" MaxLength="13" />
+    <Property Name="SECTOR_SOCIOECONOMICO" Type="char" MaxLength="2" />
+    <Property Name="NACIONALIDAD" Type="char" MaxLength="20" />
+    <Property Name="DIRECCION" Type="char" MaxLength="120" />
+    <Property Name="CIUDAD" Type="char" MaxLength="30" />
+    <Property Name="TELEFONO_DEL_PACIENTE" Type="char" MaxLength="25" />
+    <Property Name="ZONA_GEOGRAFICA" Type="char" MaxLength="12" />
+    <Property Name="SITUACION_DEL_EXPEDIENTE" Type="char" MaxLength="1" />
+    <Property Name="EXPEDIENTE_PRESTADO_A" Type="char" MaxLength="30" />
+    <Property Name="FECHA_PRESTAMO_EXPEDIENTE" Type="datetime" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="1024" />
+    <Property Name="FECHA_ULTIMA_CONSULTA" Type="datetime" />
+    <Property Name="ESTATUS_DEL_PACIENTE" Type="char" MaxLength="1" />
+    <Property Name="HORA_ADICION" Type="datetime" />
+    <Property Name="FECHA_ADICION" Type="datetime" />
+    <Property Name="USUARIO_ADICION" Type="varchar" MaxLength="128" />
+    <Property Name="HORA_ULTIMO_CAMBIO" Type="datetime" />
+    <Property Name="FECHA_ULTIMO_CAMBIO" Type="datetime" />
+    <Property Name="USUARIO_ULTIMO_CAMBIO" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityContainer Name="SIGAFModelStoreContainer">
+    <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

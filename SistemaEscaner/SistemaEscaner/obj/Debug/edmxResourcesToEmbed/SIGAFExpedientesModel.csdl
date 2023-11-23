@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIGAFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PACIENTE">
+    <Key>
+      <PropertyRef Name="EXPEDIENTE" />
+    </Key>
+    <Property Name="EXPEDIENTE" Type="Int32" Nullable="false" />
+    <Property Name="APELLIDO_1_DEL_PACIENTE" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="APELLIDO_2_DEL_PACIENTE" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="NOMBRES_DEL_PACIENTE" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="FECHA_DE_NACIMIENTO_DEL_P" Type="DateTime" Precision="3" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IDENTIDAD_DEL_PACIENTE" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="FECHA_CREACION_EXPEDIENTE" Type="DateTime" Precision="3" />
+    <Property Name="NOMBRE_DEL_PADRE" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="APELLIDO_DEL_PADRE" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="IDENTIDAD_DEL_PADRE" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="NOMBRE_DE_LA_MADRE" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="APELLIDO_DE_LA_MADRE" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="IDENTIDAD_DE_LA_MADRE" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="SECTOR_SOCIOECONOMICO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="NACIONALIDAD" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="120" FixedLength="true" Unicode="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="TELEFONO_DEL_PACIENTE" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="ZONA_GEOGRAFICA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="SITUACION_DEL_EXPEDIENTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="EXPEDIENTE_PRESTADO_A" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="FECHA_PRESTAMO_EXPEDIENTE" Type="DateTime" Precision="3" />
+    <Property Name="OBSERVACIONES" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_ULTIMA_CONSULTA" Type="DateTime" Precision="3" />
+    <Property Name="ESTATUS_DEL_PACIENTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="HORA_ADICION" Type="DateTime" Precision="3" />
+    <Property Name="FECHA_ADICION" Type="DateTime" Precision="3" />
+    <Property Name="USUARIO_ADICION" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="HORA_ULTIMO_CAMBIO" Type="DateTime" Precision="3" />
+    <Property Name="FECHA_ULTIMO_CAMBIO" Type="DateTime" Precision="3" />
+    <Property Name="USUARIO_ULTIMO_CAMBIO" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SIGAFEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
+  </EntityContainer>
+</Schema>

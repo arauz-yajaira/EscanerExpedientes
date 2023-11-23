@@ -16,7 +16,8 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\SistemaEscaner\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,10 +27,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -50,6 +51,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E45D71FC5D12DF2625F7DD70EADC7145D0C49A17</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SistemaEscaner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconoSistema.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -297,24 +313,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDEscaner.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDEscaner.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BDEscaner.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDEscaner.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BDEscaner.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDEscaner.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Bunifu\Framework\UI.cs" />
+    <Compile Include="EscanerExpedientesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscanerExpedientesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EscanerExpedientesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscanerExpedientesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EscanerExpedientesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscanerExpedientesModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="EstadoUsuario.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+      <DependentUpon>EscanerExpedientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FORM\Escaner.cs">
       <SubType>Form</SubType>
@@ -341,7 +357,7 @@
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
     <Compile Include="Hoja.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+      <DependentUpon>EscanerExpedientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
     <Compile Include="Login.cs">
@@ -350,40 +366,31 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelProyecto.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelProyecto.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelProyecto.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-    </Compile>
     <Compile Include="PACIENTE.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>SIGAFExpedientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+    <Compile Include="SIGAFExpedientesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGAFExpedientesModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+    <Compile Include="SIGAFExpedientesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGAFExpedientesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+    <Compile Include="SIGAFExpedientesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGAFExpedientesModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+      <DependentUpon>EscanerExpedientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
-      <DependentUpon>BDEscaner.tt</DependentUpon>
+      <DependentUpon>EscanerExpedientesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="USUARIOS\AgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -428,19 +435,12 @@
     <EmbeddedResource Include="USUARIOS\InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="BDEscaner.edmx">
+    <EntityDeploy Include="EscanerExpedientesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDEscaner.Designer.cs</LastGenOutput>
+      <LastGenOutput>EscanerExpedientesModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="BDEscaner.edmx.diagram">
-      <DependentUpon>BDEscaner.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="ModelProyecto.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelProyecto.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelProyecto.edmx.diagram">
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+    <None Include="EscanerExpedientesModel.edmx.diagram">
+      <DependentUpon>EscanerExpedientesModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -452,30 +452,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SIGAFExpedientesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIGAFExpedientesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SIGAFExpedientesModel.edmx.diagram">
+      <DependentUpon>SIGAFExpedientesModel.edmx</DependentUpon>
+    </None>
+    <None Include="SistemaEscaner_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BDEscaner.Context.tt">
+    <Content Include="EscanerExpedientesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDEscaner.edmx</DependentUpon>
-      <LastGenOutput>BDEscaner.Context.cs</LastGenOutput>
+      <DependentUpon>EscanerExpedientesModel.edmx</DependentUpon>
+      <LastGenOutput>EscanerExpedientesModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="BDEscaner.tt">
+    <Content Include="EscanerExpedientesModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDEscaner.edmx</DependentUpon>
-      <LastGenOutput>BDEscaner.cs</LastGenOutput>
+      <DependentUpon>EscanerExpedientesModel.edmx</DependentUpon>
+      <LastGenOutput>EscanerExpedientesModel.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelProyecto.Context.tt">
+    <Content Include="iconoSistema.ico" />
+    <Content Include="SIGAFExpedientesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
+      <DependentUpon>SIGAFExpedientesModel.edmx</DependentUpon>
+      <LastGenOutput>SIGAFExpedientesModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelProyecto.tt">
+    <Content Include="SIGAFExpedientesModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.cs</LastGenOutput>
+      <DependentUpon>SIGAFExpedientesModel.edmx</DependentUpon>
+      <LastGenOutput>SIGAFExpedientesModel.cs</LastGenOutput>
     </Content>
     <None Include="Resources\png-clipart-arrow-computer-icons-symbol-previous-button-trademark-logo - copia.png" />
     <None Include="Resources\Malote-digital-2.png" />

@@ -17,7 +17,7 @@ namespace SistemaEscaner.USUARIOS
     public partial class AgregarUsuario : Form
     {
         private bool showPassword = false;
-        ExpedienteEntities Entity = new ExpedienteEntities();
+        EscanerExpedienteEntinties Entity = new EscanerExpedienteEntinties();
 
         long IdUsuario = 0;
         bool Modificar = false;

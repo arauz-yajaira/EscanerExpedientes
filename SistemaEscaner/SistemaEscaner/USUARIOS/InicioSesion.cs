@@ -15,7 +15,7 @@ namespace SistemaEscaner.USUARIOS
     public partial class InicioSesion : Form
     {
 
-        ExpedienteEntities Entity = new ExpedienteEntities();
+        EscanerExpedienteEntinties Entity = new EscanerExpedienteEntinties();
 
 
         public InicioSesion()
@@ -83,14 +83,14 @@ namespace SistemaEscaner.USUARIOS
 
         private void Ingresar()
         {
-            using (ExpedienteEntities db = new ExpedienteEntities())
+            using (EscanerExpedienteEntinties db = new EscanerExpedienteEntinties())
             {
                 string nombreUsuario = txtUsuario.Text;
                 string contrasena = txtContra.Text;
 
                 // Buscar al usuario por nombre de usuario
                 var usuario = db.Usuarios.FirstOrDefault(u => u.Usuario == nombreUsuario);
-
+                
                 if (usuario != null)
                 {
                     // Obtener el hash SHA-256 de la contraseña ingresada

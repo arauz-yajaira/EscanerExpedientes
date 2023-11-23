@@ -62,10 +62,10 @@ namespace SistemaEscaner.FORM
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(348, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(392, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(700, 847);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(685, 723);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -79,7 +79,7 @@ namespace SistemaEscaner.FORM
             this.ATRAS_BTN.BackColor = System.Drawing.Color.Transparent;
             this.ATRAS_BTN.Image = global::SistemaEscaner.Properties.Resources.png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo1;
             this.ATRAS_BTN.ImageActive = null;
-            this.ATRAS_BTN.Location = new System.Drawing.Point(288, 66);
+            this.ATRAS_BTN.Location = new System.Drawing.Point(118, 399);
             this.ATRAS_BTN.Name = "ATRAS_BTN";
             this.ATRAS_BTN.Size = new System.Drawing.Size(45, 56);
             this.ATRAS_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +93,7 @@ namespace SistemaEscaner.FORM
             this.SIGUE_BTN.BackColor = System.Drawing.Color.Transparent;
             this.SIGUE_BTN.Image = global::SistemaEscaner.Properties.Resources.png_clipart_arrow_computer_icons_symbol_previous_button_trademark_logo___copia1;
             this.SIGUE_BTN.ImageActive = null;
-            this.SIGUE_BTN.Location = new System.Drawing.Point(1054, 66);
+            this.SIGUE_BTN.Location = new System.Drawing.Point(190, 399);
             this.SIGUE_BTN.Name = "SIGUE_BTN";
             this.SIGUE_BTN.Size = new System.Drawing.Size(45, 56);
             this.SIGUE_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +117,7 @@ namespace SistemaEscaner.FORM
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SistemaEscaner.Properties.Resources.barra1;
-            this.pictureBox3.Location = new System.Drawing.Point(-6, 931);
+            this.pictureBox3.Location = new System.Drawing.Point(-19, 793);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1431, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +185,7 @@ namespace SistemaEscaner.FORM
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(574, 940);
+            this.label6.Location = new System.Drawing.Point(587, 804);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(256, 17);
@@ -207,7 +207,7 @@ namespace SistemaEscaner.FORM
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(24, 144);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(309, 229);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(318, 229);
             this.bunifuGradientPanel1.TabIndex = 72;
             // 
             // LBApellidos
@@ -263,7 +263,7 @@ namespace SistemaEscaner.FORM
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(346, 51);
+            this.label2.Location = new System.Drawing.Point(22, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 12);
@@ -298,7 +298,7 @@ namespace SistemaEscaner.FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 966);
+            this.ClientSize = new System.Drawing.Size(1188, 832);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.LbfechaAGG);
             this.Controls.Add(this.label2);

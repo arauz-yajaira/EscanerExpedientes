@@ -18,14 +18,15 @@ namespace SistemaEscaner.FORM
     public partial class Expediente : Form
     {
         
-        ExpEntity Entity = new ExpEntity();
-        ExpedienteEntities Entities = new ExpedienteEntities();
+        SIGAFEntities Entity = new SIGAFEntities();
+        EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties();
         public static int exp = 0;
 
         public Expediente()
         {
             InitializeComponent();
             CargarDGV();
+
             txtBuscarExp.Enabled = false;
             TooltipsProyecto();
             lbEXP.Visible = false;
@@ -80,12 +81,11 @@ namespace SistemaEscaner.FORM
                                     
                                 select new
                                 {
-                                   
-                                    B.IDENTIDAD_DEL_PACIENTE,
+                                    B.EXPEDIENTE,                                    
                                     B.NOMBRES_DEL_PACIENTE,
                                     B.APELLIDO_1_DEL_PACIENTE,
                                     B.APELLIDO_2_DEL_PACIENTE,
-                                    B.EXPEDIENTE
+                                    B.IDENTIDAD_DEL_PACIENTE
 
                                 };
 
@@ -117,12 +117,11 @@ namespace SistemaEscaner.FORM
                                     B.NOMBRES_DEL_PACIENTE.Contains(Paciente)
                                 select new
                                 {
-                                 
+                                    B.EXPEDIENTE,
                                     B.NOMBRES_DEL_PACIENTE,
                                     B.APELLIDO_1_DEL_PACIENTE,
                                     B.APELLIDO_2_DEL_PACIENTE,
-                                    B.IDENTIDAD_DEL_PACIENTE,
-                                    B.EXPEDIENTE
+                                    B.IDENTIDAD_DEL_PACIENTE
                                 };
 
                 DGVDatos.DataSource = TPaciente.Take(20).ToList();
@@ -138,11 +137,11 @@ namespace SistemaEscaner.FORM
                                     )
                                 select new
                                 {
+                                    B.EXPEDIENTE,
                                     B.NOMBRES_DEL_PACIENTE,
                                     B.APELLIDO_1_DEL_PACIENTE,
                                     B.APELLIDO_2_DEL_PACIENTE,
-                                    B.IDENTIDAD_DEL_PACIENTE,
-                                    B.EXPEDIENTE
+                                    B.IDENTIDAD_DEL_PACIENTE
                                 };
 
                 DGVDatos.DataSource = TPaciente.Take(20).ToList();
@@ -159,8 +158,7 @@ namespace SistemaEscaner.FORM
             // Comprobar si el usuario hizo clic en "Sí"
             if (result == DialogResult.Yes)
             {
-                Expediente expediente = new Expediente();
-                expediente.Close();
+                this.Dispose();
                 USUARIOS.InicioSesion inicio = new USUARIOS.InicioSesion();
                 inicio.Show();
               
@@ -293,15 +291,14 @@ namespace SistemaEscaner.FORM
             try
             {
                 exp = Convert.ToInt32(DGVDatos.CurrentRow.Cells[0].Value);
-                
+
                 Escaner escaner = new Escaner();
                 escaner.ShowDialog();
-                Expediente expediente = new Expediente();
-                expediente.Hide();
+                this.Dispose();
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Estoy fallando");
                 return;
             }
 

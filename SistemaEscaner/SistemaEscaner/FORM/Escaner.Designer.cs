@@ -41,12 +41,12 @@ namespace SistemaEscaner.FORM
             this.idUsuario = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.PDF_BTN = new ns1.BunifuImageButton();
-            this.VIEW_BTN = new ns1.BunifuImageButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbGuardar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.AGG_BTN = new ns1.BunifuImageButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.lbGuardar = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -58,15 +58,12 @@ namespace SistemaEscaner.FORM
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_Regresar = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButton1 = new ns1.BunifuImageButton();
+            this.PDF_BTN = new ns1.BunifuImageButton();
+            this.VIEW_BTN = new ns1.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PDF_BTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AGG_BTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -75,6 +72,9 @@ namespace SistemaEscaner.FORM
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_Regresar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PDF_BTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,44 +181,16 @@ namespace SistemaEscaner.FORM
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel3.Controls.Add(this.bunifuImageButton1);
+            this.panel3.Controls.Add(this.lbGuardar);
             this.panel3.Controls.Add(this.PDF_BTN);
             this.panel3.Controls.Add(this.VIEW_BTN);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lbGuardar);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.AGG_BTN);
             this.panel3.Location = new System.Drawing.Point(65, 317);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(512, 191);
             this.panel3.TabIndex = 43;
-            // 
-            // PDF_BTN
-            // 
-            this.PDF_BTN.BackColor = System.Drawing.Color.Transparent;
-            this.PDF_BTN.Image = global::SistemaEscaner.Properties.Resources.Raa1;
-            this.PDF_BTN.ImageActive = null;
-            this.PDF_BTN.Location = new System.Drawing.Point(185, 30);
-            this.PDF_BTN.Name = "PDF_BTN";
-            this.PDF_BTN.Size = new System.Drawing.Size(110, 100);
-            this.PDF_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PDF_BTN.TabIndex = 46;
-            this.PDF_BTN.TabStop = false;
-            this.PDF_BTN.Zoom = 10;
-            this.PDF_BTN.Click += new System.EventHandler(this.PDF_BTN_Click);
-            // 
-            // VIEW_BTN
-            // 
-            this.VIEW_BTN.BackColor = System.Drawing.Color.Transparent;
-            this.VIEW_BTN.Image = global::SistemaEscaner.Properties.Resources._5ff78c60095b7a30b6ab03c4_investigation1;
-            this.VIEW_BTN.ImageActive = null;
-            this.VIEW_BTN.Location = new System.Drawing.Point(13, 30);
-            this.VIEW_BTN.Name = "VIEW_BTN";
-            this.VIEW_BTN.Size = new System.Drawing.Size(110, 100);
-            this.VIEW_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.VIEW_BTN.TabIndex = 45;
-            this.VIEW_BTN.TabStop = false;
-            this.VIEW_BTN.Zoom = 10;
-            this.VIEW_BTN.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // label5
             // 
@@ -230,17 +202,6 @@ namespace SistemaEscaner.FORM
             this.label5.TabIndex = 44;
             this.label5.Text = "Exportar PDF Expediente ";
             // 
-            // lbGuardar
-            // 
-            this.lbGuardar.AutoSize = true;
-            this.lbGuardar.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGuardar.Location = new System.Drawing.Point(348, 144);
-            this.lbGuardar.Name = "lbGuardar";
-            this.lbGuardar.Size = new System.Drawing.Size(140, 12);
-            this.lbGuardar.TabIndex = 0;
-            this.lbGuardar.Text = "Guardar Imagen Escaneada";
-            this.lbGuardar.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -251,28 +212,57 @@ namespace SistemaEscaner.FORM
             this.label3.TabIndex = 43;
             this.label3.Text = "Ver Expediente Digital";
             // 
-            // AGG_BTN
+            // label6
             // 
-            this.AGG_BTN.BackColor = System.Drawing.Color.Transparent;
-            this.AGG_BTN.Image = global::SistemaEscaner.Properties.Resources.beyondhealth_willkommen_01_50eba1491;
-            this.AGG_BTN.ImageActive = null;
-            this.AGG_BTN.Location = new System.Drawing.Point(333, 30);
-            this.AGG_BTN.Name = "AGG_BTN";
-            this.AGG_BTN.Size = new System.Drawing.Size(164, 144);
-            this.AGG_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AGG_BTN.TabIndex = 47;
-            this.AGG_BTN.TabStop = false;
-            this.AGG_BTN.Zoom = 10;
-            this.AGG_BTN.Click += new System.EventHandler(this.AGG_BTN_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
+            this.label6.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(641, 881);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(222, 15);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "ARCHIVOS Y EXPEDIENTES HEAC";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
+            this.label8.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(598, 9);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 18);
+            this.label8.TabIndex = 69;
+            this.label8.Text = " EXPEDIENTE DIGITAL";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // lbGuardar
+            // 
+            this.lbGuardar.AutoSize = true;
+            this.lbGuardar.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGuardar.Location = new System.Drawing.Point(342, 146);
+            this.lbGuardar.Name = "lbGuardar";
+            this.lbGuardar.Size = new System.Drawing.Size(140, 12);
+            this.lbGuardar.TabIndex = 47;
+            this.lbGuardar.Text = "Guardar Imagen Escaneada";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::SistemaEscaner.Properties.Resources.Malote_digital_2;
             this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(74, 550);
+            this.pictureBox5.Location = new System.Drawing.Point(144, 531);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(488, 445);
+            this.pictureBox5.Size = new System.Drawing.Size(323, 257);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 45;
             this.pictureBox5.TabStop = false;
@@ -281,9 +271,9 @@ namespace SistemaEscaner.FORM
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::SistemaEscaner.Properties.Resources.barra1;
-            this.pictureBox4.Location = new System.Drawing.Point(-4, 1070);
+            this.pictureBox4.Location = new System.Drawing.Point(-4, 874);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1447, 42);
+            this.pictureBox4.Size = new System.Drawing.Size(1447, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 66;
             this.pictureBox4.TabStop = false;
@@ -338,7 +328,7 @@ namespace SistemaEscaner.FORM
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(606, 74);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(713, 990);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(710, 723);
             this.bunifuGradientPanel1.TabIndex = 45;
             // 
             // label7
@@ -381,10 +371,10 @@ namespace SistemaEscaner.FORM
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(18, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(666, 922);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(515, 626);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -401,6 +391,48 @@ namespace SistemaEscaner.FORM
             this.BTN_Regresar.TabStop = false;
             this.BTN_Regresar.Click += new System.EventHandler(this.BTN_Regresar_Click);
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(344, 30);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(127, 113);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 70;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
+            // 
+            // PDF_BTN
+            // 
+            this.PDF_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.PDF_BTN.Image = global::SistemaEscaner.Properties.Resources.Raa1;
+            this.PDF_BTN.ImageActive = null;
+            this.PDF_BTN.Location = new System.Drawing.Point(185, 30);
+            this.PDF_BTN.Name = "PDF_BTN";
+            this.PDF_BTN.Size = new System.Drawing.Size(110, 100);
+            this.PDF_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PDF_BTN.TabIndex = 46;
+            this.PDF_BTN.TabStop = false;
+            this.PDF_BTN.Zoom = 10;
+            this.PDF_BTN.Click += new System.EventHandler(this.PDF_BTN_Click);
+            // 
+            // VIEW_BTN
+            // 
+            this.VIEW_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.VIEW_BTN.Image = global::SistemaEscaner.Properties.Resources._5ff78c60095b7a30b6ab03c4_investigation1;
+            this.VIEW_BTN.ImageActive = null;
+            this.VIEW_BTN.Location = new System.Drawing.Point(13, 30);
+            this.VIEW_BTN.Name = "VIEW_BTN";
+            this.VIEW_BTN.Size = new System.Drawing.Size(110, 100);
+            this.VIEW_BTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.VIEW_BTN.TabIndex = 45;
+            this.VIEW_BTN.TabStop = false;
+            this.VIEW_BTN.Zoom = 10;
+            this.VIEW_BTN.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -413,44 +445,11 @@ namespace SistemaEscaner.FORM
             this.pictureBox3.TabIndex = 39;
             this.pictureBox3.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(652, 1079);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(222, 15);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "ARCHIVOS Y EXPEDIENTES HEAC";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(129)))), ((int)(((byte)(190)))));
-            this.label8.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(598, 9);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 18);
-            this.label8.TabIndex = 69;
-            this.label8.Text = " EXPEDIENTE DIGITAL";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // Escaner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 1100);
+            this.ClientSize = new System.Drawing.Size(1435, 905);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox5);
@@ -475,9 +474,6 @@ namespace SistemaEscaner.FORM
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PDF_BTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AGG_BTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -487,6 +483,9 @@ namespace SistemaEscaner.FORM
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_Regresar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PDF_BTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VIEW_BTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -502,7 +501,6 @@ namespace SistemaEscaner.FORM
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox BTN_Regresar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbGuardar;
         private System.Windows.Forms.Button BTNEscaner;
         private ns1.BunifuGradientPanel bunifuGradientPanel1;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
@@ -520,11 +518,12 @@ namespace SistemaEscaner.FORM
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private ns1.BunifuImageButton VIEW_BTN;
-        private ns1.BunifuImageButton AGG_BTN;
         private ns1.BunifuImageButton PDF_BTN;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Label lbGuardar;
     }
 }

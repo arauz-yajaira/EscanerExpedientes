@@ -15,7 +15,7 @@ namespace SistemaEscaner.FORM
     public partial class MenuAdmin : Form
     {
 
-        ExpedienteEntities Entity = new ExpedienteEntities();
+       
         
         public MenuAdmin()
         {

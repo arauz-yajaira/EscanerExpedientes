@@ -23,9 +23,9 @@ namespace SistemaEscaner.FORM
 {
     public partial class View : Form
     {
-        ExpEntity Entity = new ExpEntity();
-        ExpedienteEntities Entities = new ExpedienteEntities();
-        Escaner escaner = new Escaner();
+        SIGAFEntities Entity = new SIGAFEntities();
+        EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties();
+        Escaner esc = new Escaner();
        // public int IDE = paciente.expediente;
         int IDE = Expediente.exp;
 
@@ -52,7 +52,7 @@ namespace SistemaEscaner.FORM
 
         public void MostrarImagen()
         {
-            using (var Entities = new ExpedienteEntities())
+            using (var Entities = new EscanerExpedienteEntinties())
             {
                 var hojas = Entities.Hoja.Where(
                     h => h.IdPacienteESC == IDE)
@@ -160,7 +160,7 @@ namespace SistemaEscaner.FORM
         {
             try
             {
-                using (var entities = new ExpedienteEntities())
+                using (var entities = new EscanerExpedienteEntinties())
                 {
                     var hojaActual = entities.Hoja
                         .Where(h => h.IdPacienteESC == IDE)
@@ -211,7 +211,7 @@ namespace SistemaEscaner.FORM
 
         private void BTN_Eliminar_Click_1(object sender, EventArgs e)
         {
-
+            EliminarHoja();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -221,9 +221,7 @@ namespace SistemaEscaner.FORM
             if (result == DialogResult.Yes)
             {
                 this.Dispose();
-               Escaner inicio = new Escaner();
-                inicio.Show();
-
+                esc.Show();
             }
             else
             {

@@ -15,9 +15,9 @@ namespace SistemaEscaner
     public partial class Hoja
     {
         public int IdHoja { get; set; }
+        public Nullable<int> IdPacienteESC { get; set; }
         public byte[] HojaAgregada { get; set; }
         public Nullable<int> usuarioCreo { get; set; }
         public System.DateTime FechaIngreso { get; set; }
-        public Nullable<int> IdPacienteESC { get; set; }
     }
 }

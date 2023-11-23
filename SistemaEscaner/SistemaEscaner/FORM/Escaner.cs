@@ -24,15 +24,24 @@ namespace SistemaEscaner.FORM
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public partial class Escaner : Form
     {
-        ExpEntity Entity = new ExpEntity(); // SIGAF
-        ExpedienteEntities Entities = new ExpedienteEntities(); //sistema escaner
-
+        SIGAFEntities Entity = new SIGAFEntities();
+        EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties();
+        Expediente esc = new Expediente();
         public int EXPED = Expediente.exp;
         int IDE = Expediente.exp;
         public string nombre;
         public string apellido;
 
-      //  int nexpe = paciente.expediente;
+        //  int nexpe = paciente.expediente;
+        public void tamPantalla()
+        {
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
+
+            this.Size = new System.Drawing.Size(screenWidth,screenHeight);
+            this.Location = new System.Drawing.Point(0,0);
+        }
+
 
         public Escaner()
         {
@@ -44,19 +53,19 @@ namespace SistemaEscaner.FORM
             txtApellido.Text = paciente.APELLIDO_1_DEL_PACIENTE;
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
-            AGG_BTN.Enabled = false;
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void BTN_Regresar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-           
+            this.Hide();
+            esc.Show();
+
         }
 
 
@@ -73,7 +82,7 @@ namespace SistemaEscaner.FORM
 
         private void BTN_AGDOC_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -121,9 +130,9 @@ namespace SistemaEscaner.FORM
 
         private void BTNEscaner_Click(object sender, EventArgs e)
         {
-          Previsualizar();
-            
-            /*AGG_BTN.Enabled = true;
+           Previsualizar();
+           /*
+            AGG_BTN.Enabled = true;
             OpenFileDialog getImage = new OpenFileDialog();
             getImage.InitialDirectory = "C:\\";
             getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png";
@@ -136,7 +145,7 @@ namespace SistemaEscaner.FORM
             {
             }*/
 
-        } 
+        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -155,17 +164,17 @@ namespace SistemaEscaner.FORM
 
 
 
-    private void BTN_VIEW_Click(object sender, EventArgs e)
+        private void BTN_VIEW_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         public void ConvertirImagenesAPDF()
         {
-            using (var Entities = new ExpedienteEntities())
+            using (var Entities = new EscanerExpedienteEntinties())
             {
                 var hojas = Entities.Hoja.Where(h => h.IdPacienteESC == IDE).ToList();
-                MessageBox.Show(IDE.ToString());
+               // MessageBox.Show(IDE.ToString());
                 totalESC = hojas.Count;
 
                 if (totalESC > 0)
@@ -225,29 +234,30 @@ namespace SistemaEscaner.FORM
 
         private void BTN_EXPDF_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Escaner_Load(object sender, EventArgs e)
         {
+           // tamPantalla();
             lbUsuario.Text = UsuarioIngresado.UsuarioNombre;
-            idUsuario.Text =  UsuarioIngresado.IdUsuario.ToString();
+            idUsuario.Text = UsuarioIngresado.IdUsuario.ToString();
 
             // Verificar si el usuario es de tipo 3 (Usuario)
             if (UsuarioIngresado.TipoUsuario == 3)
             {
                 // Bloquear los botones de agregar y escanear
                 BTNEscaner.Visible = false;
-                AGG_BTN.Visible = false;
+                bunifuImageButton1.Visible = false;
 
                 // Mostrar los botones de visualización y exportar
-               VIEW_BTN.Visible = true;
-               PDF_BTN.Visible = true;
+                VIEW_BTN.Visible = true;
+                PDF_BTN.Visible = true;
             }
             else
             {
-                BTNEscaner.Visible= true;
-                AGG_BTN.Visible = true;
+                BTNEscaner.Visible = true;
+                bunifuImageButton1.Visible = true;
                 VIEW_BTN.Visible = true;
                 PDF_BTN.Visible = true;
             }
@@ -256,12 +266,12 @@ namespace SistemaEscaner.FORM
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BTN_Vista_Click(object sender, EventArgs e)
         {
-          
+
         }
         private Image ByteArrayToImage(byte[] byteArray)
         {
@@ -287,8 +297,7 @@ namespace SistemaEscaner.FORM
             if (result == DialogResult.Yes)
             {
                 this.Dispose();
-
-            }
+                esc.Show();            }
             else
             {
                 return;
@@ -297,6 +306,7 @@ namespace SistemaEscaner.FORM
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             View viewForm = new View();
             viewForm.Show();
             viewForm.lbE.Text = IDE.ToString();
@@ -309,36 +319,65 @@ namespace SistemaEscaner.FORM
 
         private void AGG_BTN_Click(object sender, EventArgs e)
         {
-            Escaner escaner = new Escaner();
+            /*
             try
             {
-                // Convertir la imagen del PictureBox a un arreglo de bytes
-                byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
-
-                // Crear un objeto Hoja con los datos necesarios
-                Hoja hoja = new Hoja
+                using (EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties())
                 {
-                    //  usuarioCreo = escaner.lbUsuario.Text,
-                    HojaAgregada = byteArrayImagen,
-                    IdPacienteESC = IDE,
-                    FechaIngreso = DateTime.Now,
-                    usuarioCreo = UsuarioIngresado.IdUsuario
 
+                    // Convertir la imagen del PictureBox a un arreglo de bytes
+                    byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+                    Hoja hoja = new Hoja
+                    {
+                        //  usuarioCreo = escaner.lbUsuario.Text,
+                        HojaAgregada = byteArrayImagen,
+                        IdPacienteESC = IDE,
+                        FechaIngreso = DateTime.Now,
+                        usuarioCreo = UsuarioIngresado.IdUsuario
+                    };
 
-                };
+                    // Agregar el objeto Hoja a la base de datos y guardar los cambios
+                    Entities.Hoja.Add(hoja);
+                    Entities.SaveChanges();
 
-                // Agregar el objeto Hoja a la base de datos y guardar los cambios
-                Entities.Hoja.Add(hoja);
-                Entities.SaveChanges();
+                    MessageBox.Show("Guardado Satisfactoriamente");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar la imagen: " + ex.Message);
+            }*/
+        }
 
-                MessageBox.Show("Guardado Satisfactoriamente");
+        private void bunifuImageButton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties())
+                {
+
+                    // Convertir la imagen del PictureBox a un arreglo de bytes
+                    byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+                    Hoja hoja = new Hoja
+                    {
+                        //  usuarioCreo = escaner.lbUsuario.Text,
+                        HojaAgregada = byteArrayImagen,
+                        IdPacienteESC = IDE,
+                        FechaIngreso = DateTime.Now,
+                        usuarioCreo = UsuarioIngresado.IdUsuario
+                    };
+
+                    // Agregar el objeto Hoja a la base de datos y guardar los cambios
+                    Entities.Hoja.Add(hoja);
+                    Entities.SaveChanges();
+
+                    MessageBox.Show("Guardado Satisfactoriamente");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar la imagen: " + ex.Message);
             }
-
         }
     }
-
 }
