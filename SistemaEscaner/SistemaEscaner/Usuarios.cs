@@ -14,6 +14,12 @@ namespace SistemaEscaner
     
     public partial class Usuarios
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Usuarios()
+        {
+            this.Hoja = new HashSet<Hoja>();
+        }
+    
         public int IdUsuario { get; set; }
         public string Usuario { get; set; }
         public string Contra { get; set; }
@@ -24,5 +30,7 @@ namespace SistemaEscaner
     
         public virtual EstadoUsuario EstadoUsuario { get; set; }
         public virtual TipoUsuario TipoUsuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hoja> Hoja { get; set; }
     }
 }

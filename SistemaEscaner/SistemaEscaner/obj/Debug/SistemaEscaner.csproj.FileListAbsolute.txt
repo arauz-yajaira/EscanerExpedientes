@@ -109,4 +109,6 @@ C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\Sistema
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\bin\Debug\SistemaEscaner.application
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.exe.manifest
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.application
+C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.FORM.MenuUsuario.resources
+C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.FORM.VerExpEscan.resources
 C:\Users\yajai\Desktop\SistemaArchivos\EscanerExpedientes\SistemaEscaner\SistemaEscaner\obj\Debug\SistemaEscaner.csproj.AssemblyReference.cache

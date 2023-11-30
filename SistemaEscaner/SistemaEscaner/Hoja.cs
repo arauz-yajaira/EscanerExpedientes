@@ -19,5 +19,8 @@ namespace SistemaEscaner
         public byte[] HojaAgregada { get; set; }
         public Nullable<int> usuarioCreo { get; set; }
         public System.DateTime FechaIngreso { get; set; }
+        public string Comentario { get; set; }
+    
+        public virtual Usuarios Usuarios { get; set; }
     }
 }

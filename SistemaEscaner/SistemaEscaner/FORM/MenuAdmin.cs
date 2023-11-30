@@ -72,5 +72,12 @@ namespace SistemaEscaner.FORM
                 return;
             }
         }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            FORM.VerExpEscan verExp = new VerExpEscan();
+            verExp.Show();
+            this.Close();
+        }
     }
 }

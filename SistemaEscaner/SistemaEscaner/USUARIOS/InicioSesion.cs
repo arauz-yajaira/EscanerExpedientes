@@ -61,6 +61,9 @@ namespace SistemaEscaner.USUARIOS
             }
         }
 
+
+
+
         public static class UsuarioIngresado
         {
             public static string UsuarioNombre { get; private set; }
@@ -80,24 +83,21 @@ namespace SistemaEscaner.USUARIOS
             }
         }
 
-
         private void Ingresar()
         {
             using (EscanerExpedienteEntinties db = new EscanerExpedienteEntinties())
             {
                 string nombreUsuario = txtUsuario.Text;
                 string contrasena = txtContra.Text;
-
+                string contrasenaHash = Hash.obtenerHash256(contrasena);
                 // Buscar al usuario por nombre de usuario
-                var usuario = db.Usuarios.FirstOrDefault(u => u.Usuario == nombreUsuario);
+                var usuario = db.Usuarios.FirstOrDefault(u => u.Usuario == nombreUsuario && u.Contra == contrasenaHash);
                 
                 if (usuario != null)
                 {
-                    // Obtener el hash SHA-256 de la contraseña ingresada
-                    string contrasenaHash = Hash.obtenerHash256(contrasena);
-
+ 
                     // Comparar el hash de la contraseña ingresada con el hash almacenado en la base de datos
-                    if (usuario.Contra == contrasenaHash)
+                    if (usuario.Usuario== nombreUsuario && usuario.Contra == contrasenaHash)
                     {
                        
 
@@ -108,15 +108,15 @@ namespace SistemaEscaner.USUARIOS
                         UsuarioIngresado.IniciarSesion(usuario.Usuario, usuario.IdUsuario, tipoUsuario);
 
                         // Redirigir según el tipo de usuario
-                        if (tipoUsuario == 1) // Admin
+                        if (tipoUsuario == 1 ) // Admin
                         {
                             FORM.MenuAdmin admin = new FORM.MenuAdmin();
                             admin.Show();
                         }
                         else if (tipoUsuario == 2 || tipoUsuario == 3) // Digitalizador o Usuario
                         {
-                            FORM.Expediente expediente = new FORM.Expediente();
-                            expediente.Show();
+                           FORM.MenuUsuario UsuariosMenu = new FORM.MenuUsuario();
+                            UsuariosMenu.Show();
                         }
 
                         // Ocultar el formulario actual

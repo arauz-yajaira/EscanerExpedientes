@@ -42,7 +42,7 @@ namespace SistemaEscaner.USUARIOS
             tt.SetToolTip(IMGVer, "Ver Contraseña");
             BTNContra.Enabled = false;
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(txtContra, "La contraseña debe contener al menos 6 letras o numeros");
+            toolTip.SetToolTip(txtContra, "La contraseña debe contener al menos 4 letras o numeros");
             toolTip.SetToolTip(BTNAgregar, "Agrega un nuevo Usuarrio");
             toolTip.SetToolTip(txtBuscar, "Busca el usuario");
             toolTip.SetToolTip(BTNCerrar, "Cerrar ventana");

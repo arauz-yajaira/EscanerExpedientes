@@ -17,6 +17,8 @@
     <Property Name="HojaAgregada" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="usuarioCreo" Type="Int32" />
     <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Comentario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuarios" Relationship="EscanerExpedientesModel.FK_Hoja_Usuarios" FromRole="Hoja" ToRole="Usuarios" />
   </EntityType>
   <EntityType Name="TipoUsuario">
     <Key>
@@ -39,6 +41,7 @@
     <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" />
     <NavigationProperty Name="EstadoUsuario" Relationship="Self.FK_Usuarios_EstadoUsuario" FromRole="Usuarios" ToRole="EstadoUsuario" />
     <NavigationProperty Name="TipoUsuario" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="Usuarios" ToRole="TipoUsuario" />
+    <NavigationProperty Name="Hoja" Relationship="EscanerExpedientesModel.FK_Hoja_Usuarios" FromRole="Usuarios" ToRole="Hoja" />
   </EntityType>
   <Association Name="FK_Usuarios_EstadoUsuario">
     <End Role="EstadoUsuario" Type="Self.EstadoUsuario" Multiplicity="1" />
@@ -77,5 +80,32 @@
       <End Role="TipoUsuario" EntitySet="TipoUsuario" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
+    <AssociationSet Name="FK_Hoja_Usuarios" Association="EscanerExpedientesModel.FK_Hoja_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Hoja" EntitySet="Hoja" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="EscanerExpedientesModel.sysdiagrams" />
   </EntityContainer>
+  <Association Name="FK_Hoja_Usuarios">
+    <End Type="EscanerExpedientesModel.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+    <End Type="EscanerExpedientesModel.Hoja" Role="Hoja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Hoja">
+        <PropertyRef Name="usuarioCreo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

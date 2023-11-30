@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EscanerExpedientesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EscanerExpedientesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EstadoUsuario">
           <Key>
             <PropertyRef Name="IdEstado" />
@@ -21,6 +21,17 @@
           <Property Name="HojaAgregada" Type="varbinary(max)" />
           <Property Name="usuarioCreo" Type="int" />
           <Property Name="FechaIngreso" Type="date" Nullable="false" />
+          <Property Name="Comentario" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -41,6 +52,18 @@
           <Property Name="IdEstado" Type="int" Nullable="false" />
           <Property Name="IdTipoUsuario" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Hoja_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="Hoja" Type="Self.Hoja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Hoja">
+              <PropertyRef Name="usuarioCreo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Usuarios_EstadoUsuario">
           <End Role="EstadoUsuario" Type="Self.EstadoUsuario" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -68,8 +91,13 @@
         <EntityContainer Name="EscanerExpedientesModelStoreContainer">
           <EntitySet Name="EstadoUsuario" EntityType="Self.EstadoUsuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hoja" EntityType="Self.Hoja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Hoja_Usuarios" Association="Self.FK_Hoja_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Hoja" EntitySet="Hoja" />
+          </AssociationSet>
           <AssociationSet Name="FK_Usuarios_EstadoUsuario" Association="Self.FK_Usuarios_EstadoUsuario">
             <End Role="EstadoUsuario" EntitySet="EstadoUsuario" />
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -79,8 +107,7 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EscanerExpedientesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -101,6 +128,8 @@
           <Property Name="HojaAgregada" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="usuarioCreo" Type="Int32" />
           <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Comentario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuarios" Relationship="EscanerExpedientesModel.FK_Hoja_Usuarios" FromRole="Hoja" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -123,6 +152,7 @@
           <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="EstadoUsuario" Relationship="Self.FK_Usuarios_EstadoUsuario" FromRole="Usuarios" ToRole="EstadoUsuario" />
           <NavigationProperty Name="TipoUsuario" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="Usuarios" ToRole="TipoUsuario" />
+          <NavigationProperty Name="Hoja" Relationship="EscanerExpedientesModel.FK_Hoja_Usuarios" FromRole="Usuarios" ToRole="Hoja" />
         </EntityType>
         <Association Name="FK_Usuarios_EstadoUsuario">
           <End Role="EstadoUsuario" Type="Self.EstadoUsuario" Multiplicity="1" />
@@ -161,7 +191,34 @@
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <AssociationSet Name="FK_Hoja_Usuarios" Association="EscanerExpedientesModel.FK_Hoja_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Hoja" EntitySet="Hoja" />
+          </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="EscanerExpedientesModel.sysdiagrams" />
         </EntityContainer>
+        <Association Name="FK_Hoja_Usuarios">
+          <End Type="EscanerExpedientesModel.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+          <End Type="EscanerExpedientesModel.Hoja" Role="Hoja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Hoja">
+              <PropertyRef Name="usuarioCreo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -179,6 +236,7 @@
           <EntitySetMapping Name="Hoja">
             <EntityTypeMapping TypeName="EscanerExpedientesModel.Hoja">
               <MappingFragment StoreEntitySet="Hoja">
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
                 <ScalarProperty Name="IdHoja" ColumnName="IdHoja" />
                 <ScalarProperty Name="IdPacienteESC" ColumnName="IdPacienteESC" />
                 <ScalarProperty Name="HojaAgregada" ColumnName="HojaAgregada" />
@@ -205,6 +263,17 @@
                 <ScalarProperty Name="FechaModificado" ColumnName="FechaModificado" />
                 <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
                 <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EscanerExpedientesModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

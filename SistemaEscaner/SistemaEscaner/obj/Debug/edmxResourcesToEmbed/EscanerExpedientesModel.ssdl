@@ -16,6 +16,17 @@
     <Property Name="HojaAgregada" Type="varbinary(max)" />
     <Property Name="usuarioCreo" Type="int" />
     <Property Name="FechaIngreso" Type="date" Nullable="false" />
+    <Property Name="Comentario" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TipoUsuario">
     <Key>
@@ -36,6 +47,18 @@
     <Property Name="IdEstado" Type="int" Nullable="false" />
     <Property Name="IdTipoUsuario" Type="int" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Hoja_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Hoja" Type="Self.Hoja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Hoja">
+        <PropertyRef Name="usuarioCreo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Usuarios_EstadoUsuario">
     <End Role="EstadoUsuario" Type="Self.EstadoUsuario" Multiplicity="1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -63,8 +86,13 @@
   <EntityContainer Name="EscanerExpedientesModelStoreContainer">
     <EntitySet Name="EstadoUsuario" EntityType="Self.EstadoUsuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hoja" EntityType="Self.Hoja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Hoja_Usuarios" Association="Self.FK_Hoja_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Hoja" EntitySet="Hoja" />
+    </AssociationSet>
     <AssociationSet Name="FK_Usuarios_EstadoUsuario" Association="Self.FK_Usuarios_EstadoUsuario">
       <End Role="EstadoUsuario" EntitySet="EstadoUsuario" />
       <End Role="Usuarios" EntitySet="Usuarios" />

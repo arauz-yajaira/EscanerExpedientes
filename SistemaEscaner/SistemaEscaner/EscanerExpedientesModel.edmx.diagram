@@ -5,12 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d45c97e9b66840acbbee26970fbe8b33" Name="Diagram1">
-        <EntityTypeShape EntityType="EscanerExpedientesModel.EstadoUsuario" Width="1.5" PointX="0.875" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EscanerExpedientesModel.Hoja" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscanerExpedientesModel.EstadoUsuario" Width="1.5" PointX="2.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscanerExpedientesModel.Hoja" Width="1.5" PointX="6.5" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EscanerExpedientesModel.TipoUsuario" Width="1.5" PointX="0.875" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EscanerExpedientesModel.Usuarios" Width="1.5" PointX="3.5" PointY="3.375" IsExpanded="true" />
         <AssociationConnector Association="EscanerExpedientesModel.FK_Usuarios_EstadoUsuario" ManuallyRouted="false" />
         <AssociationConnector Association="EscanerExpedientesModel.FK_Usuarios_TipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="EscanerExpedientesModel.FK_Hoja_Usuarios" />
+        <EntityTypeShape EntityType="EscanerExpedientesModel.sysdiagrams" Width="1.5" PointX="6.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

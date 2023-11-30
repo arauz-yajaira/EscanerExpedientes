@@ -351,14 +351,24 @@ namespace SistemaEscaner.FORM
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            int UTipo = UsuarioIngresado.TipoUsuario;
+
             DialogResult result = MessageBox.Show("¿Seguro que quieres cerrar ventana?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                this.Dispose();
-                USUARIOS.InicioSesion inicio = new USUARIOS.InicioSesion();
-                inicio.Show();
+                if (UTipo == 1) {
 
+                    MenuAdmin admin = new MenuAdmin();
+                    admin.Show();
+                   this.Dispose(); 
+                }
+                else
+                {
+                    MenuUsuario menuUsuario = new MenuUsuario();
+                    menuUsuario.Show();
+                    this.Dispose();
+                }
             }
             else
             {

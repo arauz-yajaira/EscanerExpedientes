@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using SistemaEscaner.FORM;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Threading;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using static SistemaEscaner.USUARIOS.InicioSesion;
@@ -53,6 +54,7 @@ namespace SistemaEscaner.FORM
             txtApellido.Text = paciente.APELLIDO_1_DEL_PACIENTE;
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
+            progressBar1.Visible = false;
         }
 
 
@@ -98,15 +100,31 @@ namespace SistemaEscaner.FORM
 
             try
             {
-                // Mostrar el cuadro de dilogo para seleccionar un dispositivo de escaneo
+                // Mostrar el cuadro de diálogo para seleccionar un dispositivo de escaneo
                 Device device = commonDialog.ShowSelectDevice(WiaDeviceType.ScannerDeviceType, true);
 
                 if (device != null)
                 {
+                    // Configurar y mostrar la barra de progreso
+                    ProgressBar progressBar = new ProgressBar();
+                    progressBar.Style = ProgressBarStyle.Marquee;
+                    progressBar.MarqueeAnimationSpeed = 30;
+
+                    Form progressForm = new Form();
+                    progressForm.Text = "Escaneando...";
+                    progressForm.Controls.Add(progressBar);
+
+                    // Iniciar la barra de progreso en un hilo separado
+                    Thread progressBarThread = new Thread(() => progressForm.ShowDialog());
+                    progressBarThread.Start();
+
                     Item item = device.Items[1];
                     item.Properties["6146"].set_Value(1);
                     item.Properties["6147"].set_Value(300);
                     image = (ImageFile)item.Transfer();
+
+                    // Cerrar la barra de progreso
+                    progressForm.Invoke(new Action(() => progressForm.Close()));
 
                     if (image != null)
                     {
@@ -248,7 +266,7 @@ namespace SistemaEscaner.FORM
             {
                 // Bloquear los botones de agregar y escanear
                 BTNEscaner.Visible = false;
-                bunifuImageButton1.Visible = false;
+                BTN_Save.Visible = false;
 
                 // Mostrar los botones de visualización y exportar
                 VIEW_BTN.Visible = true;
@@ -257,7 +275,7 @@ namespace SistemaEscaner.FORM
             else
             {
                 BTNEscaner.Visible = true;
-                bunifuImageButton1.Visible = true;
+                BTN_Save.Visible = true;
                 VIEW_BTN.Visible = true;
                 PDF_BTN.Visible = true;
             }
@@ -355,21 +373,26 @@ namespace SistemaEscaner.FORM
             {
                 using (EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties())
                 {
-
-                    // Convertir la imagen del PictureBox a un arreglo de bytes
+                
                     byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+
+              
                     Hoja hoja = new Hoja
                     {
-                        //  usuarioCreo = escaner.lbUsuario.Text,
                         HojaAgregada = byteArrayImagen,
                         IdPacienteESC = IDE,
                         FechaIngreso = DateTime.Now,
-                        usuarioCreo = UsuarioIngresado.IdUsuario
+                        usuarioCreo = UsuarioIngresado.IdUsuario,
+                        Comentario = txtComentario.Text 
                     };
 
-                    // Agregar el objeto Hoja a la base de datos y guardar los cambios
+                  
                     Entities.Hoja.Add(hoja);
                     Entities.SaveChanges();
+
+                
+                    pictureBox1.Image = null;
+                    txtComentario.Text = string.Empty;
 
                     MessageBox.Show("Guardado Satisfactoriamente");
                 }
@@ -379,5 +402,34 @@ namespace SistemaEscaner.FORM
                 MessageBox.Show("Error al guardar la imagen: " + ex.Message);
             }
         }
+
+
+//         try
+//            {
+//                using (EscanerExpedienteEntinties Entities = new EscanerExpedienteEntinties())
+//                {
+
+//                    // Convertir la imagen del PictureBox a un arreglo de bytes
+//                    byte[] byteArrayImagen = ImageToByteArray(pictureBox1.Image);
+//        Hoja hoja = new Hoja
+//        {
+//            //  usuarioCreo = escaner.lbUsuario.Text,
+//            HojaAgregada = byteArrayImagen,
+//            IdPacienteESC = IDE,
+//            FechaIngreso = DateTime.Now,
+//            usuarioCreo = UsuarioIngresado.IdUsuario
+//        };
+
+//        // Agregar el objeto Hoja a la base de datos y guardar los cambios
+//        Entities.Hoja.Add(hoja);
+//                    Entities.SaveChanges();
+
+//                    MessageBox.Show("Guardado Satisfactoriamente");
+//                }
+//}
+//            catch (Exception ex)
+//{
+//    MessageBox.Show("Error al guardar la imagen: " + ex.Message);
+//}
     }
 }
